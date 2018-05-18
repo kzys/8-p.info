@@ -1,0 +1,18 @@
+{
+  "name": "8-p_info",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "nuxt": "^1.3.0",
+    "postcss-import": "^11.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "cd v3 && nuxt",
+    "build": "node src/main.js",
+    "publish": "npm run build && ./scripts/publish.sh"
+  },
+  "author": "",
+  "license": "ISC"
+}

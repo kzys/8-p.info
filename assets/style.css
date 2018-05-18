@@ -1,0 +1,89 @@
+/* http://clrs.cc/ */
+
+/*@import "normalize.css";*/
+
+body {
+    background: #fff;
+    color: #111;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+/* back to basics */
+a:link {
+    color: #009;
+}
+a:visited {
+    color: #606;
+}
+a:hover {
+    color: #00f;
+}
+a:active {
+    color: #00f;
+}
+
+h1 {
+    font-size: 1.4rem;
+}
+
+h2 {
+    font-size: 1.2rem;
+}
+
+p {
+    margin: 0 0 1rem 0;
+    line-height: 1.5;
+}
+
+header .content, #container {
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* header */
+
+header {
+    background: #f0f0f0;
+    clear: both;
+    float: none;
+}
+
+header .content {
+    font-size: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+header a {
+    color: #111 !important;
+    text-decoration: none;
+
+    border: none;
+    display: block;
+    padding: 1rem 0;
+
+    border-bottom: .1rem solid #f0f0f0;
+}
+
+header a:hover {
+    border-bottom: .1rem solid #000;
+}
+
+/* /index.html */
+
+#hello blockquote {
+    margin: 1rem 0;
+    padding: 0;
+}
+
+#hello blockquote p {
+    font-size: 150%;
+    line-height: 1.5;
+}
+
+/* /me/index.html */
+
+.family {
+    font-weight: normal;
+}
