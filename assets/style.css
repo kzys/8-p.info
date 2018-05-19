@@ -1,6 +1,6 @@
 /* http://clrs.cc/ */
 
-/*@import "normalize.css";*/
+@import "normalize.css";
 
 body {
     background: #fff;
