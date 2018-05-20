@@ -3,19 +3,30 @@
         <Header/>
         <div id="container">
             <div class="content">
-                <h1>Kazuyoshi Kato / 加藤 和良</h1>
-                <p>I'm a software developer, Japanese and Seattle transplant.</p>
+                <h1>
+                    <div class="englihs">Kazuyoshi Kato</div>
+                    <div class="japanese">加藤 和良</div>
+                </h1>
                 <p>
-                I've been woring as a Software Development Engineer at Amazon for 5+ years.
-                I work as a Software Development Engineer at <a href="https://www.amazon.com/">Amazon.com</a>.
-                I joined Amazon Japan in 2012, and moved to Seattle in 2014.
-                Before Amazon, I worked for <a href="https://mixi.co.jp">Mixi</a>.
-                The company is now known for mobile games, but I was working on
-                its social networking service.
+                    I'm a software developer, Japanese and Seattle transplant.
                 </p>
-                <p>
-                <em>But</em>, all opinions expressed here are entirely my own.
-                </p>
+                    
+
+                <h2>Work</h2>
+                <ul class="work">
+                    <li>
+                        Amazon.com
+                        <div class="years">Oct 2014 &dash; present</div>
+                    </li>
+                    <li>
+                        Amazon Japan
+                        <div class="years">July 2012 &dash; Sep 2014</div>
+                    </li>
+                    <li>
+                        mixi, Inc.
+                        <div class="years">April 2008 &dash; July 2012</div>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
