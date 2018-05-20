@@ -35,10 +35,10 @@ p {
     line-height: 1.5;
 }
 
-header .content, #container {
+.content {
     max-width: 50rem;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0;
 }
 
 /* header */
@@ -71,6 +71,11 @@ header a:hover {
 }
 
 /* /index.html */
+#hello {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+}
 
 #hello blockquote {
     margin: 1rem 0;
@@ -80,6 +85,10 @@ header a:hover {
 #hello blockquote p {
     font-size: 150%;
     line-height: 1.5;
+}
+
+#blog {
+    padding: 1rem 0;
 }
 
 /* /me/index.html */
