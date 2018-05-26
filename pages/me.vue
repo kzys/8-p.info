@@ -10,7 +10,13 @@
                 <p>
                     I'm a software developer, Japanese and Seattle transplant.
                 </p>
-                    
+                <p>
+                    I love open source software and occasionally contribute back to the community.
+                    You can find my name on
+                    <a href="https://github.com/scala/scala/commits?author=kzys">the Scala compiler</a>,
+                    Firefox's <a href="https://www.mozilla.org/credits/">about:credits</a> or
+                    <a href="https://github.com/git/git/commits?author=kzys">Git</a>.
+                </p>
 
                 <h2>Work</h2>
                 <ul class="work">
