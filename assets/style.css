@@ -101,7 +101,18 @@ ul.work {
     & li {
         margin-bottom: 1rem;
 
+        & .row {
+            display: flex;
+            justify-content: space-between;
+            line-height: 1.5rem;
+        }
+
+        & .location {
+            font-size: 90%;
+        }
+
         & .years {
+            font-size: 90%;
             color: #999;
         }
     }

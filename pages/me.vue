@@ -21,15 +21,24 @@
                 <h2>Work</h2>
                 <ul class="work">
                     <li>
-                        Amazon.com
+                        <div class="row">
+                            <div class="company">Amazon.com</div>
+                            <div class="location">Seattle, Washington</div>
+                        </div>
                         <div class="years">Oct 2014 &dash; present</div>
                     </li>
                     <li>
-                        Amazon Japan
+                        <div class="row">
+                            <div class="company">Amazon Japan</div>
+                            <div class="location">Meguro, Tokyo</div>
+                        </div>
                         <div class="years">July 2012 &dash; Sep 2014</div>
                     </li>
                     <li>
-                        mixi, Inc.
+                        <div class="row">
+                            <div class="company">mixi</div>
+                            <div class="location">Harajuku, Tokyo / Shibuya, Tokyo</div>
+                        </div>
                         <div class="years">April 2008 &dash; July 2012</div>
                     </li>
                 </ul>
