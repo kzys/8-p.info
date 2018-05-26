@@ -15,7 +15,7 @@
                     You can find my name on
                     <a href="https://github.com/scala/scala/commits?author=kzys">the Scala compiler</a>,
                     Firefox's <a href="https://www.mozilla.org/credits/">about:credits</a> or
-                    <a href="https://github.com/git/git/commits?author=kzys">Git</a>.
+                    even <a href="https://github.com/git/git/commits?author=kzys">Git</a>.
                 </p>
 
                 <h2>Work</h2>
