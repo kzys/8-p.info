@@ -4,7 +4,7 @@
         <div id="container">
             <div class="content">
                 <h1>
-                    <div class="englihs">Kazuyoshi Kato</div>
+                    <div class="english">Kazuyoshi Kato</div>
                     <div class="japanese">加藤 和良</div>
                 </h1>
                 <p>
