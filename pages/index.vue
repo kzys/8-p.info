@@ -4,8 +4,12 @@
         <div id="hello">
             <div class="content">
                 <blockquote>
-                    <p>This led me to suggest that the null value is a member of every type, and a null check is required on every use of that reference variable, and it may be perhaps a billion dollar mistake.</p>
-                    <footer><a href="https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare">Tony Hoare</a></footer>
+                    <p>We're against complexity. We believe designing systems is a fight against
+                    complexity. We'll accept to fight the complexity when it's worthwhile but
+                    we'll try hard to recognize when a small feature is not worth 1000s of lines
+                    of code. Most of the time the best way to fight complexity is by not
+                    creating it at all.</p>
+                    <footer><a href="https://github.com/antirez/redis/blob/unstable/MANIFESTO">The Redis Manifesto</a></footer>
                 </blockquote>
             </div>
         </div>
