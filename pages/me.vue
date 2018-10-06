@@ -17,6 +17,10 @@
                     Firefox's <a href="https://www.mozilla.org/credits/">about:credits</a> or
                     even <a href="https://github.com/git/git/commits?author=kzys">Git</a>.
                 </p>
+                <p class="see-also">
+                    <a href="https://github.com/kzys"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://www.linkedin.com/in/kazuyoshi/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                </p>
 
                 <h2>Work</h2>
                 <ul class="work">

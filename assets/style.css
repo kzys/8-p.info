@@ -115,3 +115,9 @@ ul.work {
         }
     }
 }
+
+.see-also a {
+    text-decoration: none;
+    margin-right: 1rem;
+    color: #000;
+}

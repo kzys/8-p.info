@@ -1,7 +1,11 @@
 const postcss_nested = require('postcss-nested');
 
 module.exports = {
-  css: [ "normalize.css", "@assets/style.css" ],
+  css: [
+    "normalize.css",
+    "@assets/style.css",
+    "@fortawesome/fontawesome-free/css/all.css"
+  ],
   head: {
       meta: [
           { charset: 'utf-8' },

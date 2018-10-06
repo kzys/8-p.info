@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.3.1",
     "normalize.css": "^8.0.0",
     "nuxt": "^2.1.0",
     "postcss-import": "^11.1.0"
