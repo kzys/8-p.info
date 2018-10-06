@@ -1,11 +1,14 @@
+const postcss_nested = require('postcss-nested');
+
 module.exports = {
-  css: [
-    "@assets/style.css"
-  ],
+  css: [ "normalize.css", "@assets/style.css" ],
   head: {
       meta: [
           { charset: 'utf-8' },
           { name: 'viewport', content: 'width=device-width, initial-scale=1' }
       ]
+  },
+  build: {
+    postcss: [ postcss_nested ]
   }
 }
