@@ -13,7 +13,8 @@
                 <p>
                     I love open source software and occasionally contribute back to the community.
                     You can find my name on
-                    <a href="https://github.com/scala/scala/commits?author=kzys">the Scala compiler</a>,
+                    <a href="https://github.com/rust-lang/rust/commits?author=kzys">Rust</a>,
+                    <a href="https://github.com/scala/scala/commits?author=kzys">Scala</a>,
                     Firefox's <a href="https://www.mozilla.org/credits/">about:credits</a> or
                     even <a href="https://github.com/git/git/commits?author=kzys">Git</a>.
                 </p>
