@@ -6,13 +6,22 @@ h1 { font-size: 150% }
 .bar .inner {
     background: #000;
 }
+#about {
+    position: absolute;
+    bottom: 0;
+}
 </style>
 <template>
     <div>
-        <div id="hello">
+        <div class="content">
+            <h1>{{ message }}</h1>
+            <div class="bar"><div class="inner" v-bind:style="{ width: barWidth }">&nbsp;</div></div>
+        </div>
+        <div id="about">
             <div class="content">
-                <h1>{{ message }}</h1>
-                <div class="bar"><div class="inner" v-bind:style="{ width: barWidth }">&nbsp;</div></div>
+                <p>
+                    Heavily inspired by <a href="https://twitter.com/year_progress">@year_progress</a>
+                </p>
             </div>
         </div>
     </div>
