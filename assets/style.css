@@ -61,18 +61,23 @@ header a:hover {
 }
 
 /* /index.html */
-#hello {
+#index {
     margin: 0;
     padding: 0;
     background: #fff;
 }
 
-#hello blockquote {
+#index blockquote {
     margin: 1rem 0;
     padding: 0;
 }
 
-#hello blockquote p {
+#quote .content {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 1rem;
+}
+
+#index blockquote p {
     font-size: 150%;
     line-height: 1.5;
 }
