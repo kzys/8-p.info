@@ -9,6 +9,10 @@ h1 { font-size: 150% }
 #about {
     position: absolute;
     bottom: 0;
+    font-size: 90%;
+}
+#about p {
+    line-height: 1.4;
 }
 </style>
 <template>
@@ -20,6 +24,7 @@ h1 { font-size: 150% }
         <div id="about">
             <div class="content">
                 <p>
+                    Created by Kazuyoshi Kato | <a href="http://8-p.info/">8-p.info</a><br/>
                     Heavily inspired by <a href="https://twitter.com/year_progress">@year_progress</a>
                 </p>
             </div>
