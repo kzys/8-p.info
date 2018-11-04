@@ -1,7 +1,7 @@
 /* http://clrs.cc/ */
 
 body {
-    background: #fff;
+    background: #eee;
     color: #111;
     font-family: 'Helvetica Neue', sans-serif;
 }
@@ -33,38 +33,10 @@ p {
 
 /* header */
 
-header {
-    background: #f0f0f0;
-    clear: both;
-    float: none;
-}
-
-header .content {
-    font-size: 90%;
-    display: flex;
-    justify-content: space-between;
-}
-
-header a {
-    color: #111 !important;
-    text-decoration: none;
-
-    border: none;
-    display: block;
-    padding: 1rem 0;
-
-    border-bottom: .1rem solid #f0f0f0;
-}
-
-header a:hover {
-    border-bottom: .1rem solid #000;
-}
-
 /* /index.html */
 #index {
     margin: 0;
     padding: 0;
-    background: #fff;
 }
 
 #index blockquote {
@@ -87,42 +59,3 @@ header a:hover {
 }
 
 /* /me/index.html */
-
-.family {
-    font-weight: normal;
-}
-
-h1 .japanese {
-    font-weight: normal;
-}
-
-ul.work {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-
-    & li {
-        margin-bottom: 1rem;
-
-        & .row {
-            display: flex;
-            justify-content: space-between;
-            line-height: 1.5rem;
-        }
-
-        & .location {
-            font-size: 90%;
-        }
-
-        & .years {
-            font-size: 90%;
-            color: #999;
-        }
-    }
-}
-
-.see-also a {
-    text-decoration: none;
-    margin-right: 1rem;
-    color: #000;
-}

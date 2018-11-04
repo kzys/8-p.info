@@ -15,15 +15,20 @@
                     You can find my name on
                     <a href="https://github.com/rust-lang/rust/commits?author=kzys">Rust</a>,
                     <a href="https://github.com/scala/scala/commits?author=kzys">Scala</a>,
-                    Firefox's <a href="https://www.mozilla.org/credits/">about:credits</a> or
-                    even <a href="https://github.com/git/git/commits?author=kzys">Git</a>.
+                    Firefox's <a href="https://www.mozilla.org/credits/">about:credits</a> and
+                    <a href="https://github.com/git/git/commits?author=kzys">Git</a>.
+                    Those are mostly small contributions on the big projects though.
+                </p>
+                <p>
+                    While I've been doing that for almost a decade,
+                    it is still fascinating to see that I can work with people all over the world through code.
                 </p>
                 <p class="see-also">
                     <a href="https://github.com/kzys"><i class="fab fa-github"></i> GitHub</a>
                     <a href="https://www.linkedin.com/in/kazuyoshi/"><i class="fab fa-linkedin"></i> LinkedIn</a>
                 </p>
 
-                <h2>Work</h2>
+                <h2>Work Experience</h2>
                 <ul class="work">
                     <li>
                         <div class="row">
@@ -62,3 +67,43 @@
         components: { Header }
     }
 </script>
+<style>
+.family {
+    font-weight: normal;
+}
+
+h1 .japanese {
+    font-weight: normal;
+}
+
+ul.work {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    & li {
+        margin-bottom: 1rem;
+
+        & .row {
+            display: flex;
+            justify-content: space-between;
+            line-height: 1.5rem;
+        }
+
+        & .location {
+            font-size: 90%;
+        }
+
+        & .years {
+            font-size: 90%;
+            color: #666;
+        }
+    }
+}
+
+.see-also a {
+    text-decoration: none;
+    margin-right: 1rem;
+    color: #000;
+}
+</style>
