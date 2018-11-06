@@ -54,16 +54,21 @@ header .column {
     clear: both;
 }
 
-
 @media only screen and (min-width: 800px) {
     header .content {
         display: flex;
         justify-content: space-between;
-        margin: 0 2rem;
+        margin: 0;
     }
 
     header .menu a {
         margin: 0 0 0 4rem;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    header .content {
+        margin: 0 2rem;
     }
 }
 </style>
