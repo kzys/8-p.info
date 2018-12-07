@@ -3,6 +3,8 @@ import subprocess
 import sys
 import json
 
+# git config diff.renameLimit 9999
+
 lines = subprocess.check_output([ 'git', 'log', '--format=commit %aI %h', '--numstat' ] + sys.argv[1:]).split('\n')
 
 record = {}
@@ -25,8 +27,15 @@ for line in lines:
         if len(path) == 0:
             path = 'root'
         if not path in record:
-            record[path + ' added'] = 0
-            record[path + ' deleted'] = 0
-        record[path + ' added'] += int(columns[0])
-        record[path + ' deleted'] += int(columns[1])
+            record['files'] = {}
+
+        if columns[0] == '-':
+            # binary files
+            pass
+        else:
+            if not path in record['files']:
+                record['files'][path] = {'add': 0, 'del':0}
+            record['files'][path]['add'] += int(columns[0])
+            record['files'][path]['del'] += int(columns[1])
+
 print '{}]'
