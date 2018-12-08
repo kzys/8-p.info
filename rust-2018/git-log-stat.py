@@ -15,8 +15,6 @@ for line in lines:
         continue
     columns = re.split('\s+', line)
     if columns[0] == 'commit':
-        if len(record) > 2:
-            print json.dumps(record), ','
         record = {}
         record['author_date_time'] = columns[1]
         record['commit'] = columns[2]
@@ -26,16 +24,14 @@ for line in lines:
         path = '/'.join(xs)
         if len(path) == 0:
             path = 'root'
-        if not path in record:
-            record['files'] = {}
 
         if columns[0] == '-':
             # binary files
             pass
         else:
-            if not path in record['files']:
-                record['files'][path] = {'add': 0, 'del':0}
-            record['files'][path]['add'] += int(columns[0])
-            record['files'][path]['del'] += int(columns[1])
+            record['path'] = path
+            record['add'] = int(columns[0])
+            record['del'] = int(columns[1])
+            print json.dumps(record), ","
 
 print '{}]'
