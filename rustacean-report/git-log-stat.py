@@ -5,7 +5,9 @@ import json
 
 # git config diff.renameLimit 9999
 
-lines = subprocess.check_output([ 'git', 'log', '--format=commit %aI %h', '--numstat' ] + sys.argv[1:]).split('\n')
+lines = subprocess.check_output([ 'git', 'log', '--format=commit %aI %h',
+                                  #'--numstat'
+] + sys.argv[1:]).split('\n')
 
 record = {}
 
