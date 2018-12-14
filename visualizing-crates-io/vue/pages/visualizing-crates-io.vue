@@ -87,7 +87,7 @@
             },
 
             async renderPackageCount() {
-                let res = await axios.get(`package-count.json`);
+                let res = await axios.get(`/_visualizing-crates-io/package-count.json`);
                 var el = this.getCanvas('package-count');
 
                 let data = res.data;
@@ -111,7 +111,7 @@
             },
 
             async renderPopularPackages(kind) {
-                let res = await axios.get(`popular-${kind}-packages.json`);
+                let res = await axios.get(`/_visualizing-crates-io/popular-${kind}-packages.json`);
                 var el = this.getCanvas(`popular-${kind}-packages`);
 
                 let labels = res.data.map(x => x.index)
