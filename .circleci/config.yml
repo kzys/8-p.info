@@ -22,7 +22,7 @@ jobs:
           paths:
             - node_modules
           key: deps-{{ checksum ".circleci/config.yml" }}-{{ checksum "package.json" }}
-      - run: npm run dev generate
+      - run: ./build.sh
       - persist_to_workspace:
           root: ~/work/dist
           paths:
