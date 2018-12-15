@@ -99,7 +99,9 @@
                         labels: labels,
                         datasets: [{
                             label: '# of packages',
-                            data: values
+                            data: values,
+                            backgroundColor: 'rgba(227,74,51,0.6)',
+                            borderWidth: 0,
                         }],
                     },
                     options: {
@@ -138,7 +140,9 @@
                         labels: labels,
                         datasets: [{
                             label: '# of dependents',
-                            data: data
+                            data: data,
+                            backgroundColor: 'rgba(227,74,51,0.6)',
+                            borderWidth: 0,
                         }]
                     },
                     options: {
@@ -231,10 +235,6 @@ h3 {
 .chart {
     width: 100%;
     height: 20vw;
-}
-
-.crates-io {
-    background: #f0f0f0;
 }
 </style>
 <!--
