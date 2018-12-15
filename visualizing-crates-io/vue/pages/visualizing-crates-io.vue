@@ -104,8 +104,24 @@
                     },
                     options: {
                         maintainAspectRatio: false,
-                        legend: { display: false }
-                    }
+                        legend: { display: false },
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    callback: function(value, index, values) {
+                                        return value.toLocaleString();
+                                    }
+                                }
+                            }]
+                        },
+                        tooltips: {
+                            callbacks: {
+                                label: function(item, data) {
+                                    return item.yLabel.toLocaleString();
+                                }
+                            }
+                        }
+                    },
                 });            
             },
 
@@ -127,7 +143,23 @@
                     },
                     options: {
                         maintainAspectRatio: false,
-                        legend: { display: false }
+                        legend: { display: false },
+                        scales: {
+                            xAxes: [{
+                                ticks: {
+                                    callback: function(value, index, values) {
+                                        return value.toLocaleString();
+                                    }
+                                }
+                            }]
+                        },
+                        tooltips: {
+                            callbacks: {
+                                label: function(item, data) {
+                                    return item.xLabel.toLocaleString();
+                                }
+                            }
+                        }
                     }
                 });            
             }
