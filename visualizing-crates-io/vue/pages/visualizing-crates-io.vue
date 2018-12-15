@@ -3,9 +3,9 @@
         <div class="intro">
             <h1>Visualizing Crates.io</h1>
             <p>
-                Rust's packages are called "crates", and its central registry is 
-                <a href="https://crates.io">crates.io</a> that stores its history on
-                <a href="https://github.com/rust-lang/crates.io-index">rust-lang/creates.io-index</a>.
+                Rust's packages are called "crates". The central registry &mdash; 
+                <a href="https://crates.io">crates.io</a> stores its entire history as
+                <a href="https://github.com/rust-lang/crates.io-index">a Git repository</a>.
                 This visualization uses the Git repository to show (one aspect of) Rust's growing ecosystem. 
             </p>
         </div>
@@ -20,7 +20,7 @@
                 Due to the growth, the Rust team decided to
                 <a href="https://internals.rust-lang.org/t/cargos-crate-index-upcoming-squash-into-one-commit/8440">squash all commits on the repository</a>
                 as one commit. Cargo, Rust's package manager was designed and prepared for this squash commit.
-                So, most of us didn't notice the moment.
+                So, most of developers didn't notice the moment.
             </p>
 
             <h2>Popular Crates: serde is used by over <span class="n">3,000</span> crates</h2>
