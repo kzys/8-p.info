@@ -14,5 +14,9 @@ module.exports = {
   },
   build: {
     postcss: [ postcss_nested ]
-  }
+  },
+
+  modules: [
+    ['@nuxtjs/google-analytics', { id: 'UA-329758-1' } ]
+  ]
 }
