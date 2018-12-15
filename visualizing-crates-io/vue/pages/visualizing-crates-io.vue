@@ -1,7 +1,6 @@
 <template>
     <div id="body">
         <div class="intro">
-            <div class="warn">[BETA; DON'T SHARE]</div>
             <h1>Visualizing Crates.io</h1>
             <p>
                 Rust's packages are called "crates", and its central registry is 
@@ -65,7 +64,7 @@
 
     export default {
         head: {
-            title: "[BETA; DON'T SHARE] Visualizing Crates.io",
+            title: 'Visualizing Crates.io',
             link: [
                 { href: 'https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700', rel: 'stylesheet'}
             ]
@@ -168,10 +167,6 @@ p {
     width: 100%;
     padding: 100px 40px 10px 40px;
     background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
-}
-
-.warn {
-    color: red;
 }
 
 h1 { 
