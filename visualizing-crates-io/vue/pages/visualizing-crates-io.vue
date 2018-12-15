@@ -217,10 +217,14 @@ h1 {
     justify-content: space-between;
 }
 
+#package-count {
+    height: 400px;
+}
+
 #popular-normal-packages,
 #popular-dev-packages,
 #popular-build-packages {
-    height: 40vw;
+    height: 400px;
 }
 
 h2 {
@@ -231,11 +235,6 @@ h2 {
 
 h3 {
     font-size: 20px;
-}
-
-.chart {
-    width: 100%;
-    height: 20vw;
 }
 </style>
 <!--
