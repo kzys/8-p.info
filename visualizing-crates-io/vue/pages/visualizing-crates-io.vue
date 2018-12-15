@@ -173,6 +173,7 @@
 <style scoped>
 #body {
     font-family: 'Roboto Condensed', sans-serif;
+    -webkit-font-smoothing: antialiased;
     font-size: 20px;
     font-weight: 400;
 }
