@@ -1,6 +1,7 @@
 <template>
     <div id="body">
         <div class="intro">
+            <div class="warn">[BETA - PLEASE DON'T SHARE]</div>
             <h1>Visualizing Crates.io</h1>
             <p>
                 Rust's packages are called "crates". The central registry &mdash; 
@@ -23,7 +24,7 @@
                 So, most of developers didn't notice the moment.
             </p>
 
-            <h2>But <span class="n">32.90%</a> of crates only have one release</h2>
+            <h2>But <span class="n">32.90%</span> of crates only have one release</h2>
             <div id="package-age"><canvas/></div>
             <p>X% of crates have one release, Y% have two, Z% have three. The ecosystem is still fairly young.</p>
 
@@ -286,9 +287,13 @@
     font-weight: 400;
 }
 
+.warn {
+    color: red;
+}
+
 h1 {
     font-weight: 700;
-    font-size: 60px;
+    font-size: 40px;
     margin: 0;
     padding: 0;
 }
