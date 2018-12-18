@@ -6,7 +6,7 @@
                 Rust's packages are called "crates". The central registry &mdash; 
                 <a href="https://crates.io">crates.io</a> stores its entire history as
                 <a href="https://github.com/rust-lang/crates.io-index">a Git repository</a>.
-                This visualization uses the Git repository to show (one aspect of) Rust's growing ecosystem. 
+                This visualization uses the Git repository to show Rust's growing ecosystem. 
             </p>
         </div>
         <div class="section crates-io">
@@ -23,16 +23,36 @@
                 So, most of developers didn't notice the moment.
             </p>
 
-            <h2>Popular Crates: serde is used by over <span class="n">3,000</span> crates</h2>
-            <p>
-                The below charts show the popularity of crates, based on the number of their dependents.
-            </p>
+            <h2>But <span class="n">32.90%</a> of crates only have one release</h2>
+            <div id="package-age"><canvas/></div>
+            <p>X% of crates have one release, Y% have two, Z% have three. The ecosystem is still fairly young.</p>
+
+            <h2>Dependencies</h2>
             <p>
                 Normal, development and build dependencies are declared on
                 <a href="https://doc.rust-lang.org/cargo/reference/specifying-dependencies.html">Cargo.toml</a>.
                 Normal dependencies are dependencies used by crates themselves.
                 Development dependencies are dependencies used by crates' tests and benchmarks.
                 Build dependencies are dependencies used by creates' build scripts.
+            </p>
+            <div class="row">
+                <div class="col">
+                    <h3>Normal</h3>
+                    <div id="dep-normal-histogram"><canvas/></div>
+                </div>
+                <div class="col">
+                    <h3>Development</h3>
+                    <div id="dep-dev-histogram"><canvas/></div>
+                </div>
+                <div class="col">
+                    <h3>Build</h3>
+                    <div id="dep-build-histogram"><canvas/></div>
+                </div>
+            </div>
+
+            <h2>Popular Crates: serde is used by over <span class="n">3,000</span> crates</h2>
+            <p>
+                The below charts show the popularity of crates, based on the number of their dependents.
             </p>
             <div class="row">
                 <div class="col">
@@ -72,6 +92,7 @@
 
         async mounted() {
             this.renderPackageCount();
+            this.renderPackageAge();
             this.renderPopularPackages('normal');
             this.renderPopularPackages('dev');
             this.renderPopularPackages('build');
@@ -166,6 +187,93 @@
                         }
                     }
                 });            
+            },
+
+            async renderPackageAge() {
+                let res = await axios.get(`/_visualizing-crates-io/package-age.json`);
+                var el = this.getCanvas(`package-age`);
+
+                let labels = [...Array(res.data['revisions'].length).keys()].map(x => x+1);
+
+                var myChart = new Chart(el, {
+                    type: 'bar',
+                    data: {
+                        labels: labels,
+                        datasets: [
+                            {
+                            label: '# of dependents',
+                            data: res.data['revisions'],
+                            backgroundColor: 'rgba(227,74,51,0.6)',
+                            borderWidth: 0,
+                        }
+                        ]
+                    },
+                    options: {
+                        maintainAspectRatio: false,
+                        legend: { display: false },
+                        scales: {
+                            xAxes: [{
+                                ticks: {
+                                    callback: function(value, index, values) {
+                                        return value.toLocaleString();
+                                    }
+                                }
+                            }],
+                            yAxes: [{
+                                type: 'logarithmic'
+                            }]
+                        },
+                        tooltips: {
+                            callbacks: {
+                                label: function(item, data) {
+                                    return item.yLabel.toLocaleString();
+                                }
+                            }
+                        }
+                    }
+                });            
+            },
+
+            async renderDependencyHistogram() {
+                let res = await axios.get(`/_visualizing-crates-io/deps-histogram.json`);
+                var el = this.getCanvas(`dep-normal-histogram`);
+
+                let labels = [...Array(res.data['normal'].length).keys()];
+
+                var myChart = new Chart(el, {
+                    type: 'bar',
+                    data: {
+                        labels: labels,
+                        datasets: [
+                            {
+                            label: '# of dependents',
+                            data: res.data['normal'],
+                            backgroundColor: 'rgba(227,74,51,0.6)',
+                            borderWidth: 0,
+                        }
+                        ]
+                    },
+                    options: {
+                        maintainAspectRatio: false,
+                        legend: { display: false },
+                        scales: {
+                            xAxes: [{
+                                ticks: {
+                                    callback: function(value, index, values) {
+                                        return value.toLocaleString();
+                                    }
+                                }
+                            }]
+                        },
+                        tooltips: {
+                            callbacks: {
+                                label: function(item, data) {
+                                    return item.yLabel.toLocaleString();
+                                }
+                            }
+                        }
+                    }
+                });            
             }
         }
     }
@@ -178,7 +286,14 @@
     font-weight: 400;
 }
 
-h1, h2, h3 {
+h1 {
+    font-weight: 700;
+    font-size: 60px;
+    margin: 0;
+    padding: 0;
+}
+
+h2, h3 {
     font-weight: 400;
 }
 
@@ -191,7 +306,7 @@ p {
 }
 
 .intro, .section {
-    padding: 10px 40px;
+    padding: 10px 20px;
 }
 
 #about {
@@ -206,18 +321,16 @@ p {
     background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
 }
 
-h1 { 
-    font-size: 30px;
-    margin: 0;
-    padding: 0;
-}
-
 .row {
     display: flex;
     justify-content: space-between;
 }
 
 #package-count {
+    height: 400px;
+}
+
+#package-age {
     height: 400px;
 }
 
