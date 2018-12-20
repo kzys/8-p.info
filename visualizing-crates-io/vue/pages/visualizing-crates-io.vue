@@ -13,20 +13,31 @@
         <div class="section crates-io">
             <h2>More than <span class="n">20,000</span> crates</h2>
             <p>
-                In November 2018, the number of crates on the registry exceeded 20,000.
+                In October 2018, the number of crates on the registry exceeded 20,000.
             </p>
-            <div id="package-count"><canvas/></div>
+            <div class="chart" id="package-count"><canvas/></div>
             <p>
-                Another histric moment was happening in September.
+                Another interesting moment was happening in September.
                 Due to the growth, the Rust team decided to
                 <a href="https://internals.rust-lang.org/t/cargos-crate-index-upcoming-squash-into-one-commit/8440">squash all commits on the repository</a>
                 as one commit. Cargo, Rust's package manager was designed and prepared for this squash commit.
                 So, most of developers didn't notice the moment.
             </p>
 
-            <h2>But <span class="n">32.90%</span> of crates only have one release</h2>
-            <div id="package-age"><canvas/></div>
-            <p>X% of crates have one release, Y% have two, Z% have three. The ecosystem is still fairly young.</p>
+            <h2><span class="n">32.90%</span> of crates only have one release</h2>
+            <p>
+                While there are a lot of crates out there, 
+                many crates have only one or two releases.
+                The ecosystem is still faily young.
+                This histogram shows the distribution of the number of releases from 1 to 20.
+            </p>
+            <div class="chart" id="package-age"><canvas/></div>
+            <p>
+                On the other hand, 1.43% of crates have more than 100 releases.
+                Crates with "rustc-ap-" prefix are automatically published by
+                <a href="https://github.com/alexcrichton/rustc-auto-publish">alexcrichton/rustc-auto-publish</a> though.
+            </p>
+            <div class="chart" id="mature-packages"><canvas/></div>
 
             <h2>Dependencies</h2>
             <p>
@@ -83,6 +94,14 @@
     import Chart from 'chart.js';
     import axios from 'axios';
 
+    const AXIS = {
+        ticks: {
+            callback: function(value, index, values) {
+                return value.toLocaleString();
+            }
+        }
+    };
+
     export default {
         head: {
             title: 'Visualizing Crates.io',
@@ -94,6 +113,7 @@
         async mounted() {
             this.renderPackageCount();
             this.renderPackageAge();
+            this.renderMaturePackages();
             this.renderPopularPackages('normal');
             this.renderPopularPackages('dev');
             this.renderPopularPackages('build');
@@ -122,21 +142,15 @@
                         datasets: [{
                             label: '# of packages',
                             data: values,
-                            backgroundColor: 'rgba(227,74,51,0.6)',
-                            borderWidth: 0,
+                            borderColor: 'rgba(227,74,51,0.6)',
+                            fill: false,
                         }],
                     },
                     options: {
                         maintainAspectRatio: false,
                         legend: { display: false },
                         scales: {
-                            yAxes: [{
-                                ticks: {
-                                    callback: function(value, index, values) {
-                                        return value.toLocaleString();
-                                    }
-                                }
-                            }]
+                            yAxes: [ AXIS ]
                         },
                         tooltips: {
                             callbacks: {
@@ -171,13 +185,7 @@
                         maintainAspectRatio: false,
                         legend: { display: false },
                         scales: {
-                            xAxes: [{
-                                ticks: {
-                                    callback: function(value, index, values) {
-                                        return value.toLocaleString();
-                                    }
-                                }
-                            }]
+                            xAxes: [ AXIS ]
                         },
                         tooltips: {
                             callbacks: {
@@ -202,7 +210,7 @@
                         labels: labels,
                         datasets: [
                             {
-                            label: '# of dependents',
+                            label: '# of revisions',
                             data: res.data['revisions'],
                             backgroundColor: 'rgba(227,74,51,0.6)',
                             borderWidth: 0,
@@ -213,21 +221,46 @@
                         maintainAspectRatio: false,
                         legend: { display: false },
                         scales: {
-                            xAxes: [{
-                                ticks: {
-                                    callback: function(value, index, values) {
-                                        return value.toLocaleString();
-                                    }
-                                }
-                            }],
-                            yAxes: [{
-                                type: 'logarithmic'
-                            }]
+                            yAxes: [ AXIS ],
+                            xAxes: [ AXIS ],
                         },
                         tooltips: {
                             callbacks: {
                                 label: function(item, data) {
                                     return item.yLabel.toLocaleString();
+                                }
+                            }
+                        }
+                    }
+                });            
+            },
+
+            async renderMaturePackages() {
+                let res = await axios.get(`/_visualizing-crates-io/mature-packages.json`);
+                var el = this.getCanvas(`mature-packages`);
+
+                let labels = res.data.map(x => x.package)
+                let data = res.data.map(x => x.revisions)
+
+                var myChart = new Chart(el, {
+                    type: 'horizontalBar',
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            label: '# of versions',
+                            data: data,
+                            backgroundColor: 'rgba(227,74,51,0.6)',
+                            borderWidth: 0,
+                        }]
+                    },
+                    options: {
+                        maintainAspectRatio: false,
+                        legend: { display: false },
+                        scales: { xAxes: [ AXIS ] },
+                        tooltips: {
+                            callbacks: {
+                                label: function(item, data) {
+                                    return item.xLabel.toLocaleString();
                                 }
                             }
                         }
@@ -257,15 +290,7 @@
                     options: {
                         maintainAspectRatio: false,
                         legend: { display: false },
-                        scales: {
-                            xAxes: [{
-                                ticks: {
-                                    callback: function(value, index, values) {
-                                        return value.toLocaleString();
-                                    }
-                                }
-                            }]
-                        },
+                        scales: { xAxes: [ AXIS ] },
                         tooltips: {
                             callbacks: {
                                 label: function(item, data) {
@@ -285,6 +310,7 @@
     -webkit-font-smoothing: antialiased;
     font-size: 20px;
     font-weight: 400;
+    margin: 10px 0;
 }
 
 .warn {
@@ -311,7 +337,9 @@ p {
 }
 
 .intro, .section {
-    padding: 10px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
 }
 
 #about {
@@ -335,10 +363,21 @@ p {
     height: 400px;
 }
 
-#package-age {
-    height: 400px;
+.chart {
+    margin: 0 auto;
 }
 
+#package-age {
+    width: 600px;
+    height: 200px;
+}
+
+#mature-packages {
+    width: 800px;
+    height: 200px;
+}
+
+#mature-packages,
 #popular-normal-packages,
 #popular-dev-packages,
 #popular-build-packages {
