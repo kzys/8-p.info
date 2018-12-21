@@ -1,7 +1,12 @@
 import pandas as pd
 import collections
+import numpy as np
 
 DEP_KINDS = ['build', 'dev', 'normal']
+
+def histogram(series):
+    bins = range(0, int(series.max()/10))
+    return np.histogram(series, bins = bins)[0].tolist()
 
 def collect_clients(df):
     clients = {}

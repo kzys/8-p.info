@@ -24,22 +24,22 @@
                 So, most of developers didn't notice the moment.
             </p>
 
-            <h2><span class="n">32.90%</span> of crates only have one release</h2>
+            <h2>But, a lot of them have less than <span class="n">6</span> releases</h2>
             <p>
                 While there are a lot of crates out there, 
-                many crates have only one or two releases.
+                many crates have less than 6 releases.
                 The ecosystem is still faily young.
                 This histogram shows the distribution of the number of releases.
             </p>
             <div class="chart" id="package-age"><div/></div>
             <p>
                 On the other hand, 1.43% of crates have more than 100 releases.
-                Crates with "rustc-ap-" prefix are automatically published by
-                <a href="https://github.com/alexcrichton/rustc-auto-publish">alexcrichton/rustc-auto-publish</a> though.
+                Please note that crates with "rustc-ap-" prefix are automatically published by
+                <a href="https://github.com/alexcrichton/rustc-auto-publish">alexcrichton/rustc-auto-publish</a>.
             </p>
-            <div class="chart" id="mature-packages"><div/></div>
+            <div class="chart" id="aged-packages"><div/></div>
 
-            <h2>Dependencies</h2>
+            <h2>Zero Dependencies is Good Dependencies?</h2>
             <p>
                 Normal, development and build dependencies are declared on
                 <a href="https://doc.rust-lang.org/cargo/reference/specifying-dependencies.html">Cargo.toml</a>.
@@ -48,38 +48,14 @@
                 Build dependencies are dependencies used by creates' build scripts.
             </p>
             <div class="row">
-                <div class="col">
-                    <h3>Normal</h3>
-                    <div id="dep-normal-histogram"><canvas/></div>
-                </div>
-                <div class="col">
-                    <h3>Development</h3>
-                    <div id="dep-dev-histogram"><canvas/></div>
-                </div>
-                <div class="col">
-                    <h3>Build</h3>
-                    <div id="dep-build-histogram"><canvas/></div>
-                </div>
+                <div id="deps" class="chart"><div/></div>
             </div>
 
             <h2>Popular Crates: serde is used by over <span class="n">3,000</span> crates</h2>
             <p>
                 The below charts show the popularity of crates, based on the number of their dependents.
             </p>
-            <div class="row">
-                <div class="col">
-                    <h3>Normal</h3>
-                    <div id="popular-normal-packages"><div/></div>
-                </div>
-                <div class="col">
-                    <h3>Development</h3>
-                    <div id="popular-dev-packages"><div/></div>
-                </div>
-                <div class="col">
-                    <h3>Build</h3>
-                    <div id="popular-build-packages"><div/></div>
-                </div>
-            </div>
+            <div id="popular-packages"><div/></div>
         </div>
         <div id="about">
             <div class="inner">
@@ -91,17 +67,7 @@
     </div>
 </template>
 <script>
-    import Chart from 'chart.js';
-    import axios from 'axios';
     import vegaEmbed from 'vega-embed';
-
-    const AXIS = {
-        ticks: {
-            callback: function(value, index, values) {
-                return value.toLocaleString();
-            }
-        }
-    };
 
     export default {
         head: {
@@ -114,20 +80,16 @@
         async mounted() {
             this.renderPackageCount();
             this.renderPackageAge();
-            // this.renderMaturePackages();
-            this.renderPopularPackages('normal');
-            this.renderPopularPackages('dev');
-            this.renderPopularPackages('build');
-          },
+            this.renderAgedPackages();
+            this.renderPopularPackages();
+            this.renderDeps();
+        },
 
         data() {
             return { };
         },
-        methods: {
-            getCanvas(id) {
-                return document.getElementById(id).getElementsByTagName('canvas')[0];
-            },
 
+        methods: {
             async renderPackageCount() {
                 let spec = {
                     width: 800,
@@ -137,7 +99,7 @@
                     "data": {
                         url: '/_visualizing-crates-io/package-count.json',
                     },
-                    "mark": {type: "line" },
+                    mark: 'area',
                     "encoding": {
                         "x": {
                             field: "author_date_time",
@@ -157,18 +119,19 @@
 
             async renderPackageAge() {
                 let spec = {
-                    width: 800,
-                    height: 400,
-                    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
-                    "data": {
+                    $schema: "https://vega.github.io/schema/vega-lite/v3.json",
+                    data: {
                         url: '/_visualizing-crates-io/package-revisions.json',
                     },
+                    width: 800,
+                    height: 400,
+                    mark: 'bar',
                     "encoding": {
                         "x": {
                             field: "revisions",
                             type: "quantitative",
                             title: "Number of Releases",
-                            bin: { maxbins: 50 },
+                            bin: { maxbins: 100 },
                         },
                         "y": {
                             aggregate: "count",
@@ -176,106 +139,117 @@
                             title: 'Number of Crates',
                             scale: {"type": "log"},
                         }
-                    },
-                    layer: [ { mark: 'bar' } ]
+                    }
                 };
                 vegaEmbed('#package-age div', spec, {actions: false});
             },
 
-            async renderMaturePackages0() {
+            async renderAgedPackages() {
                 let spec = {
+                    $schema: "https://vega.github.io/schema/vega-lite/v3.json",
                     width: 400,
                     height: 600,
-                    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
-                    "data": {
-                        url: '/_visualizing-crates-io/all-packages.json',
-                    },
+                    data: { url: '/_visualizing-crates-io/aged-packages.json' },
                     transform: [
-                        {"filter": {"field": "revisions", "gt": 100}},
-                        {"sample": 10},
+                        {
+                            window: [{ op: 'rank', as: 'rank' }],
+                            sort: [{ field: 'revisions', order: 'descending' }]
+                        },
+                        { filter: 'datum.rank <= 40' },
+                        {calculate: 'test(/rustc-ap/, datum.package)', as: 'is_rustc_ap'},
                     ],
-                    "encoding": {
+                    mark: 'bar',
+                    encoding: {
                         "x": {
-                            field: "revisions",
+                            field: 'revisions',
                             type: "quantitative",
-                            title: "Number of Releases",
+                            title: 'Number of Releases',
                         },
                         "y": {
-                            field: "package",
-                            type: "ordinal",
-                            sort: {field: 'revisions', op:'max',order:'descending'},
-                            title: 'Name'
-                        }
+                            field: 'package',
+                            type: 'ordinal',
+                            title: 'Name',
+                            sort: { field: 'revisions', op: 'max', order: 'descending' },
+                        },
+                        "color": {
+                            field: 'is_rustc_ap',
+                            title: 'Auto Publish',
+                        },
                     },
-                    layer: [ { mark: 'bar' } ]
                 };
-                vegaEmbed('#mature-packages div', spec, {actions: false});
+                vegaEmbed('#aged-packages div', spec, {actions: false});
             },
 
-            async renderPopularPackages(kind) {
-                let key = 'clients_count_' + kind;
+            async renderPopularPackages() {
+                let kinds = ['normal', 'dev', 'build'];
+                let concat = kinds.map(kind => {
+                    let key = `clients_count_${kind}`;
+                    return {
+                        transform: [
+                            {
+                                window: [{ op: 'rank', as: 'rank' }],
+                                sort: [{ field: key, order: 'descending' }]
+                            },
+                            { filter: 'datum.rank <= 20' },
+                        ],
+                        encoding: {
+                            color: {
+                                field: 'revisions',
+                                type: "quantitative",
+                                title: "Number of Releases",
+                            },
+                            x: {
+                                field: key,
+                                type: "quantitative",
+                                title: `Number of Dependents (${kind})`,
+                            },
+                            y: {
+                                field: "index",
+                                type: "ordinal",
+                                sort: { field: key, op: 'max', order: 'descending' },
+                                title: 'Name'
+                            }
+                        },
+                        mark: 'bar',
+                    };
+                });
+
                 let spec = {
                     width: 200,
                     height: 400,
                     $schema: "https://vega.github.io/schema/vega-lite/v3.json",
                     data: { url: '/_visualizing-crates-io/popular-packages.json' },
-                    transform: [
-                        {
-                            window: [{ op: 'rank', as: 'rank' }],
-                            sort: [{ field: key, order: 'descending' }]
-                        },
-                        { filter: 'datum.rank <= 20' },
-                    ],
-                    encoding: {
-                        x: {
-                            field: key,
-                            type: "quantitative",
-                            title: "Number of Dependents",
-                        },
-                        y: {
-                            field: "index",
-                            type: "ordinal",
-                            sort: { field: key, op: 'max', order: 'descending' },
-                            title: 'Name'
-                        }
-                    },
-                    layer: [ { mark: 'bar' } ],
+                    hconcat: concat,
                 };
-                vegaEmbed(`#popular-${kind}-packages`, spec, {actions: false});
+                vegaEmbed(`#popular-packages div`, spec, {actions: false});
             },
 
-            async renderDependencyHistogram() {
-                let res = await axios.get(`/_visualizing-crates-io/deps-histogram.json`);
-                var el = this.getCanvas(`dep-normal-histogram`);
-
-                let labels = [...Array(res.data['normal'].length).keys()];
-
-                var myChart = new Chart(el, {
-                    type: 'bar',
-                    data: {
-                        labels: labels,
-                        datasets: [
-                            {
-                            label: '# of dependents',
-                            data: res.data['normal'],
-                            backgroundColor: 'rgba(227,74,51,0.6)',
-                            borderWidth: 0,
-                        }
-                        ]
-                    },
-                    options: {
-                        maintainAspectRatio: false,
-                        legend: { display: false },
-                        scales: { xAxes: [ AXIS ] },
-                        tooltips: {
-                            callbacks: {
-                                label: function(item, data) {
-                                    return item.yLabel.toLocaleString();
-                                }
+            async renderDeps() {
+                let kinds = ['normal', 'dev', 'build'].map(k => `deps_count_${k}`);
+                let spec = {
+                    width: 200,
+                    height: 200,
+                    $schema: "https://vega.github.io/schema/vega-lite/v3.json",
+                    data: { url: '/_visualizing-crates-io/package-deps.json' },
+                    repeat: { 'column': kinds },
+                    spec: {
+                        mark: 'bar',
+                        encoding: {
+                            "x": {
+                                field: { repeat: 'column' },
+                                type: "quantitative",
+//                                title: "Number of Dependencies",
+                            },
+                            "y": {
+                                aggregate: "count",
+                                type: "quantitative",
+                                title: 'Number of Crates',
+                                scale: {"type": "log"},
                             }
                         }
                     }
-                });            
+                };
+                vegaEmbed(`#deps div`, spec, {actions: false});
             }
         }
     }
@@ -336,9 +310,8 @@ p {
 }
 
 .chart {
-    text-align: center;
+    margin: 0 auto;
 }
-
 
 #popular-normal-packages,
 #popular-dev-packages,
