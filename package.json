@@ -10,7 +10,8 @@
     "chart.js": "^2.7.3",
     "normalize.css": "^8.0.0",
     "nuxt": "^2.1.0",
-    "postcss-import": "^11.1.0"
+    "postcss-import": "^11.1.0",
+    "vega-embed": "^3.26.1"
   },
   "devDependencies": {
     "postcss-nested": "^4.1.0"
