@@ -92,11 +92,10 @@
                 { href: 'https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700', rel: 'stylesheet'}
             ],
             meta: [
-                { name: 'twitter:title', content: TITLE },
+                // https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/markup
                 { name: 'og:title', content: TITLE },
-
-                { name: 'twitter:description', content: DESC },
                 { name: 'og:description', content: DESC },
+                { name: 'og:type', content: 'website' },
             ]
         },
 
