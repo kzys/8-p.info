@@ -93,10 +93,10 @@
             ],
             meta: [
                 // https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/markup
-                { name: 'og:title', content: TITLE },
-                { name: 'og:description', content: DESC },
-                { name: 'og:type', content: 'website' },
-                { name: 'og:image', content: 'https://8-p.info/_visualizing-crates-io/ogp.png' },
+                { property: 'og:title', content: TITLE },
+                { property: 'og:description', content: DESC },
+                { property: 'og:type', content: 'website' },
+                { property: 'og:image', content: 'https://8-p.info/_visualizing-crates-io/ogp.png' },
             ]
         },
 
