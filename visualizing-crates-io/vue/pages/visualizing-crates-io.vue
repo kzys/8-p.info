@@ -58,10 +58,13 @@
             <div id="popular-packages"><div/></div>
         </div>
         <div id="about">
-            <div class="inner">
-                <p>
-                    Created by Kazuyoshi Kato | <a href="http://8-p.info/">8-p.info</a><br/>
-                </p>
+            <div class="row">
+                <div class="col">
+                    Created by Kazuyoshi Kato | <a href="http://8-p.info/">8-p.info</a>
+                </div>
+                <div class="col">
+                    Made in Seattle, Washington
+                </div>
             </div>
         </div>
     </div>
@@ -255,6 +258,10 @@
     }
 </script>
 <style scoped>
+* {
+    box-sizing: border-box;
+}
+
 #body {
     font-family: 'Roboto Condensed', sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -293,14 +300,14 @@ p {
 }
 
 #about {
-    height: 100px;
+    height: 40px;
 }
-#about .inner {
+#about .row {
     position: fixed;
     bottom: 0;
-    font-size: 90%;
+    font-size: 15px;
     width: 100%;
-    padding: 100px 40px 10px 40px;
+    padding: 10px 20px;
     background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
 }
 
