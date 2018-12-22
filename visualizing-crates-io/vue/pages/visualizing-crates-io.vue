@@ -1,7 +1,9 @@
 <template>
     <div id="body">
         <div class="intro">
+        <!--
             <div class="warn">[BETA - PLEASE DON'T SHARE]</div>
+            -->
             <h1>Visualizing Crates.io</h1>
             <p>
                 Rust's packages are called "crates". The central registry &mdash; 
