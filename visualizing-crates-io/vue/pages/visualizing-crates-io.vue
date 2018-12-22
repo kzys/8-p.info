@@ -14,13 +14,14 @@
             <h2>More than <span class="n">20,000</span> crates</h2>
             <p>
                 In November 2018, the number of crates on the registry exceeded 20,000.
+                Due to the growth throught the year, the Rust team had to
+                <a href="https://internals.rust-lang.org/t/cargos-crate-index-upcoming-squash-into-one-commit/8440">squash all commits on the repository as one commit</a>
+                in September.
             </p>
             <div class="chart" id="package-count"><div/></div>
             <p>
-                Another interesting moment was happening in September.
-                Due to the growth, the Rust team decided to
-                <a href="https://internals.rust-lang.org/t/cargos-crate-index-upcoming-squash-into-one-commit/8440">squash all commits on the repository</a>
-                as one commit. Cargo, Rust's package manager was designed and prepared for this squash commit.
+                It had been planned from the beginning.
+                Cargo, Rust's package manager was designed and prepared for this squash commit.
                 So, most of developers didn't notice the moment.
             </p>
 
@@ -33,7 +34,8 @@
             </p>
             <div class="chart" id="package-age"><div/></div>
             <p>
-                On the other hand, 1.43% of crates have more than 100 releases.
+                On the other hand, some crates have more than 100 releases.
+                The below chart shows these "aged" crates.
                 Please note that crates with "rustc-ap-" prefix are automatically published by
                 <a href="https://github.com/alexcrichton/rustc-auto-publish">alexcrichton/rustc-auto-publish</a>.
             </p>
@@ -41,8 +43,7 @@
 
             <h2>Zero Dependencies is Good Dependencies?</h2>
             <p>
-                Normal, development and build dependencies are declared on
-                <a href="https://doc.rust-lang.org/cargo/reference/specifying-dependencies.html">Cargo.toml</a>.
+                This histgram shows the number of dependencies on each section.
                 Normal dependencies are dependencies used by crates themselves.
                 Development dependencies are dependencies used by crates' tests and benchmarks.
                 Build dependencies are dependencies used by creates' build scripts.
@@ -50,13 +51,20 @@
             <div class="row">
                 <div id="deps" class="chart"><div/></div>
             </div>
+            <p>
+                A lot of crates have literally zero dependencies. But many crates are also young.
+                The heatmap shows the relationship between releases vs dependencies.
+            </p>
 
             <h2>Popular Crates: serde is used by over <span class="n">3,000</span> crates</h2>
             <p>
                 The below charts show the popularity of crates, based on the number of their dependents.
+                Since they are based on dependent crates, applications like <strong>ripgrep</strong> is not there.
+                Instead <strong>serde</strong> is appeared in all three rankings.
             </p>
-            <div id="popular-packages"><div/></div>
+            <div id="popular-packages" class="chart"><div/></div>
         </div>
+
         <div id="about">
             <div class="row">
                 <div class="col">
@@ -231,25 +239,49 @@
                 // Make "field" human-friendly since "title" cannot be defined with "repeat".
                 let kinds = ['normal', 'dev', 'build'].map(k => `Number of Dependencies (${k})`);
                 let spec = {
-                    width: 200,
-                    height: 200,
                     $schema: "https://vega.github.io/schema/vega-lite/v3.json",
                     data: { url: '/_visualizing-crates-io/package-deps.json' },
-                    repeat: { 'column': kinds },
+                    repeat: { column: kinds },
                     spec: {
-                        mark: 'bar',
-                        encoding: {
-                            "x": {
-                                field: { repeat: 'column' },
-                                type: "quantitative",
+                        vconcat: [
+                            {
+                                mark: 'bar',
+                                encoding: {
+                                    x: {
+                                        field: { repeat: 'column' },
+                                        type: "quantitative",
+                                    },
+                                    y: {
+                                        aggregate: "count",
+                                        type: "quantitative",
+                                        title: 'Number of Crates',
+                                        scale: {"type": "log"},
+                                    }
+                                }
                             },
-                            "y": {
-                                aggregate: "count",
-                                type: "quantitative",
-                                title: 'Number of Crates',
-                                scale: {"type": "log"},
+                            {
+                                mark: 'rect',
+                                encoding: {
+                                    "color": {
+                                    "aggregate": "count",
+                                    "type": "quantitative",
+                                    scale: {"type": "log"},
+
+                                    },
+                                    x: {
+                                        field: { repeat: 'column' },
+                                        type: "quantitative",
+                                        bin: { maxbins: 20 },
+                                    },
+                                    y: {
+                                        field: "revisions",
+                                        type: "quantitative",
+                                        title: 'Number of Releases',
+                                        bin: { maxbins: 20 },
+                                    }
+                                }
                             }
-                        }
+                        ]
                     }
                 };
                 vegaEmbed(`#deps div`, spec, {actions: false});
@@ -285,18 +317,25 @@ h2, h3 {
     font-weight: 400;
 }
 
-p {
+.intro, .section p, .section h2 {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.section p {
     line-height: 1.4;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .n {
     font-weight: 700;
-}
-
-.intro, .section {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 10px;
 }
 
 #about {
@@ -325,12 +364,6 @@ div.chart {
 #popular-dev-packages,
 #popular-build-packages {
     height: 400px;
-}
-
-h2 {
-    font-size: 40px;
-    margin: 10px 0;
-    padding: 0;
 }
 
 h3 {
