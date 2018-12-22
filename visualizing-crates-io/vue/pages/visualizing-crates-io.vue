@@ -228,7 +228,8 @@
             },
 
             async renderDeps() {
-                let kinds = ['normal', 'dev', 'build'].map(k => `deps_count_${k}`);
+                // Make "field" human-friendly since "title" cannot be defined with "repeat".
+                let kinds = ['normal', 'dev', 'build'].map(k => `Number of Dependencies (${k})`);
                 let spec = {
                     width: 200,
                     height: 200,
@@ -241,7 +242,6 @@
                             "x": {
                                 field: { repeat: 'column' },
                                 type: "quantitative",
-//                                title: "Number of Dependencies",
                             },
                             "y": {
                                 aggregate: "count",
