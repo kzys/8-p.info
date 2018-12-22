@@ -96,7 +96,7 @@
                 { name: 'og:title', content: TITLE },
                 { name: 'og:description', content: DESC },
                 { name: 'og:type', content: 'website' },
-                { name: 'og:image', content: '/_visualizing-crates-io/ogp.png' },
+                { name: 'og:image', content: 'https://8-p.info/_visualizing-crates-io/ogp.png' },
             ]
         },
 
