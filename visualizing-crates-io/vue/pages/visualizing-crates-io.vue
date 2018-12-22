@@ -83,7 +83,7 @@
     import vegaEmbed from 'vega-embed';
 
     const TITLE = 'Visualizing Crates.io'
-    const DESC = "This visualization shows Rust's growning ecosystem through crates.io, Rust's central package repository."
+    const DESC = "Visualizing Rust's growing ecosystem through crates.io, Rust's central package repository."
 
     export default {
         head: {
