@@ -137,7 +137,7 @@
                         }
                     }
                 };
-                vegaEmbed('#package-count div', spec, {actions: true});
+                vegaEmbed('#package-count div', spec, {actions: false});
             },
 
             async renderPackageAge() {
