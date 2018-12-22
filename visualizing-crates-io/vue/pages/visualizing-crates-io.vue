@@ -96,6 +96,7 @@
                 { name: 'og:title', content: TITLE },
                 { name: 'og:description', content: DESC },
                 { name: 'og:type', content: 'website' },
+                { name: 'og:image', content: '/_visualizing-crates-io/ogp.png' },
             ]
         },
 
