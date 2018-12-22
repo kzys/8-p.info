@@ -1,9 +1,6 @@
 <template>
     <div id="body">
         <div class="intro">
-        <!--
-            <div class="warn">[BETA - PLEASE DON'T SHARE]</div>
-            -->
             <h1>Visualizing Crates.io</h1>
             <p>
                 Rust's packages are called "crates". The central registry &mdash; 
@@ -371,18 +368,4 @@ div.chart {
     margin: 0 auto;
     text-align: center;
 }
-
-#popular-normal-packages,
-#popular-dev-packages,
-#popular-build-packages {
-    height: 400px;
-}
-
-h3 {
-    font-size: 20px;
-}
 </style>
-<!--
-https://www.jetbrains.com/research/devecosystem-2018/
-https://octoverse.github.com/
--->
