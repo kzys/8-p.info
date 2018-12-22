@@ -13,7 +13,7 @@
         <div class="section crates-io">
             <h2>More than <span class="n">20,000</span> crates</h2>
             <p>
-                In October 2018, the number of crates on the registry exceeded 20,000.
+                In November 2018, the number of crates on the registry exceeded 20,000.
             </p>
             <div class="chart" id="package-count"><div/></div>
             <p>
