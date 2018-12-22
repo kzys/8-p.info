@@ -82,11 +82,21 @@
 <script>
     import vegaEmbed from 'vega-embed';
 
+    const TITLE = 'Visualizing Crates.io'
+    const DESC = "This visualization shows Rust's growning ecosystem through crates.io, Rust's central package repository."
+
     export default {
         head: {
-            title: 'Visualizing Crates.io',
+            title: TITLE,
             link: [
                 { href: 'https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700', rel: 'stylesheet'}
+            ],
+            meta: [
+                { name: 'twitter:title', content: TITLE },
+                { name: 'og:title', content: TITLE },
+
+                { name: 'twitter:description', content: DESC },
+                { name: 'og:description', content: DESC },
             ]
         },
 
@@ -106,7 +116,7 @@
             async renderPackageCount() {
                 let spec = {
                     width: 800,
-                    height: 400,
+                    height: 800,
                     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
                     "description": "A simple bar chart with embedded data.",
                     "data": {
@@ -127,7 +137,7 @@
                         }
                     }
                 };
-                vegaEmbed('#package-count div', spec, {actions: false});
+                vegaEmbed('#package-count div', spec, {actions: true});
             },
 
             async renderPackageAge() {
