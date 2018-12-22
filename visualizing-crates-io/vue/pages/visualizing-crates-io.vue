@@ -316,8 +316,9 @@ p {
     justify-content: space-between;
 }
 
-.chart {
+div.chart {
     margin: 0 auto;
+    text-align: center;
 }
 
 #popular-normal-packages,
