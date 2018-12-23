@@ -1,10 +1,14 @@
 <template>
-    <div id="index">
+    <div>
         <Header/>
-        <div>
+        <div id="container">
             <div class="content">
                 <p>
                     Kazuyoshi Kato is a software developer, Japanese and Seattle transplant.
+                </p>
+                <h2>Projects</h2>
+                <p>
+                    <nuxt-link to="/visualizing-crates-io/">Visualizing Crates.io</nuxt-link>
                 </p>
             </div>
         </div>
@@ -19,3 +23,9 @@
         components: { Header }
     }
 </script>
+<style scoped>
+.section {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+</style>
