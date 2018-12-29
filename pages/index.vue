@@ -24,8 +24,27 @@
     }
 </script>
 <style scoped>
-.section {
-    margin: 0 auto;
-    max-width: 1000px;
+#index {
+    margin: 0;
+    padding: 0;
+}
+
+#index blockquote {
+    margin: 1rem 0;
+    padding: 0;
+}
+
+#quote .content {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 1rem;
+}
+
+#index blockquote p {
+    font-size: 150%;
+    line-height: 1.5;
+}
+
+#blog {
+    padding: 1rem 0;
 }
 </style>

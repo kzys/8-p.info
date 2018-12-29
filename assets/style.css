@@ -3,7 +3,12 @@
 body {
     background: #fff;
     color: #111;
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+}
+
+p {
+    line-height: 1.6;
 }
 
 /* back to basics */
@@ -27,30 +32,5 @@ a:active {
 }
 
 /* header */
-
-/* /index.html */
-#index {
-    margin: 0;
-    padding: 0;
-}
-
-#index blockquote {
-    margin: 1rem 0;
-    padding: 0;
-}
-
-#quote .content {
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 1rem;
-}
-
-#index blockquote p {
-    font-size: 150%;
-    line-height: 1.5;
-}
-
-#blog {
-    padding: 1rem 0;
-}
 
 /* /me/index.html */

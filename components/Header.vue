@@ -18,7 +18,10 @@ header {
 }
 
 header h1 {
-    font-size: 2rem;
+    font-size: 40px;
+    font-weight: 800;
+    font-style: italic;
+
     line-height: 1;
     margin: 0;
     padding: 0;
@@ -58,6 +61,7 @@ header .column {
     header .content {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         margin: 0;
     }
 
