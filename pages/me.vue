@@ -3,10 +3,10 @@
         <Header/>
         <div id="container">
             <div class="content">
-                <h1>
+                <h2>
                     <div class="english">Kazuyoshi Kato</div>
                     <div class="japanese">加藤 和良</div>
-                </h1>
+                </h2>
                 <p>
                     I'm a software developer, Japanese and Seattle transplant.
                 </p>
@@ -28,7 +28,7 @@
                     <a href="https://www.linkedin.com/in/kazuyoshi/"><i class="fab fa-linkedin"></i> LinkedIn</a>
                 </p>
 
-                <h2>Work Experience</h2>
+                <h3>Work Experience</h3>
                 <ul class="work">
                     <li>
                         <div class="row">
@@ -67,12 +67,18 @@
         components: { Header }
     }
 </script>
-<style>
+<style scoped>
+h2, h3 {
+    font-size: 20px;
+    font-weight: 800;
+    margin: 20px 0 10px 0;
+}
+
 .family {
     font-weight: normal;
 }
 
-h1 .japanese {
+.japanese {
     font-weight: normal;
 }
 
@@ -81,24 +87,25 @@ ul.work {
     padding: 0;
     list-style: none;
 
-    & li {
-        margin-bottom: 1rem;
+}
 
-        & .row {
-            display: flex;
-            justify-content: space-between;
-            line-height: 1.5rem;
-        }
+li {
+    margin-bottom: 1rem;
+}
 
-        & .location {
-            font-size: 90%;
-        }
+.row {
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.5rem;
+}
 
-        & .years {
-            font-size: 90%;
-            color: #666;
-        }
-    }
+.location {
+    font-size: 90%;
+}
+
+.years {
+    font-size: 90%;
+    color: #666;
 }
 
 .see-also a {
