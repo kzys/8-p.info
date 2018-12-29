@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="v1">
         <Header/>
         <div id="container">
             <div class="content">
@@ -68,12 +68,6 @@
     }
 </script>
 <style scoped>
-h2, h3 {
-    font-size: 20px;
-    font-weight: 800;
-    margin: 20px 0 10px 0;
-}
-
 .family {
     font-weight: normal;
 }

@@ -1,10 +1,10 @@
 <template>
-    <div>
+    <div class="v1">
         <Header/>
         <div id="container">
             <div class="content">
                 <p>
-                    Kazuyoshi Kato is a software developer, Japanese and Seattle transplant.
+                    Kazuyoshi Kato is a software developer in Seattle, Washington.
                 </p>
                 <h2>Projects</h2>
                 <p>

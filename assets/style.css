@@ -31,6 +31,19 @@ a:active {
     padding: 0 1rem;
 }
 
+.v1 h2 {
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+.v1 h3 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+
 /* header */
 
 /* /me/index.html */
