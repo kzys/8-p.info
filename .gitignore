@@ -1,4 +1,7 @@
+# Nuxt
 .nuxt/
+dist/
+
 node_modules/
 */repos/*
 *.pyc
