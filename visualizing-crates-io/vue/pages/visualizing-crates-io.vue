@@ -85,9 +85,6 @@
     export default {
         head: {
             title: TITLE,
-            link: [
-                { href: 'https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700', rel: 'stylesheet'}
-            ],
             meta: [
                 // https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/markup
                 { property: 'og:title', content: TITLE },
@@ -304,8 +301,6 @@
 }
 
 #body {
-    font-family: 'Roboto Condensed', sans-serif;
-    -webkit-font-smoothing: antialiased;
     font-size: 20px;
     font-weight: 400;
     margin: 10px 0;
