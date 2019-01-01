@@ -138,7 +138,7 @@
                 let spec = {
                     $schema: "https://vega.github.io/schema/vega-lite/v3.json",
                     data: {
-                        url: '/_visualizing-crates-io/package-revisions.json',
+                        url: '/_visualizing-crates-io/package-revs.json',
                     },
                     width: 800,
                     height: 400,
