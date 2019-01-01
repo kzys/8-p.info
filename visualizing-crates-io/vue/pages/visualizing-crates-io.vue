@@ -10,9 +10,9 @@
             </p>
         </div>
         <div class="section crates-io">
-            <h2>More than <span class="n">20,000</span> crates</h2>
+            <h2>There are more than <span class="n">21,000</span> crates</h2>
             <p>
-                In November 2018, the number of crates on the registry exceeded 20,000.
+                In December 2018, the number of crates on the registry exceeded 21,000.
                 Due to the growth throught the year, the Rust team had to
                 <a href="https://internals.rust-lang.org/t/cargos-crate-index-upcoming-squash-into-one-commit/8440">squash all commits on the repository as one commit</a>
                 in September.
