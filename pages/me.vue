@@ -8,20 +8,7 @@
                     <div class="japanese">加藤 和良</div>
                 </h2>
                 <p>
-                    I'm a software developer, Japanese and Seattle transplant.
-                </p>
-                <p>
-                    I love open source software and occasionally contribute back to the community.
-                    You can find my name on
-                    <a href="https://github.com/rust-lang/rust/commits?author=kzys">Rust</a>,
-                    <a href="https://github.com/scala/scala/commits?author=kzys">Scala</a>,
-                    Firefox's <a href="https://www.mozilla.org/credits/">about:credits</a> and
-                    <a href="https://github.com/git/git/commits?author=kzys">Git</a>.
-                    Those are mostly small contributions on the big projects though.
-                </p>
-                <p>
-                    While I've been doing that for almost a decade,
-                    it is still fascinating to see that I can work with people all over the world through code.
+                    Hello! I'm a Japanese software developer living in Seattle, Washingon.
                 </p>
                 <p class="see-also">
                     <a href="https://github.com/kzys"><i class="fab fa-github"></i> GitHub</a>
