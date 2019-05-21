@@ -3,6 +3,7 @@
         <Header/>
         <div id="container">
             <div class="content">
+                <p>[I'm on Paternity Leave]</p>
                 <p>
                     Kazuyoshi Kato is a software developer in Seattle, Washington.
                 </p>
