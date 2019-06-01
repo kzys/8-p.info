@@ -4,17 +4,17 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.3.1",
-    "@nuxtjs/google-analytics": "^2.0.2",
-    "axios": "^0.18.0",
-    "chart.js": "^2.7.3",
-    "normalize.css": "^8.0.0",
-    "nuxt": "^2.1.0",
+    "@fortawesome/fontawesome-free": "^5.8.2",
+    "@nuxtjs/google-analytics": "^2.2.0",
+    "axios": "^0.18.1",
+    "chart.js": "^2.8.0",
+    "normalize.css": "^8.0.1",
+    "nuxt": "^2.8.0",
     "postcss-import": "^11.1.0",
-    "vega-embed": "^3.26.1"
+    "vega-embed": "^3.30.0"
   },
   "devDependencies": {
-    "postcss-nested": "^4.1.0"
+    "postcss-nested": "^4.1.2"
   },
   "scripts": {
     "dev": "nuxt"
