@@ -3,13 +3,15 @@
         <Header/>
         <div id="container">
             <div class="content">
-                <p>[I'm on Paternity Leave]</p>
                 <p>
-                    Kazuyoshi Kato is a software developer in Seattle, Washington.
+                    Hello! My name is <nuxt-link to="/me/">Kazuyoshi Kato</nuxt-link>.
+                    I'm a software developer in Seattle, Washington.
                 </p>
-                <h2>Projects</h2>
                 <p>
-                    <nuxt-link to="/visualizing-crates-io/">Visualizing Crates.io</nuxt-link>
+                    I am also on
+                    <a href="https://github.com/kzys">GitHub</a>,
+                    <a href="https://twitter.com/kzys">Twitter</a> and
+                    <a href="https://note.mu/kzys_">note</a>.
                 </p>
             </div>
         </div>
