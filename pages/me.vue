@@ -8,7 +8,7 @@
                     <div class="japanese">加藤 和良</div>
                 </h2>
                 <p>
-                    Hello! I'm a Japanese software developer living in Seattle, Washingon.
+                    Kazuyoshi Kato is a software developer living in Seattle, Washington.
                 </p>
                 <p class="see-also">
                     <a href="https://github.com/kzys"><i class="fab fa-github"></i> GitHub</a>
