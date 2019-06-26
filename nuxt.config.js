@@ -1,5 +1,3 @@
-const postcss_nested = require('postcss-nested');
-
 module.exports = {
   css: [
     "normalize.css",
@@ -13,7 +11,11 @@ module.exports = {
       ]
   },
   build: {
-    postcss: [ postcss_nested ]
+    postcss: {
+      plugins: {
+        'postcss-nested': {},
+      }
+    }
   },
 
   modules: [
