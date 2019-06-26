@@ -9,9 +9,8 @@
                 </p>
                 <p>
                     I am also on
-                    <a href="https://github.com/kzys">GitHub</a>,
-                    <a href="https://twitter.com/kzys">Twitter</a> and
-                    <a href="https://note.mu/kzys_">note</a>.
+                    <a href="https://github.com/kzys">GitHub</a> and
+                    <a href="https://twitter.com/kzys">Twitter</a>.
                 </p>
             </div>
         </div>
