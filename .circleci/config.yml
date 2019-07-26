@@ -24,6 +24,7 @@ jobs:
           key: deps-{{ checksum ".circleci/config.yml" }}-{{ checksum "package.json" }}
       - run: ./build.sh
 
+      - run: sudo apt-get install -qq -y rsync
       - run:
           name: "Install Hugo"
           command: ls -l hugo || wget -O - https://github.com/gohugoio/hugo/releases/download/v0.55.6/hugo_0.55.6_Linux-64bit.tar.gz | tar zxvf -
