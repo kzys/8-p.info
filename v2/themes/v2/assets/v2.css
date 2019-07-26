@@ -35,38 +35,34 @@ code {
     vertical-align: text-bottom;
 }
 
-ul {
+ul.work {
     margin: 0;
     padding: 0;
-    text-indent: 0;
     list-style: none;
+
 }
 
 li {
-    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.row {
     display: flex;
+    justify-content: space-between;
+    line-height: 1.5rem;
 }
 
-li span {
-    flex-shrink: 0;
+.location {
+    font-size: 90%;
+}
+
+.years {
+    font-size: 90%;
+    color: #666;
+}
+
+.see-also a {
+    text-decoration: none;
     margin-right: 1rem;
-}
-
-li {
-    border-left: 4px solid #000;
-    padding-left: 10px;
-}
-
-circle.lang-ja {
-    fill: #f33;
-}
-li.lang-ja {
-    border-color: #f33;
-}
-
-li.lang-en {
-    border-color: #33f;
-}
-circle.lang-en {
-    fill: #33f;
+    color: #000;
 }
