@@ -5,7 +5,8 @@ date: 2019-07-25T21:38:20-07:00
 ---
 # Kazuyoshi Kato / 加藤 和良
 
-Kazuyoshi Kato is a software developer living in Seattle, Washington.
+Kazuyoshi Kato is a Japanese software developer living in Seattle, Washington.
+He is a software developer engineer at Amazon Web Services, where he works on Linux containers.
 
 ## Work Experience
 
