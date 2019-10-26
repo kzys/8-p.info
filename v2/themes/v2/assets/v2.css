@@ -76,11 +76,20 @@ ul.work {
     margin: 0;
     padding: 0;
     list-style: none;
-
 }
 
 ul.work li {
     margin-bottom: 1rem;
+}
+
+ul.work p {
+    font-size: 90%;
+    margin: 0;
+    padding: 0;
+}
+
+ul.work .ja {
+    font-size: 90%;
 }
 
 .row {
