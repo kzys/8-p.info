@@ -1,0 +1,17 @@
+<ul class="work">
+{{ range $index, $job := .Site.Data.jobs }}
+<li>
+    <div class="row">
+        <div class="company">
+            <div class="en">{{ $job.company.en }}</div>
+            
+            {{ if $job.company.ja }}
+            <div class="ja">{{ $job.company.ja }}</div>
+            {{ end }}
+        </div>
+        <div class="location">{{ $job.location }}</div>
+    </div>
+    <div class="years">{{ $job.years | markdownify }}</div>
+</li>
+{{ end }}
+</ul>
