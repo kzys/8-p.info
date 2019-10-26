@@ -40,7 +40,7 @@ My name is Kazuyoshi Kato. I'm a Japanese software developer living in Seattle, 
     <li>
         <div class="row">
             <div class="company">
-                <div class="en">The National Institute of Advanced Industrial Science and Technology</div>
+                <div class="en">AIST</div>
                 <div class="ja">独立行政法人産業技術総合研究所</div>
             </div>
             <div class="location">Akihabara, Tokyo</div>
