@@ -5,7 +5,7 @@ a separate, private repository since they may have different licenses.
 
 ## Development
 
-`npm run dev` starts the server at http://localhost:3000.
+`make server` starts Hugo's development server at http://localhost:1313.
 
 ## Hosting
 
