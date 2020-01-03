@@ -11,9 +11,9 @@ My name is Kazuyoshi Kato. I'm a Japanese software developer living in Seattle, 
 
 {{< jobs >}}
 
-# Contact
+## Contact
 
-My email address is kato.kazuyoshi@gmail.com. I don't use social media much these days. So, email is still the best medium to reach out.
+My email address is kato.kazuyoshi@gmail.com. I don't use social media much these days.
 
 ## Disclaimer
 
