@@ -9,7 +9,7 @@ My name is Kazuyoshi Kato. I'm a Japanese software developer living in Seattle, 
 
 ## Work Experience
 
-{{% jobs %}}
+{{< jobs >}}
 
 # Contact
 
