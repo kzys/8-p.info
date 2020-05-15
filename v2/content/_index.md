@@ -2,7 +2,10 @@
 title = "8-p.info"
 +++
 
-Hello! My name is [Kazuyoshi Kato](/me/). I'm a software developer living in Seattle, Washington.
+I bought this domain in 2003, when I got into a college. This was the place where I used to distribute software. While all files are still there, I don't link them from here since they would not be relevant anymore.
 
-- [Blogs](https://blog.8-p.info/) -- [Japanese](https://blog.8-p.info/ja/) /  [English](https://blog.8-p.info/en/)
-- [GitHub](https://github.com/kzys/)
+Nowadays my updates go to my [blogs](https://blog.8-p.info/).
+
+I'm also active on [GitHub](https://github.com/kzys/). My day job is mostly writing open source software. It is too good to be true.
+
+Oh, let me introduce myself. I'm [Kazuyoshi Kato](/me/), a Japanese software developer in Seattle, Washington.
