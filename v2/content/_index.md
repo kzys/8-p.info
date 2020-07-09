@@ -9,4 +9,4 @@ Nowadays my updates go to my [blogs](https://blog.8-p.info/).
 I'm also active on [GitHub](https://github.com/kzys/). My day job is mostly writing open source software. It is too good to be true.
 
 Oh, let me introduce myself.
-I'm <a class="h-card" href="/me/">Kazuyoshi Kato</a>, a Japanese software developer in Seattle, Washington.
+I'm <a class="h-card" class="u-url" rel="me" href="/me/">Kazuyoshi Kato</a>, a Japanese software developer in Seattle, Washington.
