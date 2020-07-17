@@ -5,11 +5,17 @@ date: 2019-07-25T21:38:20-07:00
 ---
 # Kazuyoshi Kato / 加藤 和良
 
-My name is Kazuyoshi Kato. I'm a Japanese software developer living in Seattle, Washington.
+Hello! My name is Kazuyoshi Kato. I'm a Japanese software developer in Seattle, Washington. I work for Amazon Web Services.
 
 ## Work Experience
 
 {{< jobs >}}
+
+## Elsewhere
+
+* [GitHub](https://github.com/kzys/)
+* [Twitter](https://twitter.com/kzys): I'm not really active on Twitter though. It is too fast.
+* [LinkedIn](https://www.linkedin.com/in/kazuyoshi/)
 
 ## Contact
 
