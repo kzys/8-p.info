@@ -1,1 +1,2 @@
-<!-- footer -->
+{{ $script := resources.Get "v2.js" | resources.Minify | resources.Fingerprint }}
+<script src="{{ $script.Permalink }}"></script>
