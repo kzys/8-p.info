@@ -126,3 +126,12 @@ ul.work .ja {
     margin-right: 1rem;
     color: #000;
 }
+
+blockquote {
+    margin: 0 0 0 1rem;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #000;
+}
