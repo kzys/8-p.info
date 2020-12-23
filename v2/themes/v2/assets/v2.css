@@ -1,13 +1,25 @@
 body {
     margin: 0 auto;
-    max-width: 50em;
+    padding: 0 1rem;
+    max-width: 50rem;
 
     font-family: "Helvetica Neue", "Arial", sans-serif;
 
     line-height: 1.8;
-    padding: 0 .5em;
 
     color: #333;
+    background: #f0f0f0;
+}
+
+a {
+    color: #00f;
+}
+a:visited {
+    color: #60f;
+}
+
+ul {
+    list-style-type: disc;
 }
 
 h1 {
@@ -24,65 +36,6 @@ h1,
 h2,
 strong {
     color: #333;
-}
-
-code,
-pre {
-    background: #eee;
-}
-
-code {
-    padding: 2px 4px;
-    vertical-align: text-bottom;
-}
-
-nav {
-    margin: .5rem;
-    font-size: 90%;
-    line-height: 1;
-    float: right;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav > ul {
-    display: flex;
-    justify-content: flex-end;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav a {
-    color: #000;
-    text-decoration: none;
-    display: block;
-    padding: 0.5rem;
-    background: #ddd;
-}
-
-a.here {
-    background: #fc0;
-}
-
-nav a:hover {
-    background: #eee;
-}
-
-header li.logo {
-    font-size: 1.5rem;
-    line-height: 2rem;
-}
-
-header li.me {
-    margin-left: auto;
-}
-
-h1 span.ja {
-    font-weight: normal;
 }
 
 ul.work {
@@ -102,7 +55,7 @@ ul.work p {
 }
 
 ul.work .ja {
-    color: #999;
+    color: #666;
     font-size: 90%;
 }
 
@@ -125,13 +78,4 @@ ul.work .ja {
     text-decoration: none;
     margin-right: 1rem;
     color: #000;
-}
-
-blockquote {
-    margin: 0 0 0 1rem;
-}
-
-hr {
-    border: 0;
-    border-top: 1px solid #000;
 }
