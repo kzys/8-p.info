@@ -3,4 +3,8 @@
 <link href="https://github.com/kzys" rel="me"/>
 {{ $style := resources.Get "v2.css" | resources.Minify | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $style.Permalink }}">
+
+{{ $bundle := resources.Get "bundle.css" | resources.Minify | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $bundle.Permalink }}">
+
 <title>{{ .Title }}</title>

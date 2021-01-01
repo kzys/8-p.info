@@ -14,7 +14,14 @@
     "vega-embed": "^3.30.0"
   },
   "devDependencies": {
-    "postcss-nested": "^4.1.2"
+    "@rollup/plugin-node-resolve": "^11.0.1",
+    "@types/luxon": "^1.25.0",
+    "luxon": "^1.25.0",
+    "postcss-nested": "^4.1.2",
+    "rollup": "^2.35.1",
+    "rollup-plugin-css-only": "^3.1.0",
+    "rollup-plugin-svelte": "^7.0.0",
+    "svelte": "^3.31.0"
   },
   "scripts": {
     "dev": "nuxt"
