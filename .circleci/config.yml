@@ -17,6 +17,7 @@ jobs:
           - deps-fallback
 
       - run: npm install
+      - run: npx rollup --config
 
       - save_cache:
           paths:
