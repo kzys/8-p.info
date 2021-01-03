@@ -11,7 +11,7 @@ function minuteHandAngle(dt) {
     return ((dt.hour % 12) * 30) + (dt.minute / 2)
 }
 
-const interval = setInterval(() => {
+function updateClocks() {
     let dt = DateTime.local()
     
     clocks = [
@@ -25,7 +25,10 @@ const interval = setInterval(() => {
         }
         return {dt:dt.setZone(x.tz), location: name}
     })
-}, 1000);
+}
+
+const interval = setInterval(updateClocks, 1000);
+updateClocks();
 
 onDestroy(() => clearInterval(interval));
 </script>
