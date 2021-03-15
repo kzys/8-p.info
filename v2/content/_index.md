@@ -16,10 +16,11 @@ Tech
 
 - [Nelson Elhage's newsletter](https://buttondown.email/nelhage/archive)
 - [Hillel Wayne's blog](https://www.hillelwayne.com/)
+- [Ben Kuhn's blog](https://www.benkuhn.net/)
 
 Go Programming Language
 
-- [Practical Go](https://dave.cheney.net/practical-go)
+- Dave Cheney's [Practical Go](https://dave.cheney.net/practical-go) series
 
 General
 
