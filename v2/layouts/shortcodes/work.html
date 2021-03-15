@@ -1,0 +1,8 @@
+<h3>
+  <div class="company">
+    <div class="en">{{ .Get "company-en" | markdownify }}</div>
+    <div class="ja">{{ .Get "company-ja" | markdownify }}</div>
+  </div>
+  <div class="location">{{ .Get "location" | markdownify }}</div>
+</h3>
+<div class="years">{{ .Get "years" | markdownify }}</div>

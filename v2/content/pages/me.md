@@ -13,7 +13,27 @@ I'm @kzys on [GitHub](https://github.com/kzys/) and [Twitter](https://twitter.co
 
 ## Work Experience
 
-{{< jobs >}}
+{{< work company-en="Amazon" location="Seattle, Washington" years="Oct 2014 -- present" >}}
+
+I work for Amazon Web Services since July 2019.
+
+Before that I worked for Alexa's news team and Amazon's retail website.
+
+{{< work company-en="Amazon Japan" company-ja="株式会社アマゾンジャパン"
+    location="Meguro, Tokyo" years="July 2012 -- Sep 2014" >}}
+
+{{< work company-en="mixi, Inc." company-ja="株式会社ミクシィ"
+    location="Harajuku, Tokyo / Shibuya, Tokyo" years="April 2008 -- July 2012" >}}
+
+{{< work
+    company-en="National Institute of Advanced Industrial Science and Technology"
+    company-ja="独立行政法人 産業技術総合研究所"
+	location="Akihabara, Tokyo" years="Oct 2007 -- Mar 2008 (Part-Time)" >}}
+
+{{< work
+    company-en="Community Engine Inc"
+    company-ja="コミュニティーエンジン株式会社"
+	location="Hatsudai, Tokyo" years="April 2006 -- December 2007 (Part-Time)" >}}
 
 ## Contact
 

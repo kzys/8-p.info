@@ -94,3 +94,18 @@ ul.work p {
     display: flex;
     line-height: 1;
 }
+
+h3 {
+    justify-content: space-between;
+    margin-bottom: 0;
+    font-weight: normal;
+}
+
+@media screen and (min-width: 50rem) {
+    h3 {
+	display: flex;
+    }
+}
+
+h3 div.location {
+}
