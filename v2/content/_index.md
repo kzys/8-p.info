@@ -10,7 +10,7 @@ title = "8-p.info"
 
 <div id="clocks"></div>
 
-See the three cities above in [World Time Buddy](https://www.worldtimebuddy.com/?pl=1&lid=5809844,683506,1850147).
+See Seattle, Bucharest and Tokyo in [World Time Buddy](https://www.worldtimebuddy.com/?pl=1&lid=5809844,683506,1850147).
 
 ## Things to Read
 
