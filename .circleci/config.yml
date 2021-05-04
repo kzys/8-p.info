@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:10-stretch
+      - image: circleci/node:10-buster
 
     working_directory: ~/work
 
@@ -38,7 +38,7 @@ jobs:
             - ./*
   deploy:
     docker:
-      - image: circleci/node:10-stretch
+      - image: circleci/node:10-buster
     working_directory: ~/work
     steps:
       - attach_workspace:
