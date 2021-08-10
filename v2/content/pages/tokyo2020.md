@@ -5,7 +5,7 @@ slug: tokyo2020
 ---
 <h1>
 <div class="ja">東京オリンピック期間中の日本における COVID-19 死者数とメダル獲得数</div>
-<div class="en alt">COVID-19 death cases in Japan vs. Japan's medal wins during Tokyo 2020</div>
+<div class="en alt">Japan's COVID-19 death cases vs. medal wins during Tokyo 2020</div>
 </h1>
 
 <pre style="font-size:150%">
