@@ -2,3 +2,15 @@
 {{ $script := resources.Get "bundle.js" | resources.Minify | resources.Fingerprint }}
 <script src="{{ $script.Permalink }}"></script>
 <script data-goatcounter="https://kazuyoshi.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<footer>
+    <span class="group"><a href="/" class="home">8-p.info</a> by</span>
+    <span class="group menu">
+        <a href="/me/">Kazuyoshi Kato</a>
+        <a href="/now/">What I'm doing now</a>
+    </span>
+    <span class="group menu">
+        <a href="https://blog.8-p.info/">Blog</a>
+        <a href="https://blog.8-p.info/ja/">Japanese</a>
+        <a href="https://blog.8-p.info/en/">English</a>
+    </span>
+</footer>

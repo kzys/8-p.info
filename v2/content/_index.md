@@ -4,13 +4,13 @@ title = "8-p.info"
 
 # [8-p.info](/)
 
-- [Blog](https://blog.8-p.info/)
-  - [English](https://blog.8-p.info/en/)
-  - [Japanese](https://blog.8-p.info/ja/)
-
 <div id="clocks"></div>
 
 See Seattle, Bucharest and Tokyo in [World Time Buddy](https://www.worldtimebuddy.com/?pl=1&lid=5809844,683506,1850147).
+
+### [東京オリンピック期間中の日本における COVID-19 死者数とメダル獲得数](/tokyo2020/)
+
+Japan's COVID-19 death cases vs. medal wins during Tokyo 2020.
 
 ## Things to Read
 
@@ -27,5 +27,3 @@ Go Programming Language
 General
 
 - [Make Time](https://maketime.blog/articles/)
-
-Maintained by [Kazuyoshi Kato](/me/)
