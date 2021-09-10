@@ -5,10 +5,11 @@ slug: now
 ---
 # What I'm doing right now
 
-August 2021 @ Seattle
+September 2021 @ Seattle
 
 - Parenting.
-- I still work for Amazon. My 10th anniversary is approaching.
+- I still work for Amazon. Promoted to a *senior* software engineer finally!
 - Helping [containerd](https://github.com/containerd/containerd). I became its reviewer in 2021.
 - Maintaining [firecracker-containerd](https://github.com/firecracker-microvm/firecracker-containerd) and some other AWS-owned open-source software.
-- Trying to avoid Twitter and Facebook.
+- I may use Twitter a bit more the rest of this year.
+- I would not use Facebook still.

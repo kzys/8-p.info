@@ -79,12 +79,13 @@ ul.work p {
 }
 
 .location {
-    font-size: 90%;
+    font-size: .9rem;
+    color: #000;
 }
 
 .years {
-    font-size: 90%;
-    color: #000;
+    font-size: .8rem;
+    color: #999;
 }
 
 .see-also a {
@@ -104,9 +105,19 @@ h3 {
     font-weight: normal;
 }
 
+div.title {
+    font-weight: normal;
+    justify-content: space-between;
+    align-items: center;
+    font-size: .9rem;
+}
+
 @media screen and (min-width: 50rem) {
     h3 {
-	display: flex;
+	    display: flex;
+    }
+    div.title {
+        display: flex;
     }
 }
 
@@ -127,4 +138,13 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+footer a.home {
+    display: inline;
+    font-weight: bold;
+}
+
+footer a.home, footer .group {
+    margin-right: 2rem;
 }

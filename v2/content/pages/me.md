@@ -5,7 +5,7 @@ date: 2019-07-25T21:38:20-07:00
 ---
 <h1><div class="ja">加藤 和良</div><div class="en alt">Kazuyoshi Kato</div></h1>
 
-Hello! My name is Kazuyoshi Kato. I'm a Japanese software developer in Seattle, Washington. I work for [Amazon Web Services](https://aws.amazon.com/) since July 2019.
+Hello! My name is Kazuyoshi Kato. I'm a Japanese software developer in Seattle, Washington. I work for [Amazon Web Services](https://aws.amazon.com/).
 
 I bought this domain, [8-p.info](https://8-p.info/) in 2003. I was a college student in Japan at that time. All cool hackers were having cool domains, so I wanted mine.
 
@@ -13,14 +13,22 @@ I'm @kzys on [GitHub](https://github.com/kzys/) and [Twitter](https://twitter.co
 
 ## Work Experience
 
-{{< work company-en="Amazon" location="Seattle, Washington" years="Oct 2014 -- present" >}}
+{{< work company-en="Amazon Web Services"
+    location="Seattle, Washington" years="July 2019 -- present" >}}
 
-I work for Amazon Web Services since July 2019.
+{{< title name="Senior Software Development Engineer" years="Sep 2021 -- present" >}}
 
-Before that I worked for Alexa's news team and Amazon's retail website.
+{{< title name="Software Development Engineer" years="July 2019 -- Sep 2021" >}}
+
+{{< work company-en="Amazon.com"
+    location="Seattle, Washington" years="Sep 2014 -- July 2019" >}}
+
+{{< title name="Software Development Engineer" >}}
 
 {{< work company-en="Amazon Japan" company-ja="株式会社アマゾンジャパン"
     location="Meguro, Tokyo" years="July 2012 -- Sep 2014" >}}
+
+{{< title name="Software Development Engineer" >}}
 
 {{< work company-en="mixi, Inc." company-ja="株式会社ミクシィ"
     location="Harajuku, Tokyo / Shibuya, Tokyo" years="April 2008 -- July 2012" >}}
