@@ -13,9 +13,13 @@ body {
 
 a {
     color: #00f;
+    text-decoration: none;
 }
 a:visited {
     color: #60f;
+}
+a:hover {
+    text-decoration: underline;
 }
 
 ul {
@@ -114,25 +118,13 @@ footer {
     padding: 1rem 0;
     margin-top: 1rem;
     border-top: 1px solid #000;
-    display: flex;
 }
 
 footer a {
     color: #000 !important;
     text-decoration: none;
-    display: block;
 }
 
 footer a:hover {
     text-decoration: underline;
 }
-
-footer a.home {
-    display: inline;
-    font-weight: bold;
-}
-
-footer a.home, footer .group {
-    margin-right: 2rem;
-}
-
