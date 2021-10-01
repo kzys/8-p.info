@@ -13,35 +13,38 @@ I'm @kzys on [GitHub](https://github.com/kzys/) and [Twitter](https://twitter.co
 
 ## Work Experience
 
-{{< work company-en="Amazon Web Services"
-    location="Seattle, Washington" years="July 2019 -- present" >}}
+{{< work company-en="Amazon Web Services" location="Seattle, Washington"
+    years="July 2019 -- present" >}}
 
-{{< title name="Senior Software Development Engineer" years="Sep 2021 -- present" >}}
+{{< title name="Senior Software Development Engineer"
+    years="October 2021 -- present" >}}
 
-{{< title name="Software Development Engineer" years="July 2019 -- Sep 2021" >}}
+{{< title name="Software Development Engineer"
+    years="July 2019 -- September 2021" >}}
 
-{{< work company-en="Amazon.com"
-    location="Seattle, Washington" years="Sep 2014 -- July 2019" >}}
-
-{{< title name="Software Development Engineer" >}}
-
-{{< work company-en="Amazon Japan" company-ja="株式会社アマゾンジャパン"
-    location="Meguro, Tokyo" years="July 2012 -- Sep 2014" >}}
+{{< work company-en="Amazon.com" location="Seattle, Washington" 
+    years="September 2014 -- July 2019" >}}
 
 {{< title name="Software Development Engineer" >}}
 
-{{< work company-en="mixi, Inc." company-ja="株式会社ミクシィ"
-    location="Harajuku, Tokyo / Shibuya, Tokyo" years="April 2008 -- July 2012" >}}
+{{< work company-en="Amazon Japan" company-ja="株式会社アマゾンジャパン" location="Meguro, Tokyo"
+    years="July 2012 -- September 2014" >}}
+
+{{< title name="Software Development Engineer" >}}
+
+{{< work company-en="mixi, Inc."
+    company-ja="株式会社ミクシィ" location="Harajuku, Tokyo / Shibuya, Tokyo"
+    years="April 2008 -- July 2012" >}}
 
 {{< work
     company-en="National Institute of Advanced Industrial Science and Technology"
-    company-ja="独立行政法人 産業技術総合研究所"
-	location="Akihabara, Tokyo" years="Oct 2007 -- Mar 2008 (Part-Time)" >}}
+    company-ja="独立行政法人 産業技術総合研究所" location="Akihabara, Tokyo"
+    years="October 2007 -- March 2008 (Part-Time)" >}}
 
 {{< work
     company-en="Community Engine Inc"
-    company-ja="コミュニティーエンジン株式会社"
-	location="Hatsudai, Tokyo" years="April 2006 -- December 2007 (Part-Time)" >}}
+    company-ja="コミュニティーエンジン株式会社" location="Hatsudai, Tokyo"
+    years="April 2006 -- December 2007 (Part-Time)" >}}
 
 ## Contact
 
