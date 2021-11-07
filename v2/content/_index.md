@@ -4,20 +4,16 @@ title = "8-p.info"
 
 # 8-p.info
 
-## Kazuyoshi Kato
+Hello! This is [Kazuyoshi Kato](/me/)'s homepage on the internet! I'm a Japanese software developer in Seattle, Washingon.
 
-8-p.info is maintained by [Kazuyoshi Kato](/me/).
-I'm a Japanese software engineer in Seattle, Washington.
+## My opinion about software development
 
-* [What I'm doing right now](/now/)
-* [More about myself](/me/)
+- [Stop writing shell scripts](https://blog.8-p.info/en/2021/01/11/shell-scripts/)
+- [Mocking is a necessary evil](https://blog.8-p.info/en/2020/10/22/mocking/)
 
-<a href="https://github.com/kzys"><i class="fab fa-github"></i> GitHub</a>&nbsp;
-<a href="https://twitter.com/kzys"><i class="fab fa-twitter"></i> Twitter</a>
+I have [blogs](https://blog.8-p.info/) to write some other opinions and thoughts.
 
-## Blogs
+## Others' opinion about software development that I can agree
 
-I occasionally write about technology in either English or Japanese.
-
-* [English](https://blog.8-p.info/en/)
-* [Japanese](https://blog.8-p.info/ja/)
+* [Simple, correct, fast: in that order](https://drewdevault.com/2018/07/09/Simple-correct-fast.html) (Drew DeVault)
+* [Computers can be understood](https://blog.nelhage.com/post/computers-can-be-understood/) (Nelson Elhage)
