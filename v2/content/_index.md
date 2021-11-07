@@ -17,3 +17,9 @@ I have [blogs](https://blog.8-p.info/) to write some other opinions and thoughts
 
 * [Simple, correct, fast: in that order](https://drewdevault.com/2018/07/09/Simple-correct-fast.html) (Drew DeVault)
 * [Computers can be understood](https://blog.nelhage.com/post/computers-can-be-understood/) (Nelson Elhage)
+
+## Good podcasts
+
+* [Planet Money](https://www.npr.org/podcasts/510289/planet-money/)
+* [CoRecursive](https://corecursive.com/)
+* [Your Undivided Attention](https://www.humanetech.com/podcast)
