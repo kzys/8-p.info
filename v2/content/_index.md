@@ -4,7 +4,7 @@ title = "8-p.info"
 
 # 8-p.info
 
-Hello! This is [Kazuyoshi Kato](/me/)'s homepage on the internet! I'm a Japanese software developer in Seattle, Washingon.
+Hello! This is [Kazuyoshi Kato](/me/)'s homepage. I'm a Japanese software developer in Seattle, Washingon.
 
 ## My opinion about software development
 
