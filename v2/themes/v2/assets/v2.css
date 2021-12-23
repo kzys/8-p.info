@@ -1,11 +1,9 @@
 body {
     margin: 0 auto;
     padding: 0 1rem;
-    max-width: 60rem;
+    max-width: 50rem;
 
     font-family: "Helvetica Neue", "Arial", sans-serif;
-
-    line-height: 1.8;
 
     color: #333;
     background: #fff;
@@ -26,11 +24,27 @@ ul {
     list-style-type: disc;
 }
 
+/* https://qiita.com/xrxoxcxox/items/206b223844e3c42dc86f */
 h1 {
-    font-size: 150%;
-    margin: .5rem 0;
-    padding: 0;
-    line-height: 1.2;
+    font-size: 3.2rem;
+    line-height: 4rem;
+}
+
+h2 {
+    font-size: 1.6rem;
+    line-height: 3.2rem;
+    margin: 0.8rem 0;
+}
+
+h3 {
+    font-size: 1rem;
+    line-height: 1.6rem;
+    margin: 0.8rem 0;
+}
+
+p {
+    line-height: 1.6rem;
+    margin: 0.8rem 0;
 }
 
 h1 a {
@@ -38,16 +52,8 @@ h1 a {
     color: #333 !important;
 }
 
-h2 {
-    font-size: 130%;
-    margin-top: 1rem 0 0 0;
-}
 h1 div.ja {
     font-weight: normal;
-}
-
-h3 {
-    font-size: 110%;
 }
 
 h1,
@@ -88,7 +94,7 @@ ul.work p {
 }
 
 .years {
-    width: 15rem;
+    width: 16rem;
 }
 
 .see-also a {
@@ -102,6 +108,11 @@ ul.work p {
     line-height: 1;
 }
 
+#me h1 .ja {
+    font-weight: normal;
+    color: #666;
+}
+
 #me h3 {
     justify-content: space-between;
     margin-bottom: 0;
@@ -112,13 +123,9 @@ ul.work p {
     font-size: .9rem;
 }
 
-#me h3 {
-    border-top: 1px solid #999;
-    padding-top: 1rem;
-}
-
 div.title {
     clear: both;
+    margin-top: 0.5rem;
 }
 
 @media screen and (min-width: 50rem) {
@@ -128,9 +135,6 @@ div.title {
     div.title {
         display: flex;
     }
-}
-
-h3 div.location {
 }
 
 footer {
