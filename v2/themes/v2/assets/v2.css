@@ -80,12 +80,11 @@ ul.work p {
 
 .location {
     font-size: .9rem;
-    color: #000;
+    font-weight: normal;
 }
 
 .years {
-    font-size: .8rem;
-    color: #999;
+    width: 15rem;
 }
 
 .see-also a {
@@ -102,14 +101,15 @@ ul.work p {
 h3 {
     justify-content: space-between;
     margin-bottom: 0;
+}
+h3 div.ja {
     font-weight: normal;
+    color: #666;
+    font-size: .9rem;
 }
 
 div.title {
-    font-weight: normal;
-    justify-content: space-between;
-    align-items: center;
-    font-size: .9rem;
+    clear: both;
 }
 
 @media screen and (min-width: 50rem) {
