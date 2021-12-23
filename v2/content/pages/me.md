@@ -3,7 +3,7 @@ title: "Kazuyoshi Kato / 加藤 和良"
 slug: me
 date: 2019-07-25T21:38:20-07:00
 ---
-<h1><div class="ja">加藤 和良</div><div class="en alt">Kazuyoshi Kato</div></h1>
+<h1><div class="en">Kazuyoshi Kato</div><div class="ja">加藤 和良</div></h1>
 
 Hello! My name is Kazuyoshi Kato. I'm a Japanese software developer in Seattle, Washington. I work for [Amazon Web Services](https://aws.amazon.com/).
 

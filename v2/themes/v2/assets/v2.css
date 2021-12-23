@@ -39,11 +39,15 @@ h1 a {
 }
 
 h2 {
-    font-size: 110%;
+    font-size: 130%;
     margin-top: 1rem 0 0 0;
 }
 h1 div.ja {
     font-weight: normal;
+}
+
+h3 {
+    font-size: 110%;
 }
 
 h1,
@@ -98,14 +102,19 @@ ul.work p {
     line-height: 1;
 }
 
-h3 {
+#me h3 {
     justify-content: space-between;
     margin-bottom: 0;
 }
-h3 div.ja {
+#me h3 div.ja {
     font-weight: normal;
     color: #666;
     font-size: .9rem;
+}
+
+#me h3 {
+    border-top: 1px solid #999;
+    padding-top: 1rem;
 }
 
 div.title {
