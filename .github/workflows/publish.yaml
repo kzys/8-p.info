@@ -1,0 +1,31 @@
+name: publish
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+
+    - name: JavaScript
+      run: |
+        npm install
+        npx rollup --config
+        ./build.sh
+    
+    - name: Hugo
+      run: |-
+        wget -O - https://github.com/gohugoio/hugo/releases/download/v0.55.6/hugo_0.55.6_Linux-64bit.tar.gz | tar zxvf -
+        cd v2/
+        ../hugo
+
+    - name: Merge
+      run: |-
+        rsync -rv v2/public/ dist/
