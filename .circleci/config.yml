@@ -45,11 +45,12 @@ jobs:
           at: ~/work/dist
       - run:
           name: "Install pip"
-          command: sudo apt-get install -qq -y python-pip libpython-dev
+          command: sudo apt-get install -qq -y python-pip libpython-dev git-restore-mtime
+      - run: git restore-mtime
       - run:
           name: "Install AWS CLI"
           command: sudo pip install -q awscli --upgrade
-      - run: aws s3 sync --acl public-read --size-only dist/ s3://8-p.info/
+      - run: aws s3 sync --acl public-read dist/ s3://8-p.info/
       - run:
           name: Invalidate /*
           command: aws cloudfront create-invalidation --distribution-id E2XRRAO8RPD4HJ --paths '/*'
