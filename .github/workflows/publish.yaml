@@ -10,6 +10,9 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v2
@@ -29,3 +32,19 @@ jobs:
     - name: Merge
       run: |-
         rsync -rv v2/public/ dist/
+
+    - name: AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        role-to-assume: arn:aws:iam::856782815229:role/EightInfraStack-StaticWebsiteUpload600EF283-12R2J8NJLHEAN
+        aws-region: us-west-2
+
+    - name: Upload
+      if: github.event_name == 'push'
+      run: |-
+        aws s3 ls s3://8-p.info/
+        curl -L https://github.com/bep/s3deploy/releases/download/v2.6.0/s3deploy_2.6.0_Linux-64bit.tar.gz | tar zxvf -
+        ./s3deploy \
+          -region us-east-1 -bucket 8-p.info \
+          -distribution-id E2XRRAO8RPD4HJ -max-delete 0 -acl public-read \
+          -source dist/
