@@ -22,16 +22,23 @@ jobs:
         npm install
         npx rollup --config
         ./build.sh
-    
+
     - name: Hugo
       run: |-
         wget -O - https://github.com/gohugoio/hugo/releases/download/v0.55.6/hugo_0.55.6_Linux-64bit.tar.gz | tar zxvf -
         cd v2/
         ../hugo
 
+    - name: Next.js
+      run: |
+        cd v3
+        npm install
+        npm run build
+
     - name: Merge
       run: |-
         rsync -rv v2/public/ dist/
+        rsync -rv v3/out/ dist/
 
     - name: AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
