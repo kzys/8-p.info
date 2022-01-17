@@ -52,19 +52,80 @@ function generateMaze(width: number, height: number) {
   return result;
 }
 
+type MazeProps = {
+  width: number,
+  height: number,
+}
+
+function Maze(props: MazeProps) {
+  let width = props.width;
+  let height = props.height;
+  let maze = generateMaze(width, height)
+  let nodes = []
+  maze[1][0] = 0;
+  maze[height - 2][width - 1] = 0;
+
+  let u = 4;
+  let u2 = u * 2;
+  let u3 = u * 3;
+
+  for (let y = 0; y < height; y++) {
+    for (let x = 0; x < width; x++) {
+      if (maze[y][x] == 1) {
+        nodes.push(<rect x={x * u3 + u} y={y * u3 + u} width={u} height={u}></rect>)
+
+        if (0 <= x - 1 && maze[y][x - 1] == 1) {
+          nodes.push(<rect x={x * u3} y={y * u3 + u} width={u} height={u}></rect>)
+        }
+
+        if (x + 1 < width && maze[y][x + 1] == 1) {
+          nodes.push(<rect x={x * u3 + u2} y={y * u3 + u} width={u} height={u}></rect>)
+        }
+
+        if (0 <= y - 1 && maze[y - 1][x] == 1) {
+          nodes.push(<rect x={x * u3 + u} y={y * u3} width={u} height={u}></rect>)
+        }
+
+        if (y + 1 < height && maze[y + 1][x] == 1) {
+          nodes.push(<rect x={x * u3 + u} y={y * u3 + u2} width={u} height={u}></rect>)
+        }
+      }
+    }
+  }
+
+  return (
+    <div style={{ textAlign: 'center' }}>
+      <svg version="1.1"
+        width={width * u3} height={height * u3}
+        xmlns="http://www.w3.org/2000/svg">
+        {nodes}
+      </svg>
+    </div>
+  )
+}
+
 export default function Home() {
-  let maze = generateMaze(11, 11)
+  let width = 41;
+  let height = 91
+  let maze = generateMaze(width, height)
+  let nodes = []
+
+  for (let y = 0; y < height; y++) {
+    for (let x = 0; x < width; x++) {
+      if (maze[y][x] == 1) {
+        nodes.push(<rect x={x * 10} y={y * 10} width={10} height={10}></rect>)
+      }
+    }
+  }
+
   return (
     <div className="container">
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Maze</title>
       </Head>
 
       <main>
-        {
-          maze.map((row) => (<div>{row}</div>))
-        }
+        <Maze width={81} height={81} />
       </main>
     </div>
   )
