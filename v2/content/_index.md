@@ -6,6 +6,10 @@ title = "8-p.info"
 
 Hello! This is [Kazuyoshi Kato](/me/)'s homepage. I'm a Japanese software developer in Seattle, Washingon.
 
+## Things I made recently
+
+- [Making a maze](maze/) - because my kids love mazes.
+
 ## My opinion about software development
 
 - [Stop writing shell scripts](https://blog.8-p.info/en/2021/01/11/shell-scripts/)
