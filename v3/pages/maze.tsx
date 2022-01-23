@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Head from 'next/head'
 import seedrandom from 'seedrandom';
-import { Cell, CellProps } from './cell'
+import { Cell, CellProps } from '../lib/cell'
 
 function generateMaze(width: number, height: number) {
   let r = seedrandom(width * height);
@@ -93,20 +93,6 @@ function Maze(props: MazeProps) {
         </g>)
       }
     }
-
-    nodes.push(<text
-      fontSize={u3}
-      fontFamily="monospace"
-      dominantBaseline="central"
-      x={u3} y={u3 * 1 + u}
-    >Start</text>)
-    nodes.push(<text
-      fontSize={u3}
-      fontFamily="monospace"
-      dominantBaseline="central"
-      textAnchor="end"
-      x={u3 * (width - 1)} y={u3 * (height - 1) - u}
-    >Goal</text>)
   }
 
   return (
@@ -114,6 +100,19 @@ function Maze(props: MazeProps) {
       <svg version="1.1"
         width={width * u3} height={height * u3}
         xmlns="http://www.w3.org/2000/svg">
+        <text
+          fontSize={u3}
+          fontFamily="monospace"
+          dominantBaseline="central"
+          x={u3} y={u3 * 1 + u}
+        >Start</text>
+        <text
+          fontSize={u3}
+          fontFamily="monospace"
+          dominantBaseline="central"
+          textAnchor="end"
+          x={u3 * (width - 1)} y={u3 * (height - 1) - u}
+        >Goal</text>
         {nodes}
       </svg>
     </div>
