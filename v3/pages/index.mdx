@@ -1,6 +1,7 @@
-+++
-title = "8-p.info"
-+++
+import Link from 'next/link'
+import Layout from '../lib/layout'
+
+export const meta={ title: '8-p.info' }
 
 # 8-p.info
 
@@ -8,7 +9,7 @@ Hello! This is [Kazuyoshi Kato](/me/)'s homepage. I'm a Japanese software develo
 
 ## Things I made recently
 
-- [Making a maze](maze/) - because my kids love mazes.
+- <Link href="/maze/">Making a maze</Link> - because my kids love mazes.
 
 ## My opinion about software development
 
@@ -27,3 +28,5 @@ I have [blogs](https://blog.8-p.info/) to write some other opinions and thoughts
 * [Planet Money](https://www.npr.org/podcasts/510289/planet-money/)
 * [CoRecursive](https://corecursive.com/)
 * [Your Undivided Attention](https://www.humanetech.com/podcast)
+
+export default ({ children }) => <Layout meta={meta}>{children}</Layout>
