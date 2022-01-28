@@ -1,6 +1,3 @@
-{{ $script := resources.Get "v2.js" | resources.Minify | resources.Fingerprint }}
-{{ $script := resources.Get "bundle.js" | resources.Minify | resources.Fingerprint }}
-<script src="{{ $script.Permalink }}"></script>
 <script data-goatcounter="https://kazuyoshi.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 <footer>
     <a href="/" class="home">8-p.info</a>
