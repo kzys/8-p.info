@@ -29,15 +29,26 @@ export default function Clock(props: clockProps) {
         return () => clearInterval(x);
     }, [])
 
-    return <div style={{ textAlign: 'center', width: '5rem', margin: '1rem' }}>
+    let face = "#fff"
+    let hand = "#ccc"
+
+    if (17 <= dateTime.hour || dateTime.hour < 6) {
+        hand = '#fff'
+        face = '#000'
+    } else if (9 <= dateTime.hour) {
+        hand = 'black'
+    }
+
+
+    return <div style={{ textAlign: 'center', width: '5rem', margin: '0' }}>
         <div>{name}</div>
         <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="50" r="45" fill="none" stroke="black" strokeWidth="2" />
-            <line x1="50" y1="50" x2="50" y2="20" stroke="black" strokeWidth="2"
+            <circle cx="50" cy="50" r="45" fill={face} stroke={hand} strokeWidth="2" />
+            <line x1="50" y1="50" x2="50" y2="20" stroke={hand} strokeWidth="2"
                 transform={`rotate(${minuteHandAngle(dateTime)}  50 50)`} />
-            <line x1="50" y1="50" x2="50" y2="10" stroke="black" strokeWidth="2"
+            <line x1="50" y1="50" x2="50" y2="10" stroke={hand} strokeWidth="2"
                 transform={`rotate(${hourHandAngle(dateTime)}  50 50)`} />
         </svg>
-        <div style={{ fontSize: '0.9rem' }}>{dateTime.toFormat("DD")}<br />{dateTime.toFormat("t")}</div>
+        <div style={{ fontSize: '0.8rem' }}>{dateTime.toFormat("DD")}<br />{dateTime.toFormat("t")}</div>
     </div>
 }
