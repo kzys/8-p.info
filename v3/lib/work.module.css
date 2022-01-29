@@ -1,0 +1,27 @@
+@media screen and (min-width: 50rem) {
+    .company {
+	    display: flex;
+    }
+    div.title {
+        display: flex;
+    }
+}
+
+.company {
+    justify-content: space-between;
+    margin-bottom: 0;
+}
+
+.title {
+    clear: both;
+    margin-top: 0.5rem;
+}
+
+.years {
+    width: 16rem;
+}
+
+.location {
+    font-size: .9rem;
+    font-weight: normal;
+}
