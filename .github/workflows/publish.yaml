@@ -40,6 +40,7 @@ jobs:
         rsync -rv v3/out/ dist/
 
     - name: AWS Credentials
+      if: github.event_name == 'push'
       uses: aws-actions/configure-aws-credentials@v1
       with:
         role-to-assume: arn:aws:iam::856782815229:role/EightInfraStack-StaticWebsiteUpload600EF283-12R2J8NJLHEAN
