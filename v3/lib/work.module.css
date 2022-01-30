@@ -14,7 +14,7 @@
 
 .title {
     clear: both;
-    margin-top: 0.5rem;
+    line-height: 2;
 }
 
 .years {
@@ -24,4 +24,9 @@
 .location {
     font-size: .9rem;
     font-weight: normal;
+}
+
+.japanese {
+    font-weight: normal;
+    color: #666;
 }

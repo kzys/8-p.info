@@ -17,8 +17,11 @@ export function Company(props: companyProps) {
   `}</style>
         <h3 className={styles.company}>
             <div>
-                <div className="en">{props.name}</div>
-                <div className="ja">{props.localName}</div>
+                <div>{props.name}</div>
+                <div
+                    style={{ fontSize: '0.9rem' }}
+                    className={styles.japanese}
+                >{props.localName}</div>
             </div>
             <div className={styles.location}>{props.location}</div>
         </h3>
@@ -27,13 +30,14 @@ export function Company(props: companyProps) {
 
 type titleProps = {
     name: string,
-    years: string,
+    from: string,
+    to: string,
 }
 
 export function Title(props: titleProps) {
     return <>
         <div className={styles.title}>
-            <div className={styles.years}>{props.years}</div>
+            <div className={styles.years}>{props.from} &mdash; {props.to}</div>
             <div className="name">{props.name}</div>
         </div>
     </>

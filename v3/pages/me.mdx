@@ -2,8 +2,12 @@
 export const title = 'Kazuyoshi Kato / 加藤 和良'
 
 import {Company, Title} from '../lib/work.tsx'
+import styles from '../lib/work.module.css'
 
-<h1><div className="en">Kazuyoshi Kato</div><div className="ja">加藤 和良</div></h1>
+<h1>
+    <div className="en">Kazuyoshi Kato</div>
+    <div className={styles.japanese}>加藤 和良</div>
+</h1>
 
 Hello! My name is Kazuyoshi Kato. I'm a Japanese software developer in Seattle, Washington. I work for [Amazon Web Services](https://aws.amazon.com/).
 
@@ -15,33 +19,33 @@ I'm @kzys on [GitHub](https://github.com/kzys/) and [Twitter](https://twitter.co
 
 <Company name="Amazon Web Services" location="Seattle, Washington"/>
 
-<Title name="Senior Software Development Engineer" years="October 2021 -- present" />
+<Title name="Senior Software Development Engineer" from="October 2021" to="present" />
 
-<Title name="Software Development Engineer" years="July 2019 -- September 2021" />
+<Title name="Software Development Engineer" from="July 2019" to="September 2021" />
 
 <Company name="Amazon.com" location="Seattle, Washington" />
 
-<Title name="Software Development Engineer" years="September 2014 -- July 2019" />
+<Title name="Software Development Engineer" from="September 2014" to="July 2019" />
 
 <Company name="Amazon Japan" localName="株式会社アマゾンジャパン" location="Meguro, Tokyo" />
 
-<Title name="Software Development Engineer" years="July 2012 -- September 2014" />
+<Title name="Software Development Engineer" from="July 2012" to="September 2014" />
 
 <Company name="mixi, Inc." localName="株式会社ミクシィ" location="Harajuku, Tokyo / Shibuya, Tokyo" />
 
-<Title name="Engineer" years="April 2008 -- July 2012" />
+<Title name="Engineer" from="April 2008" to="July 2012" />
 
 <Company
     name="National Institute of Advanced Industrial Science and Technology"
     localName="独立行政法人 産業技術総合研究所" location="Akihabara, Tokyo" />
 
-<Title name="Technical Staff (Part-Time)" years="October 2007 -- March 2008" />
+<Title name="Technical Staff (Part-Time)" from="October" to="March 2008" />
 
 <Company
     name="Community Engine Inc"
     localName="コミュニティーエンジン株式会社" location="Hatsudai, Tokyo" />
 
-<Title name="Development Engineer (Part-Time)" years="April 2006 -- December 2007" />
+<Title name="Development Engineer (Part-Time)" from="April 2006" to="December 2007" />
 
 ## Contact
 

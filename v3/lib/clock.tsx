@@ -32,13 +32,12 @@ export default function Clock(props: clockProps) {
     let face = "#fff"
     let hand = "#ccc"
 
-    if (17 <= dateTime.hour || dateTime.hour < 6) {
+    if (9 <= dateTime.hour && dateTime.hour <= 17) {
+        hand = 'black'
+    } else if (17 < dateTime.hour || dateTime.hour < 6) {
         hand = '#fff'
         face = '#000'
-    } else if (9 <= dateTime.hour) {
-        hand = 'black'
     }
-
 
     return <div style={{ textAlign: 'center', width: '5rem', margin: '0' }}>
         <div>{name}</div>
