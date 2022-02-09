@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import seedrandom from 'seedrandom';
 import { Cell, CellProps } from './cell'
 
 function init(width: number, height: number) {
