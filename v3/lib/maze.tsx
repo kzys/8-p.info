@@ -1,8 +1,8 @@
+import { useEffect, useState } from 'react';
 import seedrandom from 'seedrandom';
 import { Cell, CellProps } from './cell'
 
-function generateMaze(width: number, height: number) {
-    let r = seedrandom(width * height);
+function init(width: number, height: number) {
     let result = new Array<Array<number>>();
     for (let y = 0; y < height; y++) {
         result.push(new Array<number>(width).fill(0));
@@ -12,6 +12,11 @@ function generateMaze(width: number, height: number) {
             }
         }
     }
+    return result;
+}
+
+function generateMaze(r: () => number, width: number, height: number) {
+    let result = init(width, height)
 
     let stack: Array<[number, number]> = new Array();
     let pos: [number, number] = [1, 1];
@@ -43,7 +48,7 @@ function generateMaze(width: number, height: number) {
         }
         stack.push([cx, cy]);
 
-        let d = next[Math.floor(r.quick() * next.length)];
+        let d = next[Math.floor(r() * next.length)];
         let dx = d[0];
         let dy = d[1];
         result[cy + dy][cx + dx] = 0;
@@ -57,7 +62,8 @@ function generateMaze(width: number, height: number) {
 type mazeProps = {
     width: number,
     height: number,
-    colors: Array<string>
+    colors?: Array<string>
+    text: boolean
 }
 
 export function Maze(props: mazeProps) {
@@ -67,7 +73,22 @@ export function Maze(props: mazeProps) {
     let height = props.height;
     height = height * 2 + 1;
 
-    let maze = generateMaze(width, height)
+    const [client, setClient] = useState(false);
+
+    let colors = props.colors;
+    if (!colors) {
+        colors = ['pink', 'red', 'purple', 'blue', 'orange']
+    }
+
+    let maze = init(width, height);
+    if (client) {
+        maze = generateMaze(Math.random, width, height)
+    }
+
+    useEffect(() => {
+        setClient(true)
+    })
+
     let nodes = []
     maze[1][0] = 0;
     maze[height - 2][width - 1] = 0;
@@ -84,7 +105,7 @@ export function Maze(props: mazeProps) {
                     right: x + 1 < width && maze[y][x + 1] == 1,
                     top: 0 <= y - 1 && maze[y - 1][x] == 1,
                     bottom: y + 1 < height && maze[y + 1][x] == 1,
-                    color: props.colors[i % props.colors.length],
+                    color: colors[i % colors.length],
                 };
                 nodes.push(<g key={i++} transform={`translate(${x * u3},${y * u3})`} y={y * u3}>
                     <Cell {...cp}></Cell>
@@ -94,23 +115,23 @@ export function Maze(props: mazeProps) {
     }
 
     return (
-        <div key={maze.join('x')} style={{ textAlign: 'center' }}>
+        <div key={maze.join('x')}>
             <svg version="1.1"
                 width={width * u3} height={height * u3}
                 xmlns="http://www.w3.org/2000/svg">
-                <text
+                {props.text && <text
                     fontSize={u3}
                     fontFamily="monospace"
                     dominantBaseline="central"
                     x={u3} y={u3 * 1 + u}
-                >Start</text>
-                <text
+                >Start</text>}
+                {props.text && <text
                     fontSize={u3}
                     fontFamily="monospace"
                     dominantBaseline="central"
                     textAnchor="end"
                     x={u3 * (width - 1)} y={u3 * (height - 1) - u}
-                >Goal</text>
+                >Goal</text>}
                 {nodes}
             </svg>
         </div>

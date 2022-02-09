@@ -1,6 +1,6 @@
 import '../global.css'
 import Link from 'next/link'
-import Layout from '../lib/layout'
+import { Layout, Footer } from '../lib/layout'
 
 export default function MyApp({ Component, pageProps }) {
     var c;
@@ -11,10 +11,11 @@ export default function MyApp({ Component, pageProps }) {
         // This one doesn't have props...
         c = <Component {...pageProps} />
     }
+
+    let footer = c.props.footer == undefined
+
     return <Layout title={c.props.title || ''}>
         {c}
-        <footer style={{ borderTop: '1px solid #000', paddingTop: '1rem' }}>
-            <Link href="/">8-p.info</Link>
-        </footer>
+        {footer && <Footer />}
     </Layout>
 }
