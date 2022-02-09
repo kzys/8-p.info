@@ -30,10 +30,7 @@ export default function Home() {
           </form>
           <br />
         </div>
-        <Maze
-          width={width} height={height}
-          colors={['pink', 'red', 'purple', 'blue', 'orange']}
-        />
+        <Maze text={true} width={width} height={height} />
       </main>
     </div>
   )
