@@ -1,0 +1,9 @@
+.footer {
+    border-top: 1px solid #000;
+    padding: 1rem 0;
+}
+
+.footer a {
+    color: #000;
+    text-decoration: none;
+}
