@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: sans-serif;
-            line-height: 1.5;
+            line-height: 1.8;
         }
 
         a {
@@ -17,62 +17,92 @@
             color: #c0c;
         }
 
-        main {
-            max-width: 40rem;
-            margin: 0 auto;
-        }
+	main {
+	    margin: 1rem;
+	    padding: 0;
+	}
+
+	@media (min-width: 80em) {
+            main {
+		display: flex;
+            }
+	}
+
+	.column {
+	    flex-basis: 50%;
+	}
     </style>
 </head>
 <body>
     <main>
-        <h1>8-p.info</h1>
-        <p>
+	<div class="column">
+          <h1>8-p.info</h1>
+          <p>
             My name is <a href="/me/">Kazuyoshi Kato</a>.
             I have a <a href="https://blog.8-p.info/">blog</a> and
             <a href="https://thoughts.8-p.info/">some notes</a>.
-        </p>
-	<h2>Projects</h2>
-	<p>To be updated, hopefully soon.</p>
+          </p>
+	  <h2>Projects</h2>
+	  <p>To be updated, hopefully soon.</p>
 
-        <h2>No web3</h2>
-        <p>
+          <h2>No web3</h2>
+          <p>
             I'm still skeptical about blockchain technology.
             Please read
             <a href="https://concerned.tech">Letter in Support of Responsible Fintech Policy</a> (I signed)
             and/or watch <a href="https://www.youtube.com/watch?v=YQ_xWvX1n9g">Line Goes Up</a>
             if you haven't.
-        </p>
+          </p>
+	</div>
 
-	<h2>From the internet</h2>
-	<p>Inspired by <a href="https://www.kickscondor.com/foundations-of-a-tiny-directory/">Foundations of a Tiny Directory</a>, I'm collecting the good parts of the internet.</p>
+	<div class="column">
+	  <h2>From the internet</h2>
+	  <p>Inspired by <a href="https://www.kickscondor.com/foundations-of-a-tiny-directory/">Foundations of a Tiny Directory</a>, I'm collecting the good parts of the internet.</p>
 
-	<h3>Software development</h3>
-	<ul>
-	  <li><a href="https://drewdevault.com/2018/07/09/Simple-correct-fast.html">Simple, correct, fast: in that order</a> - It is really hard to do that though</li>
-	  <li><a href="https://medium.com/@9len/on-code-review-16ea85f7c585">On Code Review</a> - <q>Code review should probably always be your top priority</q></li>
-	  <li><a href="https://blog.nelhage.com/post/computers-can-be-understood/">Computers can be understood</a></li>
-	  <li><a href="https://martinfowler.com/bliki/TestDouble.html">TestDouble</a> - dummy objects, fake objects, stubs, spies and mocks.</li>
-	  <li><a href="https://drewdevault.com/2021/04/12/DCO.html">The Developer Certificate of Origin is a great alternative to a CLA</a>
-	</ul>
+	  <h3>Software development</h3>
+	  <ul>
+	    <li><a href="https://drewdevault.com/2018/07/09/Simple-correct-fast.html">Simple, correct, fast: in that order</a> - It is really hard to do that though</li>
+	    <li><a href="https://medium.com/@9len/on-code-review-16ea85f7c585">On Code Review</a> - <q>Code review should probably always be your top priority</q></li>
+	    <li><a href="https://blog.nelhage.com/post/computers-can-be-understood/">Computers can be understood</a></li>
+	    <li><a href="https://martinfowler.com/bliki/TestDouble.html">TestDouble</a> - Dummy objects, fake objects, stubs, spies and mocks.</li>
+	    <li><a href="https://drewdevault.com/2021/04/12/DCO.html">The Developer Certificate of Origin is a great alternative to a CLA</a></li>
+	    <li><a href="https://heistak.github.io/your-code-displays-japanese-wrong/">Your Code Displays Japanese Wrong</a> - About Unicode's Han Unification</li>
+	    <li><a href="https://www.tritondatacenter.com/node-js/production/design/errors">Error Handling in Node.js</a> - Operational errors vs. programmer errors.</li>
+	  </ul>
 
-	<h3>Podcast</h3>
-	<ul>
-	  <li><a href="https://www.npr.org/podcasts/510289/planet-money/">Planet Money</a></li>
-	  <li><a href="https://corecursive.com/">CoRecursive</a></li>
-	</ul>
+	  <h3>Web</h3>
+	  <ul>
+	    <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">A Complete Guide to Flexbox </a></li>
+	  </ul>
 
-	<h3>xkcd</h3>
-	<ul>
-	  <li><a href="https://xkcd.com/386/">Duty Calls</a></li>
-	  <li><a href="https://xkcd.com/927/">Standards</a></li>
-	  <li><a href="https://xkcd.com/1171/">Perl Problems</a></li>
-	</ul>
+	  <h3>Podcast</h3>
+	  <ul>
+	    <li><a href="https://www.npr.org/podcasts/510289/planet-money/">Planet Money</a> - About economics.</li>
+	    <li><a href="https://corecursive.com/">CoRecursive</a> - A good well-edited tech interview podcast.</li>
+	  </ul>
 
-        <h3>Minimalism</h3>
-	<p>I'm not a minimalist, but I'd like to be.</p>
-        <ul>
-          <li><a href="https://maketime.blog/article/the-distraction-free-iphone/">The Distraction-Free iPhone</a></li>
-	</ul>
+	  <h3>xkcd</h3>
+	  <ul>
+	    <li><a href="https://xkcd.com/386/">Duty Calls</a></li>
+	    <li><a href="https://xkcd.com/927/">Standards</a></li>
+	    <li><a href="https://xkcd.com/1171/">Perl Problems</a></li>
+	  </ul>
+
+          <h3>Minimalism</h3>
+	  <p>I'm not a minimalist, but I'd like to be.</p>
+          <ul>
+            <li><a href="https://maketime.blog/article/the-distraction-free-iphone/">The Distraction-Free iPhone</a></li>
+	  </ul>
+
+	  <h3>Cool folks to follow</h3>
+	  <ul>
+	    <li><a href="https://100r.co/">Hundred Rabbits</a> - They are living in a sailboat and making own personal computing stack.</li>
+	    <li><a href="https://www.inkandswitch.com/">Ink & Switch</a></li>
+	  </ul>
+	</div>
     </main>
+    <footer>
+      hello
+    </footer>
 </body>
 </html>
