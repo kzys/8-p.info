@@ -7,6 +7,8 @@ import (
 	"path/filepath"
 )
 
+const outDir = "v4_out"
+
 type FrontMatter struct {
 	Title  string `yaml:"title"`
 	Layout string `yaml:"layout"`
@@ -50,7 +52,7 @@ func processFile(in string, out string) error {
 
 func realMain() error {
 	src := os.Args[1]
-	dest := "dist"
+	dest := outDir
 
 	err := os.MkdirAll(dest, 0755)
 	if err != nil {
