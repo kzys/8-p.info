@@ -2,13 +2,10 @@ package main
 
 import (
 	"bytes"
-	"fmt"
 	"html/template"
 	"os"
-	"strings"
 
 	"github.com/yuin/goldmark"
-	"gopkg.in/yaml.v3"
 )
 
 func processMarkdownInclude(in string) (template.HTML, error) {
@@ -25,37 +22,28 @@ func processMarkdownInclude(in string) (template.HTML, error) {
 	return template.HTML(w.String()), nil
 }
 
-func processMarkdown(in, out string) (string, error) {
+func (g *gen) processMarkdown(in, out string) (string, error) {
 	path := out[:len(out)-3] + ".html"
 
-	var fm FrontMatter
+	var params Params
 
-	b, err := os.ReadFile(in)
-	if err != nil {
-		return "", err
-	}
-	if string(b[0:4]) == "---\n" {
-		xs := strings.SplitN(string(b), "---", 3)
-		b = []byte(xs[2])
-		err = yaml.Unmarshal([]byte(xs[1]), &fm)
-		if err != nil {
-			return "", err
-		}
-	}
-
-	w, err := os.Create(path)
-	if err != nil {
-		return "", err
-	}
-	defer w.Close()
-
-	_, err = w.WriteString(fmt.Sprintf("<title>%s</title>", fm.Title))
+	b, params, err := readFrontMatter(in)
 	if err != nil {
 		return "", err
 	}
 
-	if err := goldmark.Convert(b, w); err != nil {
+	body := &bytes.Buffer{}
+	if err := goldmark.Convert(b, body); err != nil {
 		return "", err
 	}
+
+	params.Root = "/"
+	params.Body = template.HTML(body.String())
+
+	err = g.render(path, params)
+	if err != nil {
+		return "", err
+	}
+
 	return path, nil
 }

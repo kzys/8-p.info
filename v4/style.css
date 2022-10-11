@@ -1,0 +1,78 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.8;
+}
+
+a {
+    color: #00c;
+}
+a:visited {
+    color: #c0c;
+}
+
+main {
+    margin: 1rem;
+    padding: 0;
+}
+
+@media (min-width: 80em) {
+    main.flex {
+        display: flex;
+    }
+}
+
+main.flex .column {
+    flex-basis: 50%;
+}
+
+/* me */
+
+main.narrow {
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 50rem;
+    font-family: "Helvetica Neue", sans-serif;
+}
+
+.family {
+    color: #900;
+}
+
+.given {
+    color: #090;
+}
+
+p {
+    line-height: 1.5;
+}
+
+table.name {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+table.name th, table.name td {
+    border: 1px solid #999;
+    text-align: center;
+}
+table.name th {
+    font-weight: normal;
+}
+table.name td {
+    font-size: 200%;
+}
+
+h4 {
+    font-weight: normal;
+}
+
+@media (min-width: 50rem) {
+    h4 {
+        display: flex;
+    }
+    h4 .years {
+        width: 33.3%;
+    }
+    h4 .title {
+        flex-grow: 2;
+    }
+}
