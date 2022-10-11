@@ -32,7 +32,6 @@ jobs:
       run: |-
         rsync -rv v2/public/ dist/
         rsync -rv v3/out/ dist/
-        rsync -rv v4/ dist/
 
     - name: AWS Credentials
       if: github.event_name == 'push'
