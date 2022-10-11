@@ -1,3 +1,7 @@
+const crypto = require('crypto');
+const crypto_orig_createHash = crypto.createHash;
+crypto.createHash = algorithm => crypto_orig_createHash(algorithm == 'md4' ? "sha256" : algorithm);
+
 module.exports = {
   css: [
     "normalize.css",
@@ -15,10 +19,6 @@ module.exports = {
       plugins: {
         'postcss-nested': {},
       }
-    },
-    extend: function(c, x) {
-      // https://stackoverflow.com/a/73027407
-      c.output.hashFunction = 'sha1';
     }
   },
 
