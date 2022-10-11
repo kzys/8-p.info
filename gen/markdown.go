@@ -1,13 +1,29 @@
 package main
 
 import (
+	"bytes"
 	"fmt"
+	"html/template"
 	"os"
 	"strings"
 
 	"github.com/yuin/goldmark"
 	"gopkg.in/yaml.v3"
 )
+
+func processMarkdownInclude(in string) (template.HTML, error) {
+	b, err := os.ReadFile(in)
+	if err != nil {
+		return "", err
+	}
+
+	w := &bytes.Buffer{}
+
+	if err := goldmark.Convert(b, w); err != nil {
+		return "", err
+	}
+	return template.HTML(w.String()), nil
+}
 
 func processMarkdown(in, out string) (string, error) {
 	path := out[:len(out)-3] + ".html"

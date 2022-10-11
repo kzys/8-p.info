@@ -36,7 +36,12 @@ func processFile(in string, out string) error {
 		}
 		defer w.Close()
 
-		tp, err := template.New("index.html").ParseFiles(in)
+		tp, err := template.New("index.html").Funcs(template.FuncMap{
+			"include": func(path string) (template.HTML, error) {
+				dir := filepath.Dir(in)
+				return processMarkdownInclude(filepath.Join(dir, path))
+			},
+		}).ParseFiles(in)
 		if err != nil {
 			return fmt.Errorf("failed to parse %s: %w", in, err)
 		}
