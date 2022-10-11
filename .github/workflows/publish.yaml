@@ -18,9 +18,7 @@ jobs:
     - uses: actions/setup-node@v2
 
     - name: JavaScript
-      run: |
-        npm install
-        ./build.sh
+      run: make
 
     - name: Hugo
       run: |-
