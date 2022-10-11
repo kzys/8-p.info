@@ -28,12 +28,6 @@ jobs:
         cd v2/
         ../hugo
 
-    - name: Next.js
-      run: |
-        cd v3
-        npm install
-        npm run build
-
     - name: Merge
       run: |-
         rsync -rv v2/public/ dist/
