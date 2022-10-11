@@ -2,9 +2,11 @@
 .nuxt/
 dist/
 
-*/node_modules
+node_modules
 */repos/*
 *.pyc
 
 v3/out/
 v3/.next/
+
+gen/gen
