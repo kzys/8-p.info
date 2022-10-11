@@ -15,24 +15,18 @@ jobs:
       contents: read
     steps:
     - uses: actions/checkout@v2
-    - uses: actions/setup-node@v2
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 16
 
     - name: JavaScript
-      run: |
-        npm install
-        ./build.sh
+      run: make
 
     - name: Hugo
       run: |-
         wget -O - https://github.com/gohugoio/hugo/releases/download/v0.55.6/hugo_0.55.6_Linux-64bit.tar.gz | tar zxvf -
         cd v2/
         ../hugo
-
-    - name: Next.js
-      run: |
-        cd v3
-        npm install
-        npm run build
 
     - name: Merge
       run: |-
