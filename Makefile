@@ -9,3 +9,6 @@ build-v1-v3:
 	npm install
 	./build.sh
 	(cd v3 && npm install && npm run build)
+
+test:
+	(cd gen && go test -v)

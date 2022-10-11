@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"html/template"
 	"io/fs"
 	"os"
 	"path/filepath"
@@ -28,32 +27,23 @@ func processFile(in string, out string) error {
 		return err
 	}
 
+	var path string
 	ext := filepath.Ext(in)
 	if ext == ".html" {
-		w, err := os.Create(out)
+		p, err := processHTML(in, out)
 		if err != nil {
 			return err
 		}
-		defer w.Close()
-
-		tp, err := template.New("index.html").ParseFiles(in)
-		if err != nil {
-			return fmt.Errorf("failed to parse %s: %w", in, err)
-		}
-
-		err = tp.ExecuteTemplate(w, "index.html", 1)
-		if err != nil {
-			return fmt.Errorf("failed to execute %s: %w", in, err)
-		}
+		path = p
 	} else if ext == ".md" {
-		var err error
-		out, err = processMarkdown(in, out)
+		p, err := processMarkdown(in, out)
 		if err != nil {
 			return err
 		}
+		path = p
 	}
 
-	fmt.Printf("process %s to generate %s\n", in, out)
+	fmt.Printf("process %s to generate %s\n", in, path)
 	return nil
 
 }
