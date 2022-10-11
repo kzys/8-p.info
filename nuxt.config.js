@@ -15,6 +15,10 @@ module.exports = {
       plugins: {
         'postcss-nested': {},
       }
+    },
+    extend: function(c, x) {
+      // https://stackoverflow.com/a/73027407
+      c.output.hashFunction = 'sha1';
     }
   },
 
