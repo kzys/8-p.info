@@ -49,3 +49,9 @@ jobs:
           -region us-east-1 -bucket 8-p.info \
           -distribution-id E2XRRAO8RPD4HJ -max-delete 0 -acl public-read \
           -source dist/
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - run: make test
