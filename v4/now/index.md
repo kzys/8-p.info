@@ -4,8 +4,7 @@ title: What Kazuyoshi is doing right now
 
 # What I'm doing right now
 
-January 2022 @ Seattle
+October 2022 @ Seattle
 
-- Got a [VanMoof](https://www.vanmoof.com/). It is a lease program though.
-- Will get new glasses.
-- Making some diagrams regarding containers and sharing them on Twitter.
+- I am rebuilding 8-p.info once again.
+- Blogging is fine, but I'd like to keep a few well-maintained long-lasting pages.
