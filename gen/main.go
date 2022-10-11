@@ -6,9 +6,12 @@ import (
 	"io/fs"
 	"os"
 	"path/filepath"
-
-	"github.com/yuin/goldmark"
 )
+
+type FrontMatter struct {
+	Title  string `yaml:"title"`
+	Layout string `yaml:"layout"`
+}
 
 func main() {
 	err := realMain()
@@ -43,18 +46,9 @@ func processFile(in string, out string) error {
 			return fmt.Errorf("failed to execute %s: %w", in, err)
 		}
 	} else if ext == ".md" {
-		out = out[:len(out)-3] + ".html"
-		w, err := os.Create(out)
+		var err error
+		out, err = processMarkdown(in, out)
 		if err != nil {
-			return err
-		}
-		defer w.Close()
-
-		r, err := os.ReadFile(in)
-		if err != nil {
-			return err
-		}
-		if err := goldmark.Convert(r, w); err != nil {
 			return err
 		}
 	}
