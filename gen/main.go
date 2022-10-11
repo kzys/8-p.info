@@ -2,10 +2,12 @@ package main
 
 import (
 	"fmt"
-	"io"
+	"html/template"
 	"io/fs"
 	"os"
 	"path/filepath"
+
+	"github.com/yuin/goldmark"
 )
 
 func main() {
@@ -14,6 +16,52 @@ func main() {
 		fmt.Fprintf(os.Stderr, "%s\n", err)
 		os.Exit(1)
 	}
+}
+
+func processFile(in string, out string) error {
+	dir := filepath.Dir(out)
+	err := os.MkdirAll(dir, 0755)
+	if err != nil {
+		return err
+	}
+
+	ext := filepath.Ext(in)
+	if ext == ".html" {
+		w, err := os.Create(out)
+		if err != nil {
+			return err
+		}
+		defer w.Close()
+
+		tp, err := template.New("index.html").ParseFiles(in)
+		if err != nil {
+			return fmt.Errorf("failed to parse %s: %w", in, err)
+		}
+
+		err = tp.ExecuteTemplate(w, "index.html", 1)
+		if err != nil {
+			return fmt.Errorf("failed to execute %s: %w", in, err)
+		}
+	} else if ext == ".md" {
+		out = out[:len(out)-3] + ".html"
+		w, err := os.Create(out)
+		if err != nil {
+			return err
+		}
+		defer w.Close()
+
+		r, err := os.ReadFile(in)
+		if err != nil {
+			return err
+		}
+		if err := goldmark.Convert(r, w); err != nil {
+			return err
+		}
+	}
+
+	fmt.Printf("process %s to generate %s\n", in, out)
+	return nil
+
 }
 
 func realMain() error {
@@ -38,32 +86,7 @@ func realMain() error {
 		if err != nil {
 			return err
 		}
-		out := filepath.Join(dest, rel)
 
-		dir := filepath.Dir(out)
-		err = os.MkdirAll(dir, 0755)
-		if err != nil {
-			return err
-		}
-
-		w, err := os.Create(out)
-		if err != nil {
-			return err
-		}
-		defer w.Close()
-
-		r, err := os.Open(path)
-		if err != nil {
-			return err
-		}
-		defer r.Close()
-
-		_, err = io.Copy(w, r)
-		if err != nil {
-			return err
-		}
-
-		fmt.Printf("process %s to generate %s\n", path, out)
-		return nil
+		return processFile(path, filepath.Join(dest, rel))
 	})
 }

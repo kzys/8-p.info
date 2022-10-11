@@ -1,4 +1,6 @@
-export const title = 'What Kazuyoshi is doing right now'
+---
+title: What Kazuyoshi is doing right now
+---
 
 # What I'm doing right now
 
