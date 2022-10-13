@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"html/template"
 	"io/fs"
 	"os"
 	"path/filepath"
@@ -9,9 +10,11 @@ import (
 
 const outDir = "v4_out"
 
-type FrontMatter struct {
+type Params struct {
 	Title  string `yaml:"title"`
 	Layout string `yaml:"layout"`
+	Root   string
+	Body   template.HTML
 }
 
 func main() {
@@ -22,7 +25,7 @@ func main() {
 	}
 }
 
-func processFile(in string, out string) error {
+func (g *gen) processFile(in string, out string) error {
 	dir := filepath.Dir(out)
 	err := os.MkdirAll(dir, 0755)
 	if err != nil {
@@ -32,13 +35,19 @@ func processFile(in string, out string) error {
 	var path string
 	ext := filepath.Ext(in)
 	if ext == ".html" {
-		p, err := processHTML(in, out)
+		p, err := g.processHTML(in, out)
 		if err != nil {
 			return err
 		}
 		path = p
 	} else if ext == ".md" {
-		p, err := processMarkdown(in, out)
+		p, err := g.processMarkdown(in, out)
+		if err != nil {
+			return err
+		}
+		path = p
+	} else if ext == ".css" {
+		p, err := g.processNormalFile(in, out)
 		if err != nil {
 			return err
 		}
@@ -59,6 +68,14 @@ func realMain() error {
 		return err
 	}
 
+	g := &gen{}
+
+	tp, err := template.New("").ParseFiles("v4_layout/wrapper.html")
+	if err != nil {
+		return err
+	}
+	g.tp = tp
+
 	return filepath.Walk(src, func(path string, info fs.FileInfo, err error) error {
 		stat, err := os.Stat(path)
 		if err != nil {
@@ -73,6 +90,6 @@ func realMain() error {
 			return err
 		}
 
-		return processFile(path, filepath.Join(dest, rel))
+		return g.processFile(path, filepath.Join(dest, rel))
 	})
 }
