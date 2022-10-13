@@ -8,9 +8,15 @@ Inspired by [Foundations of a Tiny Directory](https://www.kickscondor.com/founda
 * [On Code Review](https://medium.com/@9len/on-code-review-16ea85f7c585) - <q>Code review should probably always be your top priority</q>
 * [Computers can be understood](https://blog.nelhage.com/post/computers-can-be-understood/)
 * [TestDouble](https://martinfowler.com/bliki/TestDouble.html) - Dummy objects, fake objects, stubs, spies and mocks.
-* [The Developer Certificate of Origin is a great alternative to a CLA](https://drewdevault.com/2021/04/12/DCO.html)
-* [Your Code Displays Japanese Wrong](https://heistak.github.io/your-code-displays-japanese-wrong/) - About Unicode's Han Unification
 * [Error Handling in Node.js](https://www.tritondatacenter.com/node-js/production/design/errors) - Operational errors vs. programmer errors.
+
+### Open Source
+
+* [The Developer Certificate of Origin is a great alternative to a CLA](https://drewdevault.com/2021/04/12/DCO.html)
+
+### Internationalization
+
+* [Your Code Displays Japanese Wrong](https://heistak.github.io/your-code-displays-japanese-wrong/) - About Unicode's Han Unification
 
 ### Web
 
