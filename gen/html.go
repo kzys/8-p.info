@@ -3,11 +3,12 @@ package main
 import (
 	"bytes"
 	"fmt"
-	"gopkg.in/yaml.v3"
 	"html/template"
 	"os"
 	"path/filepath"
 	"strings"
+
+	"gopkg.in/yaml.v3"
 )
 
 func readFrontMatter(path string) ([]byte, Params, error) {
@@ -37,7 +38,7 @@ func (g *gen) processHTML(in, out string) (string, error) {
 	tp, err := template.New("index.html").Funcs(template.FuncMap{
 		"include": func(path string) (template.HTML, error) {
 			dir := filepath.Dir(in)
-			return processMarkdownInclude(filepath.Join(dir, path))
+			return g.processMarkdownInclude(filepath.Join(dir, path))
 		},
 	}).Parse(string(b))
 	if err != nil {

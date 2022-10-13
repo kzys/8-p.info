@@ -4,11 +4,9 @@ import (
 	"bytes"
 	"html/template"
 	"os"
-
-	"github.com/yuin/goldmark"
 )
 
-func processMarkdownInclude(in string) (template.HTML, error) {
+func (g *gen) processMarkdownInclude(in string) (template.HTML, error) {
 	b, err := os.ReadFile(in)
 	if err != nil {
 		return "", err
@@ -16,7 +14,7 @@ func processMarkdownInclude(in string) (template.HTML, error) {
 
 	w := &bytes.Buffer{}
 
-	if err := goldmark.Convert(b, w); err != nil {
+	if err := g.md.Convert(b, w); err != nil {
 		return "", err
 	}
 	return template.HTML(w.String()), nil
@@ -33,7 +31,7 @@ func (g *gen) processMarkdown(in, out string) (string, error) {
 	}
 
 	body := &bytes.Buffer{}
-	if err := goldmark.Convert(b, body); err != nil {
+	if err := g.md.Convert(b, body); err != nil {
 		return "", err
 	}
 
