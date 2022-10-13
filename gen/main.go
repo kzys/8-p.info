@@ -68,7 +68,7 @@ func realMain() error {
 		return err
 	}
 
-	g := &gen{}
+	g := newGen()
 
 	tp, err := template.New("").ParseFiles("v4_layout/wrapper.html")
 	if err != nil {
