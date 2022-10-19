@@ -36,7 +36,7 @@ func (g *gen) processMarkdown(in, out string) (string, error) {
 	}
 
 	params.Root = "/"
-	params.Body = template.HTML(body.String())
+	params.Body = template.HTML("<main class='markdown'>" + body.String() + "</main>")
 
 	err = g.render(path, params)
 	if err != nil {
