@@ -1,7 +1,7 @@
 ---
-title: Kazuyoshi Kato
+title: Kazuyoshi Kato / 加藤 和良
 ---
-# Kazuyoshi Kato
+# Kazuyoshi Kato / 加藤 和良
 
 Hello! My name is Kazuyoshi Kato. I'm a Japanese software developer in Seattle, Washington. I work for [Amazon Web Services](https://aws.amazon.com/).
 
