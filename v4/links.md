@@ -15,10 +15,15 @@ Inspired by [Foundations of a Tiny Directory](https://www.kickscondor.com/founda
 * [Practical Go](https://dave.cheney.net/practical-go/presentations/gophercon-singapore-2019.html) (2019)
 * [Notes on structured concurrency, or: Go statement considered harmful](https://vorpus.org/blog/notes-on-structured-concurrency-or-go-statement-considered-harmful/) (2018) - Mostly addressed by context and errgroup today though. See [this issue](https://github.com/golang/go/issues/29011) as well.
 
+### Unix
+
+* [The Tragedy of systemd](https://www.youtube.com/watch?v=o_AIw9bGogo)
+
 ### Team
 
 * [Recurse Center's social rules](https://www.recurse.com/social-rules)
 * [On Code Review](https://medium.com/@9len/on-code-review-16ea85f7c585) - <q>Code review should probably always be your top priority</q>
+* [World Time Buddy](https://www.worldtimebuddy.com/?pl=1&lid=5809844,5128581,1850147) - Seattle, New York and Tokyo
 
 ### Open Source
 
