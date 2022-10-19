@@ -24,7 +24,8 @@
     "svelte": "^3.31.0"
   },
   "scripts": {
-    "dev": "nuxt"
+    "dev": "nuxt",
+    "rollup": "rollup -c"
   },
   "author": "",
   "license": "ISC"
