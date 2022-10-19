@@ -27,7 +27,7 @@ main.flex .column {
 
 /* me */
 
-main.narrow {
+main.markdown, main.narrow {
     margin: 0 auto;
     padding: 1rem;
     max-width: 50rem;
