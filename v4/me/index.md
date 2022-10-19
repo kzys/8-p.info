@@ -11,80 +11,89 @@ I'm @kzys on [GitHub](https://github.com/kzys/) and [Twitter](https://twitter.co
 
 ## Work Experience
 
-<h3>Amazon Web Services</h3>
+### Amazon Web Services
+
 <h4>
 <div class="years">October 2021 - present</div>
 <div class="title">Senior Software Development Engineer</div>
 <div class="location">Seattle, Washington</div>
 </h4>
-<p>containerd and firecracker-containerd still.</p>
+
+containerd and firecracker-containerd still.
 
 <h4>
 <div class="years">July 2019 - September 2021</div>
 <div class="title">Software Development Engineer</div>
 <div class="location">Seattle, Washington</div>
 </h4>
-<p>containerd and firecracker-containerd.</p>
 
-<h3>Amazon</h3>
+containerd and firecracker-containerd.
+
+### Amazon
+
 <h4>
 <div class="years">September 2014 - July 2019</div>
 <div class="title">Software Development Engineer</div>
 <div class="location">Seattle, Washington</div>
 </h4>
-<p>Consumer for 3 years. Alexa for 2 years.</p>
-<h3>Amazon Japan</h3>
+
+Consumer for 3 years. Alexa for 2 years.
+
+### Amazon Japan
+
 <h4>
 <div class="years">July 2012 - September 2014</div>
 <div class="title">Software Development Engineer</div>
 <div class="location">Meguro, Tokyo</div>
 </h4>
-<p>
+
 At that time, Amazon's mobile web experience was mostly owned by a small team in Tokyo.
 I was in the team and helped the modernization project of Product Detail Page.
-</p>
 
-<h3>mixi, Inc.</h3>
+### mixi, Inc.
+
 <h4>
 <div class="years">April 2008 - July 2012</div>
 <div class="title">Engineer</div>
 <div class="location">Harajuku, Tokyo / Shibuya, Tokyo</div>
 </h4>
-<p>
+
 I was in Platform team and developed mixi Platform,
-<a href="https://en.wikipedia.org/wiki/OpenSocial">OpenSocial</a>-based social application platform.
-</p>
-<h3>National Institute of Advanced Industrial Science and Technology</h3>
+[OpenSocial](https://en.wikipedia.org/wiki/OpenSocial)-based social application platform.
+
+### National Institute of Advanced Industrial Science and Technology
+
 <h4>
 <div class="years">October 2008 - March 2008</div>
 <div class="title">Technical Staff (Part-Time)</div>
 <div class="location">Akihabara, Tokyo</div>
 </h4>
-<p>I was in <a href="http://wedata.net">wedata</a> project.</p>
 
-<h3>Community Engine Inc</h3>
+I was in [wedata](http://wedata.net) project.
+
+### Community Engine Inc
+
 <h4>
 <div class="years">April 2006 - December 2007</div>
 <div class="title">Development Engineer (Part-Time)</div>
 <div class="location">Hatsudai, Tokyo</div>
 </h4>
-<p>
+
 Community Engine was Square Enix's subsidary,
 which was primarily developing network middleware for games.
 I prototyped the middleware's ActionScript 3 port, including its code generator.
-</p>
 
 ## FAQ
 
 <h3 id="kazu">Kazu? Kaz? Kato?</h3>
-<p>
+
 Kazuyoshi seems long for non-Japanese, albeit
-<a href="https://en.wikipedia.org/wiki/Kazuyoshi_Miura">common</a>
-<a href="https://en.wikipedia.org/wiki/Tamori">name</a> in Japan.
+[common](https://en.wikipedia.org/wiki/Kazuyoshi_Miura)
+[name](https://en.wikipedia.org/wiki/Tamori) in Japan.
 So I often use "Kazu" instead.
 Kaz is fine. It may be closer to the pronunciation.
 Kato is okay, but that's my family name.
-</p>
+
 <table class="name">
 <tr>
     <td></td>
@@ -117,38 +126,30 @@ Kato is okay, but that's my family name.
     <td>shi</td>
 </tr>
 </table>
-<p>
+
 My name, in Kanji is 加藤和良. 加藤 is my family name and 和良 is my given name.
 Chinese people could recognize the letters since Kanji is derived from Chinese.
-</p>
-<p>
+
 Japanese has another writing system, Hiragana.
 My name in Hiragana is かとうかずよし.
 Hiragana is "phonographic" whereas Kanji is "logographic".
 In other words, Hiragana basically represents its pronunciation,
 like the alphabet in English or Hangul in Korean.
-</p>
-<p>
+
 Hiragana can be translated into the alphabet in English, since both are phonographic.
 かとう is Kato. かずよし is Kazuyoshi.
 The romanization system is called
-<a href="https://en.wikipedia.org/wiki/Hepburn_romanization">Hepburn romanization</a>,
+[Hepburn romanization](https://en.wikipedia.org/wiki/Hepburn_romanization),
 which maps Hiragana characters to English alphabets.
-</p>
-<p>
+
 That may be the reason I used "Kazu" in the beginning.
 I thought about the letters, rather than the pronunciation.
-</p>
-<p>
+
 By the way, Japanese, as like Chinese and Korean,
-write names in the <em>family name, given name</em> order.
+write names in the *family name, given name* order.
 I used to do that even in English, but now getting used to use
-the <em>given name, family name</em> order, especially since I live in the States.
-</p>
-<p>
-However, <a href="https://www.reuters.com/article/us-japan-names/family-comes-first-japan-to-switch-order-of-names-in-victory-for-tradition-idUSKCN1VR1LE"
->the Japanese government is starting to use
-the <em>family name, given name</em> order even in English</a>.
+the *given name, family name* order, especially since I live in the States.
+
+However, [the Japanese government is starting to use
+the *family name, given name* order even in English](https://www.reuters.com/article/us-japan-names/family-comes-first-japan-to-switch-order-of-names-in-victory-for-tradition-idUSKCN1VR1LE).
 What's a mess...
-</p>
-</main>
