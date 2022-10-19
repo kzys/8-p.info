@@ -9,6 +9,12 @@ Inspired by [Foundations of a Tiny Directory](https://www.kickscondor.com/founda
 * [TestDouble](https://martinfowler.com/bliki/TestDouble.html) - Dummy objects, fake objects, stubs, spies and mocks.
 * [Error Handling in Node.js](https://www.tritondatacenter.com/node-js/production/design/errors) - Operational errors vs. programmer errors.
 
+### Go
+
+* [Effective Go](https://go.dev/doc/effective_go)
+* [Practical Go](https://dave.cheney.net/practical-go/presentations/gophercon-singapore-2019.html) (2019)
+* [Notes on structured concurrency, or: Go statement considered harmful](https://vorpus.org/blog/notes-on-structured-concurrency-or-go-statement-considered-harmful/) (2018) - Mostly addressed by context and errgroup today though. See [this issue](https://github.com/golang/go/issues/29011) as well.
+
 ### Team
 
 * [Recurse Center's social rules](https://www.recurse.com/social-rules)
