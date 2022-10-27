@@ -48,6 +48,7 @@ Inspired by [Foundations of a Tiny Directory](https://www.kickscondor.com/founda
 * [Duty Calls](https://xkcd.com/386/)
 * [Standards](https://xkcd.com/927/)
 * [Perl Problems](https://xkcd.com/1171/)
+* [Dependency](https://xkcd.com/2347/)
 
 ### Minimalism
 
