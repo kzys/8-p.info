@@ -60,3 +60,8 @@ I'm not a minimalist, but I'd like to be.
 
 * [Hundred Rabbits](https://100r.co/) - They are living in a sailboat and making own personal computing stack.
 * [Ink & Switch](https://www.inkandswitch.com/)
+
+### 日本語
+
+* [山形浩生](https://cruel.org/jindex.html)
+  * [山形浩生の「経済のトリセツ」](https://cruel.hatenablog.com/)
