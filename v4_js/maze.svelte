@@ -1,6 +1,7 @@
 <script lang="ts">
-    export let width: number
-    export let height: number
+    let width = 11
+    let height = 11
+    export let showcontrol;
 
 function init(width: number, height: number) {
     let result = new Array<Array<number>>();
@@ -60,11 +61,20 @@ function generateMaze(r: () => number, width: number, height: number) {
 }
 
 let u3 = 5;
-
-let rows = generateMaze(Math.random, width, height);
+let rows;
+$: {
+    rows = generateMaze(Math.random, width*2+1, height*2+1);
+}
 </script>
+
 <div style="width:90%">
-<svg width="100%" viewBox="0 0 {width} {height}">
+    {#if showcontrol}
+    <div>
+        Width: <input type=range bind:value={width} min=5 max=21/>
+        Height: <input type=range bind:value={height} min=5 max=21/>
+    </div>
+    {/if}
+<svg width="100%" viewBox="0 0 {width*2+1} {height*2+1}">
         {#each rows as row, y}
             {#each row as col, x}
             {#if col == 1}
