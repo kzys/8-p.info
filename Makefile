@@ -1,7 +1,10 @@
 build: build-v1-v3 build-v4 
 	find dist/
 
-build-v4:
+v4_out/output.js: v4_js/input.js v4_js/maze.svelte
+	npm run rollup
+
+build-v4: v4_out/output.js
 	(cd gen && go build)
 	./gen/gen v4
 
