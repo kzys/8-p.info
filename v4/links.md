@@ -8,6 +8,7 @@ Inspired by [Foundations of a Tiny Directory](https://www.kickscondor.com/founda
 * [Computers can be understood](https://blog.nelhage.com/post/computers-can-be-understood/)
 * [TestDouble](https://martinfowler.com/bliki/TestDouble.html) - Dummy objects, fake objects, stubs, spies and mocks.
 * [Error Handling in Node.js](https://www.tritondatacenter.com/node-js/production/design/errors) - Operational errors vs. programmer errors.
+* [Python Packaging Is Good Now](https://glyph.twistedmatrix.com/2016/08/python-packaging.html)
 
 ### Go
 
@@ -17,6 +18,7 @@ Inspired by [Foundations of a Tiny Directory](https://www.kickscondor.com/founda
 
 ### Unix
 
+* [Bash Strict Mode](http://redsymbol.net/articles/unofficial-bash-strict-mode/)
 * [The Tragedy of systemd](https://www.youtube.com/watch?v=o_AIw9bGogo)
 
 ### Team
@@ -56,12 +58,20 @@ I'm not a minimalist, but I'd like to be.
 
 * [The Distraction-Free iPhone](https://maketime.blog/article/the-distraction-free-iphone/)
 
-### Cool folks to follow
+### Personal Computing
 
 * [Hundred Rabbits](https://100r.co/) - They are living in a sailboat and making own personal computing stack.
 * [Ink & Switch](https://www.inkandswitch.com/)
 
-### 日本語
+### People
 
-* [山形浩生](https://cruel.org/jindex.html)
-  * [山形浩生の「経済のトリセツ」](https://cruel.hatenablog.com/)
+* [Adrian Colyer](https://blog.acolyer.org/) - the morning paper
+* [Baku Hashimoto](https://baku89.com/)
+* [Bryan Cantrill](http://dtrace.org/blogs/bmc/)
+* [cho45](https://www.lowreal.net/) [ja]
+* [Julia Evans](https://jvns.ca/)
+* [Lin Clark](https://code-cartoons.com/)
+* [Marc Brooker](https://brooker.co.za/blog/)
+* [Samuel Karp](https://samuelkarp.com/)
+* [山形浩生](https://cruel.org/jindex.html) / [山形浩生の「経済のトリセツ」](https://cruel.hatenablog.com/) [ja]
+* [小関悠](https://youkoseki.com/) [ja]
