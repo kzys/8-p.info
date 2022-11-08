@@ -63,14 +63,18 @@ I'm not a minimalist, but I'd like to be.
 * [Hundred Rabbits](https://100r.co/) - They are living in a sailboat and making own personal computing stack.
 * [Ink & Switch](https://www.inkandswitch.com/)
 
+### Devs who draw
+
+* [Ivan Velichko](https://iximiuz.com/en/) - Containers and Kubernetes
+* [Julia Evans](https://jvns.ca/) / [wizard zines](https://wizardzines.com/)
+* [Lin Clark](https://code-cartoons.com/)
+
 ### People
 
 * [Adrian Colyer](https://blog.acolyer.org/) - the morning paper
 * [Baku Hashimoto](https://baku89.com/)
 * [Bryan Cantrill](http://dtrace.org/blogs/bmc/)
 * [cho45](https://www.lowreal.net/) [ja]
-* [Julia Evans](https://jvns.ca/)
-* [Lin Clark](https://code-cartoons.com/)
 * [Marc Brooker](https://brooker.co.za/blog/)
 * [Samuel Karp](https://samuelkarp.com/)
 * [山形浩生](https://cruel.org/jindex.html) / [山形浩生の「経済のトリセツ」](https://cruel.hatenablog.com/) [ja]
