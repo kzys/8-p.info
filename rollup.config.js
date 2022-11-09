@@ -1,6 +1,7 @@
 import svelte from 'rollup-plugin-svelte';
 import resolve from '@rollup/plugin-node-resolve';
 import autoPreprocess from 'svelte-preprocess';
+import commonjs from '@rollup/plugin-commonjs';
 
 export default {
   input: 'v4_js/input.js',
@@ -11,5 +12,6 @@ export default {
       preprocess: autoPreprocess(),
     }),
     resolve({ browser: true }),
+    commonjs(),
   ],
 };
