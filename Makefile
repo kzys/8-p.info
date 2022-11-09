@@ -14,3 +14,6 @@ build-v1-v2:
 
 test:
 	(cd gen && go test -v)
+
+fmt:
+	npx prettier --write  v4_js/*.*
