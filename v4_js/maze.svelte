@@ -1,6 +1,6 @@
 <script lang="ts">
-    let width = 11
-    let height = 11
+    let width = 20;
+    let height = 20;
     export let showcontrol;
 
 function init(width: number, height: number) {
@@ -70,8 +70,14 @@ $: {
 <div style="width:90%">
     {#if showcontrol}
     <div>
-        Width: <input type=range bind:value={width} min=5 max=21/>
-        Height: <input type=range bind:value={height} min=5 max=21/>
+        {width} x {height}
+    </div>
+    <div>
+        Width:
+        <input id=width type=range bind:value={width} min=3 max=100/>
+
+        Height:
+        <input type=range bind:value={height} min=3 max=100/>
     </div>
     {/if}
 <svg width="100%" viewBox="0 0 {width*2+1} {height*2+1}">

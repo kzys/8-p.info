@@ -65,6 +65,10 @@ h4 {
     font-weight: normal;
 }
 
+.thumbnail {
+    width: 10rem;
+}
+
 @media (min-width: 50rem) {
     h4 {
         display: flex;

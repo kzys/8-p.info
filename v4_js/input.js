@@ -1,9 +1,7 @@
 import Maze from './maze.svelte'
 
-let el = document.getElementById('maze');
-if (el) {
-    new Maze({
-        target: el,
-        props: el.dataset,
-    });
-}
+let xs = document.querySelectorAll('.maze');
+console.log(xs)
+xs.forEach(x => {
+    new Maze({ target: x, props: x.dataset });
+});
