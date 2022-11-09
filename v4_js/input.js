@@ -1,7 +1,10 @@
 import Maze from './maze.svelte'
+import Clock from './clock.svelte'
 
-let xs = document.querySelectorAll('.maze');
-console.log(xs)
+let components = { maze: Maze, clock: Clock }
+
+let xs = document.querySelectorAll('.maze, .svelte');
 xs.forEach(x => {
-    new Maze({ target: x, props: x.dataset });
+    let klass = components[x.dataset.c];
+    new klass({ target: x, props: x.dataset });
 });

@@ -4,14 +4,17 @@ title: 8-p.info
 <main class="flex">
   <div class="column">
     <h1>8-p.info</h1>
+            
     <p>
       My name is <a href="/me/">Kazuyoshi Kato</a>.
       I'm a software developer in Seattle.
     </p>
+    <div class="svelte" data-c="clock" data-timezone="America/Los_Angeles">
+    </div>
 
     <h2>Projects</h2>
     <h3><a href="/maze/">Random Maze Generator</a></h3>
-    <div class="maze thumbnail"></div>
+    <div class="svelte thumbnail" data-c="maze"></div>
     <p>
       A simple client-side maze generator for kids.
     </p>
@@ -28,6 +31,7 @@ title: 8-p.info
       and/or watch <a href="https://www.youtube.com/watch?v=YQ_xWvX1n9g">Line Goes Up</a>
       if you haven't.
     </p>
+
   </div>
   <div class="column">{{ include "links.md" }}</div>
 </main>
