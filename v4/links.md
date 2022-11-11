@@ -75,7 +75,8 @@ I'm not a minimalist, but I'd like to be.
 * [Baku Hashimoto](https://baku89.com/)
 * [Bryan Cantrill](http://dtrace.org/blogs/bmc/)
 * [cho45](https://www.lowreal.net/) [ja]
-* [Marc Brooker](https://brooker.co.za/blog/)
-* [Samuel Karp](https://samuelkarp.com/)
+* [Marc Brooker](https://brooker.co.za/blog/) - One of few AWS super senior engineers who blog regularly.
+* [Colm MacCárthaigh](https://shufflesharding.com/) - Another super senior engineer, not regularly updated though.
+* [Samuel Karp](https://samuelkarp.com/) - Sam was the face of AWS containers in the open-source world. He is in Google but I still can work with him because of open-source!
 * [山形浩生](https://cruel.org/jindex.html) / [山形浩生の「経済のトリセツ」](https://cruel.hatenablog.com/) [ja]
 * [小関悠](https://youkoseki.com/) [ja]
