@@ -20,6 +20,7 @@ Inspired by [Foundations of a Tiny Directory](https://www.kickscondor.com/founda
 
 * [Bash Strict Mode](http://redsymbol.net/articles/unofficial-bash-strict-mode/)
 * [The Tragedy of systemd](https://www.youtube.com/watch?v=o_AIw9bGogo)
+* [Frequently Asked Questions for FreeBSD](https://docs.freebsd.org/en/books/faq/) - Especially [Why should I care what color the bikeshed is?](https://docs.freebsd.org/en/books/faq/#bikeshed-painting) and [How many FreeBSD hackers does it take to change a lightbulb?](https://docs.freebsd.org/en/books/faq/#changing-lightbulbs)
 
 ### Team
 
@@ -35,9 +36,16 @@ Inspired by [Foundations of a Tiny Directory](https://www.kickscondor.com/founda
 
 * [Your Code Displays Japanese Wrong](https://heistak.github.io/your-code-displays-japanese-wrong/) - About Unicode's Han Unification
 
+### Laws
+* [Betteridge's law of headlines](https://en.wikipedia.org/wiki/Betteridge%27s_law_of_headlines) - Any headline that ends in a question mark can be answered by the word no.
+* [Cunningham's Law](https://meta.wikimedia.org/wiki/Cunningham%27s_Law) - The best way to get the right answer on the internet is not to ask a question; it's to post the wrong answer.
+* [Godwin's law](https://en.wikipedia.org/wiki/Godwin%27s_law) - As an online discussion grows longer (regardless of topic or scope), the probability of a comparison to Nazis or Adolf Hitler approaches 1.
+* [Postel's law](https://en.wikipedia.org/wiki/Robustness_principle) - Be conservative in what you send, be liberal in what you accept.
+
 ### Web
 
-* [A Complete Guide to Flexbox ](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+* [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+* [A Quite Biased History of HTML5](http://diveintohtml5.info/past.html)
 
 ### Podcasts
 
@@ -51,6 +59,7 @@ Inspired by [Foundations of a Tiny Directory](https://www.kickscondor.com/founda
 * [Standards](https://xkcd.com/927/)
 * [Perl Problems](https://xkcd.com/1171/)
 * [Dependency](https://xkcd.com/2347/)
+* [Backpack Decisions](https://xkcd.com/1952/) - aka bikeshedding.
 
 ### Minimalism
 
