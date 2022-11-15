@@ -7,7 +7,7 @@ Hello! My name is Kazuyoshi Kato. I'm a Japanese software developer in Seattle, 
 
 I bought this domain, [8-p.info](https://8-p.info/) in 2003. I was a college student in Japan at that time. All cool hackers were having cool domains, so I wanted mine.
 
-I'm @kzys on [GitHub](https://github.com/kzys/) and [Twitter](https://twitter.com/kzys). I occasionally update [LinkedIn](https://www.linkedin.com/in/kazuyoshi/).
+I'm @kzys on [GitHub](https://github.com/kzys/). I occasionally update [LinkedIn](https://www.linkedin.com/in/kazuyoshi/). I'm taking a break from [Twitter](https://twitter.com/kzys).
 
 ## Work Experience
 
@@ -19,7 +19,7 @@ I'm @kzys on [GitHub](https://github.com/kzys/) and [Twitter](https://twitter.co
 <div class="location">Seattle, Washington</div>
 </h4>
 
-containerd and firecracker-containerd still.
+This is where I am! [I became a containerd committer](https://github.com/containerd/project/pull/84) in 2022. I also won the Garak Award in the same year. It is an org-wide award for "for working across teams & getting things done".
 
 <h4>
 <div class="years">July 2019 - September 2021</div>
@@ -27,17 +27,29 @@ containerd and firecracker-containerd still.
 <div class="location">Seattle, Washington</div>
 </h4>
 
-containerd and firecracker-containerd.
+While working for Amazon, I did some small open source contributions here and there. And I wanted to do open-source for living. So I joined AWS to develop containerd and other open-source software.
 
-### Amazon
+Regarding containerd, I was starting from [fixing a metrics issue](https://github.com/containerd/cgroups/pull/147) and then [became a reviewer](https://github.com/containerd/project/pull/62) in 2021.
+
+### Alexa
 
 <h4>
-<div class="years">September 2014 - July 2019</div>
+<div class="years">March 2017 - July 2019</div>
 <div class="title">Software Development Engineer</div>
 <div class="location">Seattle, Washington</div>
 </h4>
 
-Consumer for 3 years. Alexa for 2 years.
+After focusing on Amazon's shopping website for years, I wanted to experience something completely different. So I joined Alexa to develop its "news" experience.
+
+### Amazon
+
+<h4>
+<div class="years">September 2014 - March 2017</div>
+<div class="title">Software Development Engineer</div>
+<div class="location">Seattle, Washington</div>
+</h4>
+
+I transferred from Amazon Japan to the headquarter to work on developer tools for mobile web developers, but the project was cancelled in 2015. After worked on few projects, I eventually joined the team to develop a brand-new reverse proxy for Amazon's shopping website.
 
 ### Amazon Japan
 
