@@ -51,7 +51,11 @@ Inspired by [Foundations of a Tiny Directory](https://www.kickscondor.com/founda
 
 * [Planet Money](https://www.npr.org/podcasts/510289/planet-money/) - About economics.
 * [CoRecursive](https://corecursive.com/) - Good well-edited tech interviews.
-* [Your Undivided Attention](https://www.humanetech.com/podcast) 
+* [Your Undivided Attention](https://www.humanetech.com/podcast)
+
+### Food
+
+* [The Ultimate V60 Technique](https://www.youtube.com/watch?v=AI4ynXzkSQo)
 
 ### xkcd
 
