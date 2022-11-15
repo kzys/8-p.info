@@ -35,6 +35,7 @@ Inspired by [Foundations of a Tiny Directory](https://www.kickscondor.com/founda
 ### Internationalization
 
 * [Your Code Displays Japanese Wrong](https://heistak.github.io/your-code-displays-japanese-wrong/) - About Unicode's Han Unification
+* [What Is Mojibake?](http://www8.plala.or.jp/tkubota1/mojibake/) - Not that relevant in this Unicode era though.
 
 ### Laws
 * [Betteridge's law of headlines](https://en.wikipedia.org/wiki/Betteridge%27s_law_of_headlines) - Any headline that ends in a question mark can be answered by the word no.
@@ -70,6 +71,7 @@ Inspired by [Foundations of a Tiny Directory](https://www.kickscondor.com/founda
 I'm not a minimalist, but I'd like to be.
 
 * [The Distraction-Free iPhone](https://maketime.blog/article/the-distraction-free-iphone/)
+* [Matt D'Avella](https://www.mattdavella.com/)
 
 ### Personal Computing
 
