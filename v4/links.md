@@ -58,6 +58,10 @@ Inspired by [Foundations of a Tiny Directory](https://www.kickscondor.com/founda
 
 * [The Ultimate V60 Technique](https://www.youtube.com/watch?v=AI4ynXzkSQo)
 
+### Coloring pages / Worksheets
+
+* [パウパトロールとおうちで学ぼう](https://pawpatrol.jp/learn/)
+
 ### xkcd
 
 * [Duty Calls](https://xkcd.com/386/)
@@ -101,5 +105,5 @@ People I know, but including people I saw in Amazon's big meetings.
 * [Samuel Karp](https://samuelkarp.com/) - Sam was the face of AWS containers in the open-source world. He works for Google now but I still can work with him because of open-source!
 * [cho45](https://www.lowreal.net/) [ja]
 * [karino2](https://karino2.github.io/) [ja]
-* [Hajime Morrita](https://notes.dodgson.org/) [ja]
+* [Hajime Morrita](https://records.dodgson.org/) / [steps to phantasien](https://anemone.dodgson.org/) / [Morrita Notes](https://notes.dodgson.org/) [ja]
 * [Jun Mukai](https://wp.jmuk.org/) [ja] - Hajime and Jun are hosting a paper-reading podcast, [Misreading Chat](https://misreading.chat/).
