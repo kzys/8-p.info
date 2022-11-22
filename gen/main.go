@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 )
 
-const outDir = "v4_out"
+const outDir = "v4/out"
 
 type Params struct {
 	Title  string `yaml:"title"`
@@ -70,7 +70,7 @@ func realMain() error {
 
 	g := newGen()
 
-	tp, err := template.New("").ParseFiles("v4_layout/wrapper.html")
+	tp, err := template.New("").ParseFiles("v4/layout/wrapper.html")
 	if err != nil {
 		return err
 	}

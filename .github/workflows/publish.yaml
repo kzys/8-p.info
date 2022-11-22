@@ -31,7 +31,7 @@ jobs:
     - name: Merge
       run: |-
         rsync -rv v2/public/ dist/
-        rsync -rv v4_out/ dist/
+        rsync -rv v4/out/ dist/
 
     - name: AWS Credentials
       if: github.event_name == 'push'
