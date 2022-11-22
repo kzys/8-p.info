@@ -6,7 +6,5 @@ node_modules
 */repos/*
 *.pyc
 
-v3/out/
-v3/.next/
-
 gen/gen
+v4/out/
