@@ -24,9 +24,18 @@ Inspired by [Foundations of a Tiny Directory](https://www.kickscondor.com/founda
 
 ### Team
 
-* [Recurse Center's social rules](https://www.recurse.com/social-rules)
 * [On Code Review](https://medium.com/@9len/on-code-review-16ea85f7c585) - <q>Code review should probably always be your top priority</q>
 * [World Time Buddy](https://www.worldtimebuddy.com/?pl=1&lid=5809844,5128581,1850147) - Seattle, New York and Tokyo
+
+### Communication patterns
+
+It is valuable to understand the patterns.
+Sending these links to individuals seems like a trolling though.
+
+* [Recurse Center's social rules](https://www.recurse.com/social-rules)
+* [no hello](https://nohello.net/en/)
+* [Don't ask to ask, just ask](https://dontasktoask.com/)
+* [The XY Problem](https://xyproblem.info/)
 
 ### Open Source
 
