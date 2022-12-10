@@ -52,6 +52,10 @@ Sending these links to individuals seems like a trolling though.
 * [Godwin's law](https://en.wikipedia.org/wiki/Godwin%27s_law) - As an online discussion grows longer (regardless of topic or scope), the probability of a comparison to Nazis or Adolf Hitler approaches 1.
 * [Postel's law](https://en.wikipedia.org/wiki/Robustness_principle) - Be conservative in what you send, be liberal in what you accept.
 
+### Stats
+
+* [Spurious Correlations](https://tylervigen.com/spurious-correlations) - Correlation does not imply causation.
+
 ### Web
 
 * [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
