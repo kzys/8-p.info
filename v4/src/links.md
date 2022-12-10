@@ -56,6 +56,15 @@ Sending these links to individuals seems like a trolling though.
 
 * [Spurious Correlations](https://tylervigen.com/spurious-correlations) - Correlation does not imply causation.
 
+### Standards
+
+* [HTTP Semantics](https://www.rfc-editor.org/rfc/rfc9110) - Most likely I need this.
+* [HTTP resources and specifications](https://developer.mozilla.org/en-US/docs/Web/HTTP/Resources_and_specifications) - Good links to other HTTP specs.
+* [OCI runtime spec](https://github.com/opencontainers/runtime-spec/blob/main/spec.md)
+* [OCI distribution spec](https://github.com/opencontainers/distribution-spec/blob/main/spec.md)
+* [OCI image spec](https://github.com/opencontainers/image-spec/blob/main/spec.md)
+* [POSIX.1-2017](https://pubs.opengroup.org/onlinepubs/9699919799/)
+
 ### Web
 
 * [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
