@@ -1,36 +1,47 @@
 ---
 title: 8-p.info
 ---
-<main class="flex">
-  <div class="column">
+<main id="index">
+  <header>
     <h1>8-p.info</h1>
-            
-    <p>
-      {{ include "hello.md" }}
-    </p>
-    <div class="svelte" data-c="clock" data-timezone="America/Los_Angeles">
+    <a href="#ja">日本語は下にあります / Japanese below</a>
+  </header>
+  <section id="english">
+    <div class="column">
+      <p>
+	{{ include "hello_en.md" }}
+      </p>
+      <div class="svelte" data-c="clock" data-timezone="America/Los_Angeles">
+      </div>
+
+      <h2>Projects</h2>
+      <h3><a href="/maze/">Random Maze Generator</a></h3>
+      <div class="svelte thumbnail" data-c="maze"></div>
+      <p>
+	A simple client-side maze generator for kids.
+      </p>
+
+      <h2>No web3</h2>
+      <p>
+	I'm still skeptical about blockchain.
+	Blockchain has been a solution looking for a problem and
+	"building the next web" wouldn't be the problem it could solve.
+      </p>
+      <p>
+	Please read
+	<a href="https://concerned.tech">Letter in Support of Responsible Fintech Policy</a> (I signed)
+	and/or watch <a href="https://www.youtube.com/watch?v=YQ_xWvX1n9g">Line Goes Up</a>
+	if you haven't.
+      </p>
+
     </div>
+    <div class="column">{{ include "links.md" }}</div>
+  </section>
 
-    <h2>Projects</h2>
-    <h3><a href="/maze/">Random Maze Generator</a></h3>
-    <div class="svelte thumbnail" data-c="maze"></div>
-    <p>
-      A simple client-side maze generator for kids.
-    </p>
-
-    <h2>No web3</h2>
-    <p>
-      I'm still skeptical about blockchain.
-      Blockchain has been a solution looking for a problem and
-      "building the next web" wouldn't be the problem it could solve.
-    </p>
-    <p>
-      Please read
-      <a href="https://concerned.tech">Letter in Support of Responsible Fintech Policy</a> (I signed)
-      and/or watch <a href="https://www.youtube.com/watch?v=YQ_xWvX1n9g">Line Goes Up</a>
-      if you haven't.
-    </p>
-
-  </div>
-  <div class="column">{{ include "links.md" }}</div>
+  <section id="ja">
+    <div class="column">
+      <h2>日本語</h2>
+      {{ include "hello_ja.md" }}
+    </div>
+  </section>
 </main>
