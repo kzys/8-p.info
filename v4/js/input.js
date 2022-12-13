@@ -3,8 +3,8 @@ import Clock from "./clock.svelte";
 
 let components = { maze: Maze, clock: Clock };
 
-let xs = document.querySelectorAll(".maze, .svelte");
+let xs = document.querySelectorAll("[data-svelte]");
 xs.forEach((x) => {
-  let klass = components[x.dataset.c];
+  let klass = components[x.dataset.svelte];
   new klass({ target: x, props: x.dataset });
 });
