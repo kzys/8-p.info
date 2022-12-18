@@ -7,7 +7,7 @@ Hello! My name is Kazuyoshi Kato. I'm a Japanese software developer in Seattle, 
 
 I bought this domain, [8-p.info](https://8-p.info/) in 2003. I was a college student in Japan at that time. All cool hackers were having cool domains, so I wanted mine.
 
-I'm @kzys on [GitHub](https://github.com/kzys/). I occasionally update [LinkedIn](https://www.linkedin.com/in/kazuyoshi/). I'm taking a break from [Twitter](https://twitter.com/kzys).
+I'm @kzys on [GitHub](https://github.com/kzys/). I occasionally update [LinkedIn](https://www.linkedin.com/in/kazuyoshi/). I've moved to <a rel="me" href="https://indieweb.social/@kzys">Mastodon</a> from [Twitter](https://twitter.com/kzys).
 
 ## Work Experience
 
