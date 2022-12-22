@@ -76,6 +76,13 @@
   $: {
     rows = generateMaze(Math.random, width * 2 + 1, height * 2 + 1);
   }
+  let tileSize = 5;
+  let viewBox = [
+    -tileSize,
+    -tileSize,
+    tileSize * 2 * (width+1),
+    tileSize * 2 * (height+1),
+  ].join(' ')
 </script>
 
 <div style="width:90%">
@@ -91,11 +98,36 @@
       <input type="range" bind:value={height} min="3" max="100" />
     </div>
   {/if}
-  <svg width="100%" viewBox="0 0 {width * 2 + 1} {height * 2 + 1}">
+  <svg width="100%" viewBox="{viewBox}">
     {#each rows as row, y}
       {#each row as col, x}
         {#if col == 1}
-          <rect fill="#000" {x} {y} width="1" height="1" />
+          <g>
+          {#if rows[y-1] && rows[y-1][x] == 1}
+            <line stroke="#000"
+              x1="{x * tileSize}" y1="{y * tileSize}"
+              x2="{x * tileSize}" y2="{(y-1) * tileSize}"
+            />
+          {/if}
+          {#if rows[y+1] && rows[y+1][x] == 1}
+          <line stroke="#000"
+            x1="{x * tileSize}" y1="{y * tileSize}"
+            x2="{x * tileSize}" y2="{(y+1) * tileSize}"
+          />
+          {/if}
+          {#if rows[y] && rows[y][x-1] == 1}
+          <line stroke="#000"
+            x1="{x * tileSize}" y1="{y * tileSize}"
+            x2="{(x-1) * tileSize}" y2="{y * tileSize}"
+          />
+          {/if}
+          {#if rows[y] && rows[y][x+1] == 1}
+          <line stroke="#000"
+            x1="{x * tileSize}" y1="{y * tileSize}"
+            x2="{(x+1) * tileSize}" y2="{y * tileSize}"
+          />
+          {/if}
+        </g>
         {/if}
       {/each}
     {/each}
