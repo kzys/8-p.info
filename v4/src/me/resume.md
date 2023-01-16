@@ -13,7 +13,7 @@ title: Kazuyoshi Kato
 
 </header>
 
-Senior engineer with 10+ years experience. Seeking to leverage skills and experience to build the search engine for code.
+Senior engineer with 10+ years experience. Seeking to leverage skills and experience to build the next big thing.
 
 ## Work Experience
 
