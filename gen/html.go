@@ -53,6 +53,7 @@ func (g *gen) processHTML(in, out string) (string, error) {
 
 	params.Root = "/"
 	params.Body = template.HTML(body.String())
+	params.BodyClass = in
 
 	err = g.render(out, params)
 	if err != nil {
