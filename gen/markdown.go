@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"html/template"
 	"os"
+	"strings"
 )
 
 func (g *gen) processMarkdownInclude(in string) (template.HTML, error) {
@@ -36,6 +37,9 @@ func (g *gen) processMarkdown(in, out string) (string, error) {
 	}
 
 	params.Root = "/"
+	class := strings.ReplaceAll(in, "/", "_")
+	class = strings.ReplaceAll(class, ".md", "")
+	params.BodyClass = class
 	params.Body = template.HTML("<main class='markdown'>" + body.String() + "</main>")
 
 	err = g.render(path, params)

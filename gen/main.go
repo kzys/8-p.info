@@ -11,10 +11,11 @@ import (
 const outDir = "v4/out"
 
 type Params struct {
-	Title  string `yaml:"title"`
-	Layout string `yaml:"layout"`
-	Root   string
-	Body   template.HTML
+	Title     string `yaml:"title"`
+	Layout    string `yaml:"layout"`
+	Root      string
+	BodyClass string
+	Body      template.HTML
 }
 
 func main() {
