@@ -11,7 +11,7 @@ a:visited {
 }
 
 main {
-    margin: 1rem;
+    margin: 0 1rem;
     padding: 0;
 }
 
@@ -24,17 +24,6 @@ h2 {
     padding: 0;
     font-size: 1.5rem;
     line-height: 1;
-}
-
-header h1 {
-    font-size: 2rem;
-    padding: 0;
-    margin: 0;
-}
-header a {
-    font-size: .9rem;
-    line-height: 2rem;
-    display: block;
 }
 
 @media (min-width: 80em) {
@@ -90,18 +79,48 @@ h4 {
     font-weight: normal;
 }
 
+h4 {
+    display: flex;
+}
+h4 .years {
+    width: 33.3%;
+}
+.title {
+    flex-grow: 2;
+}
+
 .thumbnail {
     width: 10rem;
 }
 
-@media (min-width: 50rem) {
-    h4 {
-        display: flex;
-    }
-    h4 .years {
-        width: 33.3%;
-    }
-    h4 .title {
-        flex-grow: 2;
-    }
+/* /me/resume.html */
+
+#v4_src_me_resume header ul {
+    display: flex;
+	justify-content: space-between;
+    margin: 1rem 0;
+    padding: 0;
+}
+#v4_src_me_resume header li {
+    list-style: none;
+    margin: 0;
+}
+
+#v4_src_me_resume body {
+    line-height: 1.2;
+}
+
+#v4_src_me_resume header {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+#v4_src_me_resume main.markdown {
+    max-width: none;
+}
+
+#v4_src_me_resume h1 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }

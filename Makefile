@@ -17,3 +17,6 @@ test:
 
 fmt:
 	npx prettier --write  v4/js/*.*
+
+resume.pdf: build-v4
+	wkhtmltopdf http://localhost:8000/me/resume.html resume.pdf
