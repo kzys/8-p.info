@@ -9,7 +9,7 @@
     "axios": "^1.1.2",
     "chart.js": "^2.8.0",
     "normalize.css": "^8.0.1",
-    "nuxt": "^2.15.8",
+    "nuxt": "^3.0.0",
     "postcss-import": "^15.0.0",
     "vega-embed": "^6.21.0"
   },
