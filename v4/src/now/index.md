@@ -1,10 +1,14 @@
 ---
-title: What Kazuyoshi is doing right now
+title: What Kazuyoshi is doing now
 ---
 
-# What I'm doing right now
+# What Kazuyoshi is doing now
 
-October 2022 @ Seattle
+2023-03-02
 
-- I got my Framework Laptop this September and installed Fedora 36 there.
-- I am rebuilding 8-p.info once again to reduce its dependencies.
+- I'm living in Seattle and working remotely. The team is "located" in Seattle, but we no longer have assigned seats.
+- My "blog" is powered by [Buttondown](https://buttondown.email/kazuyoshi) this year.
+
+----
+
+This is my [now page](https://nownownow.com/about). What I'd tell a friend I haven't seen for a while.
