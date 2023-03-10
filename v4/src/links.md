@@ -129,3 +129,10 @@ People I know, but including people I saw in Amazon's big meetings.
 * [karino2](https://karino2.github.io/) [ja]
 * [Hajime Morrita](https://records.dodgson.org/) / [steps to phantasien](https://anemone.dodgson.org/) / [Morrita Notes](https://notes.dodgson.org/) [ja]
 * [Jun Mukai](https://wp.jmuk.org/) [ja] - Hajime and Jun are hosting a paper-reading podcast, [Misreading Chat](https://misreading.chat/).
+
+### Blockchain / web3
+
+I am still skeptical.
+
+* [Letter in Support of Responsible Fintech Policy](https://concerned.tech) - I signed.
+* [Line Goes Up](https://www.youtube.com/watch?v=YQ_xWvX1n9g) (2022) - Good documentary about NFT, starting from the 2008 financial crisis.
