@@ -9,17 +9,22 @@ I bought this domain, [8-p.info](https://8-p.info/) in 2003. I was a college stu
 
 I'm @kzys on [GitHub](https://github.com/kzys/). I occasionally update [LinkedIn](https://www.linkedin.com/in/kazuyoshi/). I've moved to <a rel="me" href="https://indieweb.social/@kzys">Mastodon</a> from [Twitter](https://twitter.com/kzys).
 
-I have my [resume](resume.html) online.
+## Work
+
+I worked for [Amazon](https://www.aboutamazon.com/) and [Mixi](https://mixi.co.jp/) full-time.
+Before Mixi, I worked for [AIST](https://www.aist.go.jp/) and Community Engine part-time.
+
+My "base" [resume](resume.html) is available online.
 
 ## FAQ
 
-<h3 id="kazu">Kazu? Kaz? Kato?</h3>
+<h3 id="kazu">Kaz? Kazu? Kato?</h3>
 
-Kazuyoshi seems long for non-Japanese, albeit
+Kazuyoshi seems long for non-Japanese folks, albeit
 [common](https://en.wikipedia.org/wiki/Kazuyoshi_Miura)
 [name](https://en.wikipedia.org/wiki/Tamori) in Japan.
-So I often use "Kazu" instead.
-Kaz is fine. It may be closer to the pronunciation.
+So I often use "Kaz" nowadays.
+I had used "Kazu" when I was in Amazon though but I dropped the last "u" to make it 25% shorter.
 Kato is okay, but that's my family name.
 
 <table class="name">

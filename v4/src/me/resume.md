@@ -20,7 +20,7 @@ Senior engineer with 10+ years of experience. Seeking to leverage skills and exp
 ### Amazon Web Services
 
 <h4>
-<div class="years">October 2021 - present</div>
+<div class="years">October 2021 - March 2023</div>
 <div class="title">Senior Software Development Engineer</div>
 <div class="location">Seattle, Washington</div>
 </h4>
