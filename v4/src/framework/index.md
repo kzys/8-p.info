@@ -5,8 +5,8 @@ title: Framework Laptop
 # Framework Laptop
 
 [Framework](https://frame.work/) Laptop is a laptop that is repairable and upgradable.
-I bought one in 2022 for personal use and installed Fedora Linux 36.
-Then I bought another in 2023 for work and installed Ubuntu Desktop 22.04.
+I bought one in 2022 for personal use, another in 2023 for work.
+Both currently have Ubuntu Desktop 22.04.
 
 ## HiDPI
 
@@ -17,3 +17,11 @@ For me, the following setting strikes the good balance between screen real estat
 * Settings > Displays > Scale: 100%
 * Tweaks > Fonts > Scaling Factor: 1.50
 * Tweaks > Fonts > All font sizes: 10
+
+"Tweaks" is `gnome-tweaks`.
+
+## Brightness buttons don't work
+
+The buttons don't work out of the box, but there is a fix.
+
+https://community.frame.work/t/solved-ubuntu-22-brightness-keys-not-working/22460/7
