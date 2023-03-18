@@ -3,7 +3,7 @@ title: Kazuyoshi Kato / 加藤 和良
 ---
 # Kazuyoshi Kato / 加藤 和良
 
-Hello! My name is Kazuyoshi Kato. I'm a Japanese software developer in Seattle, Washington. I work for [Amazon Web Services](https://aws.amazon.com/).
+Hello! My name is Kazuyoshi Kato. I'm a Japanese software developer in Seattle, Washington.
 
 I bought this domain, [8-p.info](https://8-p.info/) in 2003. I was a college student in Japan at that time. All cool hackers were having cool domains, so I wanted mine.
 
