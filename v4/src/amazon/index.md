@@ -1,3 +1,6 @@
+---
+title: Amazon
+---
 # Amazon
 
 I worked for Amazon from July 2012 to March 2023. The first two years were in Tokyo, the rest was in Seattle.
