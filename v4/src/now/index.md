@@ -4,9 +4,9 @@ title: What Kazuyoshi is doing now
 
 # What Kazuyoshi is doing now
 
-2023-03-02
+2023-03-17
 
-- I'm living in Seattle and working remotely. The team is "located" in Seattle, but we no longer have assigned seats.
+- I left [Amazon](/amazon/) to join a small startup.
 - My "blog" is powered by [Buttondown](https://buttondown.email/kazuyoshi) this year.
 
 ----

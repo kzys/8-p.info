@@ -9,6 +9,10 @@ I bought this domain, [8-p.info](https://8-p.info/) in 2003. I was a college stu
 
 I'm @kzys on [GitHub](https://github.com/kzys/). I occasionally update [LinkedIn](https://www.linkedin.com/in/kazuyoshi/). I've moved to <a rel="me" href="https://indieweb.social/@kzys">Mastodon</a> from [Twitter](https://twitter.com/kzys).
 
+## Now
+
+I have my [Now](/now/) page.
+
 ## Work
 
 I worked for [Amazon](https://www.aboutamazon.com/) and [Mixi](https://mixi.co.jp/) full-time.
