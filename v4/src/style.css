@@ -15,8 +15,9 @@ main {
     padding: 0;
 }
 
-main.flex .column {
-    flex-basis: 50%;
+main .column {
+    flex-basis: 45%;
+    margin-right: 1rem;
 }
 
 h2 {
