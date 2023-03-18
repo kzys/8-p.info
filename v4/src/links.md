@@ -6,9 +6,13 @@ Inspired by [Foundations of a Tiny Directory](https://www.kickscondor.com/founda
 
 * [Simple, correct, fast: in that order](https://drewdevault.com/2018/07/09/Simple-correct-fast.html) - It is really hard to do that though
 * [Computers can be understood](https://blog.nelhage.com/post/computers-can-be-understood/)
-* [TestDouble](https://martinfowler.com/bliki/TestDouble.html) - Dummy objects, fake objects, stubs, spies and mocks.
 * [Error Handling in Node.js](https://www.tritondatacenter.com/node-js/production/design/errors) - Operational errors vs. programmer errors.
 * [Python Packaging Is Good Now](https://glyph.twistedmatrix.com/2016/08/python-packaging.html)
+
+### Martin Fowler
+
+* [TestDouble](https://martinfowler.com/bliki/TestDouble.html) - Dummy objects, fake objects, stubs, spies and mocks.
+* [TestCoverage](https://martinfowler.com/bliki/TestCoverage.html) - <q>Test coverage is a useful tool for finding untested parts of a codebase. Test coverage is of little use as a numeric statement of how good your tests are.</q>
 
 ### Go
 
