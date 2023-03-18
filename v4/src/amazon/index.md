@@ -1,6 +1,6 @@
 # Amazon
 
-I worked for Amazon from July 2012 to March 2023. My first office was in Meguro, Tokyo.
+I worked for Amazon from July 2012 to March 2023. The first two years were in Tokyo, the rest was in Seattle.
 
 ## Former Amazon folks who wrote about leaving
 
