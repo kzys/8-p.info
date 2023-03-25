@@ -119,8 +119,6 @@ I'm not a minimalist, but I'd like to be.
 * [Adrian Colyer](https://blog.acolyer.org/) - the morning paper
 * [Baku Hashimoto](https://baku89.com/)
 * [Bryan Cantrill](http://dtrace.org/blogs/bmc/)
-* [小関悠](https://youkoseki.com/) [ja]
-* [山形浩生](https://cruel.org/jindex.html) / [山形浩生の「経済のトリセツ」](https://cruel.hatenablog.com/) [ja]
 
 ### People I know
 
