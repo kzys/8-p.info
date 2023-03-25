@@ -25,3 +25,11 @@ For me, the following setting strikes the good balance between screen real estat
 The buttons don't work out of the box, but there is a fix.
 
 https://community.frame.work/t/solved-ubuntu-22-brightness-keys-not-working/22460/7
+
+## macOS-like Cmd/Ctrl split
+
+macOS uses `Cmd` for GUI shortcuts (e.g., Cmd-c as copy) and keeps `Ctrl` for Unix-like shortcuts, including
+Emacs-like editing shortcuts (e.g., Ctrl-n as down).
+
+On Linux, technically Gnome + Wayland, [xremap](https://github.com/k0kubun/xremap) makes that possible.
+My xremap.yml is on [GitHub](https://github.com/kzys/dotfiles/blob/master/xremap.yml).
