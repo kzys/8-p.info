@@ -13,4 +13,4 @@ containerd is a container runtime, originally written by Docker engineers.
 
 
 I've been [a reviewer since 2021](https://github.com/containerd/project/pull/62) and
-[a committer since 2022](https://github.com/containerd/project/pull/84).
+[committer since 2022](https://github.com/containerd/project/pull/84).
