@@ -1,6 +1,8 @@
 ---
-title: Amazon Builders' Library is good
+title: The Amazon Builders' Library is good
 ---
+# The Amazon Builders' Library is good
+
 [The Amazon Builders' Library](https://aws.amazon.com/builders-library/) is good! Here are some of my favorites.
 
 
@@ -9,7 +11,9 @@ title: Amazon Builders' Library is good
 My main take is, executing a less-executed code path is bad, especially when you are already in trouble.
 
 > Not only might the fallback strategy make the problem worse, this will likely occur as a latent bug. It is easy to develop fallback strategies that rarely trigger in production.
+>
 > ...
+>
 > Distributed fallback strategies often have latent bugs that show up only when an unlikely set of coincidences occur, potentially months or years after their introduction.
 
 ## [Avoiding overload in distributed systems by putting the smaller service in control](https://aws.amazon.com/builders-library/avoiding-overload-in-distributed-systems-by-putting-the-smaller-service-in-control/)
