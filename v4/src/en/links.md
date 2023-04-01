@@ -134,3 +134,9 @@ I am still skeptical.
 
 * [Letter in Support of Responsible Fintech Policy](https://concerned.tech) - I signed.
 * [Line Goes Up](https://www.youtube.com/watch?v=YQ_xWvX1n9g) (2022) - Good documentary about NFT, starting from the 2008 financial crisis.
+
+### YouTube
+
+* [Microservices](https://www.youtube.com/watch?v=y8OnoxKotPQ) (2020) - KRAZAM videos are almost all good. I still love this classic.
+* [Video Killed the Radio Star](https://www.youtube.com/watch?v=tk4_SMI0jVc) (2014) - Pomplamoose nowadays is seems much sustainable, but this "projector" series was too good.
+* [Sen Morimoto's Live on KEXP at Home](https://www.youtube.com/watch?v=Q8v44RuAaZE&t=732s) (2021) - Especially this part that he covers Mitski.
