@@ -28,7 +28,6 @@
 - [0xcc.net](http://0xcc.net/) - 高林さん。
   - [bkノート](http://0xcc.net/bknotes/)
   - [出版物](http://0xcc.net/pub/)
-  - [横着プログラミング](http://0xcc.net/unimag/)
 
 ### ポッドキャスト
 
