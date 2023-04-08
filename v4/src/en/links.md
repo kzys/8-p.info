@@ -146,6 +146,6 @@ I am still skeptical.
 * [103 Bits of Advice I Wish I Had Known](https://web.archive.org/web/20221003024152/https://kk.org/thetechnium/103-bits-of-advice-i-wish-i-had-known/) (2022) by Kevin Kelly - It is moved from kk.org to his 2023 book "Excellent Advice for Living", but the original is still in the Internet Archive.
 * [How To Be Successful](https://blog.samaltman.com/how-to-be-successful) (2009) by Sam Altman
 
-## Machine Learning
+### Machine Learning
 
 * [Andrej Karpathy](https://karpathy.ai/)
