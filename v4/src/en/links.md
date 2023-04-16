@@ -1,6 +1,4 @@
-## From the internet
-
-Inspired by [Foundations of a Tiny Directory](https://www.kickscondor.com/foundations-of-a-tiny-directory/), I'm collecting the good parts of the internet.
+## Links
 
 ### Software development
 
@@ -8,6 +6,10 @@ Inspired by [Foundations of a Tiny Directory](https://www.kickscondor.com/founda
 * [Computers can be understood](https://blog.nelhage.com/post/computers-can-be-understood/)
 * [Error Handling in Node.js](https://www.tritondatacenter.com/node-js/production/design/errors) - Operational errors vs. programmer errors.
 * [Python Packaging Is Good Now](https://glyph.twistedmatrix.com/2016/08/python-packaging.html)
+
+### Internet
+
+* [Foundations of a Tiny Directory](https://www.kickscondor.com/foundations-of-a-tiny-directory/)
 
 ### Martin Fowler
 

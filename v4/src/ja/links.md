@@ -1,12 +1,16 @@
 ## リンク集
 
-### ソフトウェア開発
+### ソフトウェア
 
 - [開発イテレーション偏重](https://shinh.hatenablog.com/entry/2019/09/12/201335) (2019)
 
 ### ハードウェア
 
 - [キーボードとアジャイル開発](https://mixiengineer.hatenablog.com/entry/2011/10803/) (2011) - キネシスにトラックポイントを無理やりつける。なぜか翻訳文体なのも良い。
+
+### ポッドキャスト
+
+- [Misreading Chat](https://misreading.chat/) - 森田さんと向井さんの、コンピュータサイエンス周辺の論文を読むポッドキャスト。
 
 ### 人々
 
@@ -28,7 +32,3 @@
 - [0xcc.net](http://0xcc.net/) - 高林さん。
   - [bkノート](http://0xcc.net/bknotes/)
   - [出版物](http://0xcc.net/pub/)
-
-### ポッドキャスト
-
-- [Misreading Chat](https://misreading.chat/) - 森田さんと向井さんの、コンピュータサイエンス周辺の論文を読むポッドキャスト。
