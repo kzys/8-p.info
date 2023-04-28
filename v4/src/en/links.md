@@ -153,3 +153,8 @@ I am still skeptical.
 ### Machine Learning
 
 * [Andrej Karpathy](https://karpathy.ai/)
+
+### Tech/Corporate Culture
+
+* [Goodbye, Google](https://stopdesign.com/journal/2009/03/20/goodbye-google.html) (2009) - <q>Yes, it’s true that a team at Google couldn’t decide between two blues, so they’re testing 41 shades between each blue to see which one performs better.</q>
+* [Principles of Technology Leadership](https://www.youtube.com/watch?v=9QMGAtxUlAc) (2017)
