@@ -8,6 +8,10 @@
 
 - [キーボードとアジャイル開発](https://mixiengineer.hatenablog.com/entry/2011/10803/) (2011) - キネシスにトラックポイントを無理やりつける。なぜか翻訳文体なのも良い。
 
+### 趣味
+
+- [nippper](https://nippper.com/) - 模型
+
 ### ポッドキャスト
 
 - [Misreading Chat](https://misreading.chat/) - 森田さんと向井さんの、コンピュータサイエンス周辺の論文を読むポッドキャスト。
@@ -27,6 +31,7 @@
 - [Jun Mukai's blog](https://wp.jmuk.org/) - 向井さん。
 - [なーんだ、ただの水たまりじゃないか](https://karino2.github.io/) - karino2 さん。『Android を支える技術』著者。
   - ポッドキャスト: [プログラム雑談](https://podcasters.spotify.com/pod/show/karino2)
+- [nattou.org](https://nattou.org/) - 常にペイントツールを作り続けていてすごい。
 - [www.lowreal.net](https://www.lowreal.net/) - cho45 さん。むかしは JavaScript をよく書いていたけれど、いまはハードウェアの話が多い。
 - [A Day in the Life](https://secon.dev/) - 舘野さん。
 - [0xcc.net](http://0xcc.net/) - 高林さん。
