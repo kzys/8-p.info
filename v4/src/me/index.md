@@ -15,8 +15,13 @@ I have my [Now](/now/) page.
 
 ## Work
 
-I worked for [Amazon](https://www.aboutamazon.com/) and [Mixi](https://mixi.co.jp/) full-time.
-Before Mixi, I worked for [AIST](https://www.aist.go.jp/) and Community Engine part-time.
+I work for [Fly.io](https://fly.io/).
+
+Before that, I worked for
+[Amazon](https://www.aboutamazon.com/),
+[Mixi](https://mixi.co.jp/),
+[AIST](https://www.aist.go.jp/) and
+[Community Engine](https://web.archive.org/web/20090310205106/http://www.ce-lab.net/ja/index.html).
 
 My "base" [resume](resume.html) is available online.
 
