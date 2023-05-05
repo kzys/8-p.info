@@ -17,6 +17,16 @@ Senior engineer with 10+ years of experience. Seeking to leverage skills and exp
 
 ## Work Experience
 
+### Fly.io
+
+<h4>
+<div class="years">March 2023 - present</div>
+<div class="title">Platform Engineer</div>
+<div class="location">Remote</div>
+</h4>
+
+- ???
+
 ### Amazon Web Services
 
 <h4>
