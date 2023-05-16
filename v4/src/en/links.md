@@ -4,6 +4,7 @@
 
 * [Simple, correct, fast: in that order](https://drewdevault.com/2018/07/09/Simple-correct-fast.html) - It is really hard to do that though
 * [Computers can be understood](https://blog.nelhage.com/post/computers-can-be-understood/)
+* [Do the hard one second](https://buttondown.email/nelhage/archive/do-the-hard-one-second/)
 * [Error Handling in Node.js](https://www.tritondatacenter.com/node-js/production/design/errors) - Operational errors vs. programmer errors.
 * [Python Packaging Is Good Now](https://glyph.twistedmatrix.com/2016/08/python-packaging.html)
 
