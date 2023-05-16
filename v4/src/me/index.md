@@ -21,7 +21,7 @@ Before that, I worked for
 [Amazon](https://www.aboutamazon.com/),
 [Mixi](https://mixi.co.jp/),
 [AIST](https://www.aist.go.jp/) and
-[Community Engine](https://web.archive.org/web/20090310205106/http://www.ce-lab.net/ja/index.html).
+[Community Engine](https://ja.wikipedia.org/wiki/コミュニティーエンジン).
 
 My "base" [resume](resume.html) is available online.
 
