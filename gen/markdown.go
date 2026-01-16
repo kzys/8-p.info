@@ -2,6 +2,7 @@ package main
 
 import (
 	"bytes"
+	"fmt"
 	"html/template"
 	"os"
 	"strings"
@@ -28,7 +29,7 @@ func (g *gen) processMarkdown(in, out string) (string, error) {
 
 	b, params, err := readFrontMatter(in)
 	if err != nil {
-		return "", err
+		return "", fmt.Errorf("failed to read front matter from %s: %w", in, err)
 	}
 
 	body := &bytes.Buffer{}

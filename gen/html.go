@@ -32,7 +32,7 @@ func readFrontMatter(path string) ([]byte, Params, error) {
 func (g *gen) processHTML(in, out string) (string, error) {
 	b, params, err := readFrontMatter(in)
 	if err != nil {
-		return "", err
+		return "", fmt.Errorf("failed to read front matter from %s: %w", in, err)
 	}
 
 	tp, err := template.New("index.html").Funcs(template.FuncMap{
@@ -57,7 +57,7 @@ func (g *gen) processHTML(in, out string) (string, error) {
 
 	err = g.render(out, params)
 	if err != nil {
-		return "", err
+		return "", fmt.Errorf("failed to render: %w", err)
 	}
 	return out, nil
 }
