@@ -2,16 +2,24 @@
 title: 8-p.info
 ---
 <main class="narrow" id="dots">
+  <h1 class="visually-hidden">This month, this year and this life</h1>
   <p class="intro">Nowadays I mainly update <a href="https://explain.8-p.info/">explain.8-p.info</a>.</p>
 
   <div id="spans" hidden>
-    <div class="span" data-span="month"><h1></h1><span class="days" aria-hidden="true"></span><span class="note">One dot is one day, the week starting on Sunday.</span></div>
-    <div class="span" data-span="year"><h1></h1><span class="days" aria-hidden="true"></span><span class="note">One dot is one day, one line per month.</span></div>
-    <div class="span" data-span="life"><h1></h1><span class="days" aria-hidden="true"></span><span class="note">One dot is one year. Life expectancy is at birth for men (<a href="https://www.mhlw.go.jp/toukei/saikin/hw/life/life23/index.html">MHLW abridged life tables, 2023</a> and <a href="https://www.cdc.gov/nchs/products/databriefs/db521.htm">NCHS, 2023</a>). Since I have already lived this long, my own expectancy is somewhat longer than these figures suggest.</span></div>
+    <div class="span" data-span="month"><h2></h2><span class="days" aria-hidden="true"></span><span class="note">One dot is one day, the week starting on Sunday.</span></div>
+    <div class="span" data-span="year"><h2></h2><span class="days" aria-hidden="true"></span><span class="note">One dot is one day, one line per month.</span></div>
+    <div class="span" data-span="life"><h2></h2><span class="days" aria-hidden="true"></span><span class="note">One dot is one year. Life expectancy is at birth for men (<a href="https://www.mhlw.go.jp/toukei/saikin/hw/life/life23/index.html">MHLW abridged life tables, 2023</a> and <a href="https://www.cdc.gov/nchs/products/databriefs/db521.htm">NCHS, 2023</a>). Since I have already lived this long, my own expectancy is somewhat longer than these figures suggest.</span></div>
   </div>
 </main>
 
 <style>
+ #dots .visually-hidden {
+     position: absolute;
+     width: 1px;
+     height: 1px;
+     overflow: hidden;
+     clip-path: inset(50%);
+ }
  #dots .intro {
      border-bottom: 1px solid #ddd;
      padding-bottom: 1rem;
@@ -29,15 +37,15 @@ title: 8-p.info
      gap: 0.4rem;
      margin: 1.5rem 0;
  }
- #dots h1 {
+ #dots h2 {
      margin: 0;
      font-size: 1.25rem;
      font-weight: normal;
      line-height: 1.4;
  }
  /* Economist Design System: tokyo-45 for Japan, chicago-45 for the U.S. */
- #dots h1 .mark-jp { color: #c91d42; }
- #dots h1 .mark-us { color: #2e45b8; }
+ #dots h2 .mark-jp { color: #c91d42; }
+ #dots h2 .mark-us { color: #2e45b8; }
 
  #dots .days {
      display: grid;
@@ -150,11 +158,11 @@ title: 8-p.info
          // Rounded, since daylight saving makes some days shorter or longer.
          var total = Math.round((span[3] - span[2]) / DAY);
          var day = Math.round((today - span[2]) / DAY) + 1;
-         partOf(span[0], 'h1').textContent =
+         partOf(span[0], 'h2').textContent =
              span[1] + ', ' + Math.round((day / total) * 100) + '%, day ' + day + ' of ' + total;
      });
 
-     var life = partOf('life', 'h1');
+     var life = partOf('life', 'h2');
      life.appendChild(document.createTextNode('This life, ' + exact.toFixed(1) + ' years, '));
      EXPECTANCY.forEach(function (e, i) {
          var pct = document.createElement('span');
