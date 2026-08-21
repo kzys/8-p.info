@@ -1,11 +1,175 @@
 ---
 title: 8-p.info
 ---
-<main id="index">
-  <blockquote>
-    The Party told you to reject the evidence of your eyes and ears.
-    It was their final, most essential command.
-  </blockquote>
+<main class="narrow" id="dots">
+  <p class="intro">Nowadays I mainly update <a href="https://explain.8-p.info/">explain.8-p.info</a>.</p>
 
-  Nowadays I mainly update <a href="https://explain.8-p.info/">explain.8-p.info</a>.
+  <div id="spans">
+    <div class="span" data-span="month"><h1></h1><span class="days"></span><span class="note">One dot is one day, the week starting on Sunday.</span></div>
+    <div class="span" data-span="year"><h1></h1><span class="days"></span><span class="note">One dot is one day, one line per month.</span></div>
+    <div class="span" data-span="life"><h1></h1><span class="days"></span><span class="note">One dot is one year. Life expectancy is at birth for men (<a href="https://www.mhlw.go.jp/toukei/saikin/hw/life/life23/index.html">MHLW abridged life tables, 2023</a> and <a href="https://www.cdc.gov/nchs/products/databriefs/db521.htm">NCHS, 2023</a>). Having already reached my age, my own remaining expectancy is somewhat longer than these figures suggest.</span></div>
+  </div>
 </main>
+
+<style>
+ #dots .intro {
+     border-bottom: 1px solid #ddd;
+     padding-bottom: 1rem;
+ }
+ #dots #spans {
+     /* Every dot is one column of the widest row, the 31 days of a month. */
+     --gap: 0.15rem;
+     --col: calc((100% - 30 * var(--gap)) / 31);
+     max-width: 42rem;
+     margin: 1.5rem 0;
+ }
+ #dots .span {
+     display: flex;
+     flex-direction: column;
+     gap: 0.4rem;
+     margin: 1.5rem 0;
+ }
+ #dots h1 {
+     margin: 0;
+     font-size: 1.25rem;
+     font-weight: normal;
+     line-height: 1.4;
+ }
+ #dots h1 .mark-jp { color: #00c; }
+ #dots h1 .mark-us { color: #6ae; }
+
+ #dots .days {
+     display: grid;
+     gap: var(--gap);
+     max-width: 30rem;
+ }
+ #dots .span[data-span="year"] .days { grid-template-columns: repeat(31, 1fr); }
+ #dots .span[data-span="month"] .days { grid-template-columns: repeat(7, var(--col)); }
+ #dots .span[data-span="life"] .days { grid-template-columns: repeat(10, var(--col)); }
+
+ #dots .dot {
+     aspect-ratio: 1;
+     border-radius: 50%;
+     background: #ddd;
+ }
+ #dots .dot.past { background: #333; }
+ #dots .dot.now { background: #999; }
+ #dots .dot.mark-jp { background: #00c; }
+ #dots .dot.mark-us { background: #6ae; }
+
+ #dots .note {
+     color: #666;
+ }
+</style>
+
+<script>
+ (function () {
+     var BIRTHDAY = [1984, 11, 1];
+     var EXPECTANCY = [
+         { label: 'Japan', years: 81.1, mark: 'mark-jp' },
+         { label: 'the U.S.', years: 75.8, mark: 'mark-us' }
+     ];
+
+     var birth = new Date(BIRTHDAY[0], BIRTHDAY[1] - 1, BIRTHDAY[2]);
+     var now = new Date();
+     var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+     var thisYear = now.getFullYear();
+     var thisMonth = now.getMonth();
+
+     // Whole years lived, then the leftover as a fraction of the current year.
+     var age = thisYear - birth.getFullYear();
+     var last = new Date(birth.getFullYear() + age, birth.getMonth(), birth.getDate());
+     if (last > now) {
+         age -= 1;
+         last = new Date(birth.getFullYear() + age, birth.getMonth(), birth.getDate());
+     }
+     var next = new Date(birth.getFullYear() + age + 1, birth.getMonth(), birth.getDate());
+     var exact = age + (now - last) / (next - last);
+
+     function daysIn(y, m) {
+         return new Date(y, m + 1, 0).getDate();
+     }
+
+     function dot(names, title) {
+         var el = document.createElement('span');
+         el.className = names.join(' ');
+         el.title = title;
+         return el;
+     }
+
+     function partOf(span, part) {
+         return document.querySelector('.span[data-span="' + span + '"] ' + part);
+     }
+
+     function dayNames(date) {
+         if (date < today) {
+             return ['dot', 'past'];
+         }
+         return date.getTime() === today.getTime() ? ['dot', 'now'] : ['dot'];
+     }
+
+     // This month, as a calendar starting the week on Sunday.
+     var monthDays = partOf('month', '.days');
+     for (var d = 1; d <= daysIn(thisYear, thisMonth); d++) {
+         var date = new Date(thisYear, thisMonth, d);
+         var day = dot(dayNames(date), date.toDateString());
+         if (d === 1) {
+             day.style.gridColumnStart = date.getDay() + 1;
+         }
+         monthDays.appendChild(day);
+     }
+
+     // This year, one month per line.
+     var yearDays = partOf('year', '.days');
+     for (var m = 0; m < 12; m++) {
+         for (var i = 1; i <= daysIn(thisYear, m); i++) {
+             var monthDate = new Date(thisYear, m, i);
+             var monthDay = dot(dayNames(monthDate), monthDate.toDateString());
+             if (i === 1) {
+                 monthDay.style.gridColumnStart = 1;
+             }
+             yearDays.appendChild(monthDay);
+         }
+     }
+
+     // This life, a dot per year, one decade per line.
+     var lifeDays = partOf('life', '.days');
+     for (var year = 0; year < 100; year++) {
+         var names = ['dot'];
+         if (year < age) {
+             names.push('past');
+         } else if (year === age) {
+             names.push('now');
+         }
+         EXPECTANCY.forEach(function (e) {
+             if (year === Math.floor(e.years)) {
+                 names.push(e.mark);
+             }
+         });
+         lifeDays.appendChild(dot(names, 'Age ' + year));
+     }
+
+     var DAY = 24 * 60 * 60 * 1000;
+     [['month', 'This month', new Date(thisYear, thisMonth, 1), new Date(thisYear, thisMonth + 1, 1)],
+      ['year', 'This year', new Date(thisYear, 0, 1), new Date(thisYear + 1, 0, 1)]].forEach(function (span) {
+         var done = (now - span[2]) / (span[3] - span[2]);
+         // Rounded, since daylight saving makes some days shorter or longer.
+         var total = Math.round((span[3] - span[2]) / DAY);
+         var day = Math.round((today - span[2]) / DAY) + 1;
+         partOf(span[0], 'h1').textContent =
+             span[1] + ', ' + Math.round(done * 100) + '%, day ' + day + ' of ' + total;
+     });
+
+     var life = partOf('life', 'h1');
+     life.appendChild(document.createTextNode('This life, ' + exact.toFixed(1) + ' years, '));
+     EXPECTANCY.forEach(function (e, i) {
+         var pct = document.createElement('span');
+         pct.className = e.mark;
+         pct.textContent = Math.round((exact / e.years) * 100) + '%';
+         life.appendChild(pct);
+         life.appendChild(document.createTextNode(
+             (i === 0 ? ' of male life expectancy in ' : ' of ') + e.label +
+             ' (' + e.years + ')' + (i === 0 ? ', ' : '')));
+     });
+ })();
+</script>
