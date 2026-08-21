@@ -4,10 +4,10 @@ title: 8-p.info
 <main class="narrow" id="dots">
   <p class="intro">Nowadays I mainly update <a href="https://explain.8-p.info/">explain.8-p.info</a>.</p>
 
-  <div id="spans">
-    <div class="span" data-span="month"><h1></h1><span class="days"></span><span class="note">One dot is one day, the week starting on Sunday.</span></div>
-    <div class="span" data-span="year"><h1></h1><span class="days"></span><span class="note">One dot is one day, one line per month.</span></div>
-    <div class="span" data-span="life"><h1></h1><span class="days"></span><span class="note">One dot is one year. Life expectancy is at birth for men (<a href="https://www.mhlw.go.jp/toukei/saikin/hw/life/life23/index.html">MHLW abridged life tables, 2023</a> and <a href="https://www.cdc.gov/nchs/products/databriefs/db521.htm">NCHS, 2023</a>). Since I have already lived this long, my own expectancy is somewhat longer than these figures suggest.</span></div>
+  <div id="spans" hidden>
+    <div class="span" data-span="month"><h1></h1><span class="days" aria-hidden="true"></span><span class="note">One dot is one day, the week starting on Sunday.</span></div>
+    <div class="span" data-span="year"><h1></h1><span class="days" aria-hidden="true"></span><span class="note">One dot is one day, one line per month.</span></div>
+    <div class="span" data-span="life"><h1></h1><span class="days" aria-hidden="true"></span><span class="note">One dot is one year. Life expectancy is at birth for men (<a href="https://www.mhlw.go.jp/toukei/saikin/hw/life/life23/index.html">MHLW abridged life tables, 2023</a> and <a href="https://www.cdc.gov/nchs/products/databriefs/db521.htm">NCHS, 2023</a>). Since I have already lived this long, my own expectancy is somewhat longer than these figures suggest.</span></div>
   </div>
 </main>
 
@@ -170,5 +170,8 @@ title: 8-p.info
              (i === 0 ? ' of male life expectancy in ' : ' of ') + e.label +
              ' (' + e.years + ')' + (i === 0 ? ', ' : '')));
      });
+
+     // Everything here is generated, so show it only once it is all there.
+     document.getElementById('spans').hidden = false;
  })();
 </script>
