@@ -7,7 +7,7 @@ title: 8-p.info
   <div id="spans">
     <div class="span" data-span="month"><h1></h1><span class="days"></span><span class="note">One dot is one day, the week starting on Sunday.</span></div>
     <div class="span" data-span="year"><h1></h1><span class="days"></span><span class="note">One dot is one day, one line per month.</span></div>
-    <div class="span" data-span="life"><h1></h1><span class="days"></span><span class="note">One dot is one year. Life expectancy is at birth for men (<a href="https://www.mhlw.go.jp/toukei/saikin/hw/life/life23/index.html">MHLW abridged life tables, 2023</a> and <a href="https://www.cdc.gov/nchs/products/databriefs/db521.htm">NCHS, 2023</a>). Having already reached my age, my own remaining expectancy is somewhat longer than these figures suggest.</span></div>
+    <div class="span" data-span="life"><h1></h1><span class="days"></span><span class="note">One dot is one year. Life expectancy is at birth for men (<a href="https://www.mhlw.go.jp/toukei/saikin/hw/life/life23/index.html">MHLW abridged life tables, 2023</a> and <a href="https://www.cdc.gov/nchs/products/databriefs/db521.htm">NCHS, 2023</a>). Since I have already lived this long, my own expectancy is somewhat longer than these figures suggest.</span></div>
   </div>
 </main>
 
@@ -152,12 +152,11 @@ title: 8-p.info
      var DAY = 24 * 60 * 60 * 1000;
      [['month', 'This month', new Date(thisYear, thisMonth, 1), new Date(thisYear, thisMonth + 1, 1)],
       ['year', 'This year', new Date(thisYear, 0, 1), new Date(thisYear + 1, 0, 1)]].forEach(function (span) {
-         var done = (now - span[2]) / (span[3] - span[2]);
          // Rounded, since daylight saving makes some days shorter or longer.
          var total = Math.round((span[3] - span[2]) / DAY);
          var day = Math.round((today - span[2]) / DAY) + 1;
          partOf(span[0], 'h1').textContent =
-             span[1] + ', ' + Math.round(done * 100) + '%, day ' + day + ' of ' + total;
+             span[1] + ', ' + Math.round((day / total) * 100) + '%, day ' + day + ' of ' + total;
      });
 
      var life = partOf('life', 'h1');
