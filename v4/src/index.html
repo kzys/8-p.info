@@ -35,8 +35,9 @@ title: 8-p.info
      font-weight: normal;
      line-height: 1.4;
  }
- #dots h1 .mark-jp { color: #00c; }
- #dots h1 .mark-us { color: #6ae; }
+ /* Economist Design System: tokyo-45 for Japan, chicago-45 for the U.S. */
+ #dots h1 .mark-jp { color: #c91d42; }
+ #dots h1 .mark-us { color: #2e45b8; }
 
  #dots .days {
      display: grid;
@@ -53,9 +54,8 @@ title: 8-p.info
      background: #ddd;
  }
  #dots .dot.past { background: #333; }
- #dots .dot.now { background: #999; }
- #dots .dot.mark-jp { background: #00c; }
- #dots .dot.mark-us { background: #6ae; }
+ #dots .dot.mark-jp { background: #c91d42; }
+ #dots .dot.mark-us { background: #2e45b8; }
 
  #dots .note {
      color: #666;
@@ -102,10 +102,7 @@ title: 8-p.info
      }
 
      function dayNames(date) {
-         if (date < today) {
-             return ['dot', 'past'];
-         }
-         return date.getTime() === today.getTime() ? ['dot', 'now'] : ['dot'];
+         return date <= today ? ['dot', 'past'] : ['dot'];
      }
 
      // This month, as a calendar starting the week on Sunday.
@@ -136,10 +133,8 @@ title: 8-p.info
      var lifeDays = partOf('life', '.days');
      for (var year = 0; year < 100; year++) {
          var names = ['dot'];
-         if (year < age) {
+         if (year <= age) {
              names.push('past');
-         } else if (year === age) {
-             names.push('now');
          }
          EXPECTANCY.forEach(function (e) {
              if (year === Math.floor(e.years)) {
