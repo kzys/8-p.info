@@ -8,7 +8,7 @@ title: 8-p.info
   <div id="spans" hidden>
     <div class="span" data-span="month"><h2></h2><div class="days" aria-hidden="true"></div><p class="note">One dot is one day, one line is one week starting on Sunday.</p></div>
     <div class="span" data-span="year"><h2></h2><div class="days" aria-hidden="true"></div><p class="note">One dot is one day, one line is one month.</p></div>
-    <div class="span" data-span="life"><h2></h2><div class="days" aria-hidden="true"></div><p class="note">One dot is one year, one line is one decade.</p><p class="note">Life expectancy is at birth for men, from the <a href="https://www.mhlw.go.jp/toukei/saikin/hw/life/life23/index.html">Ministry of Health, Labour and Welfare (厚生労働省) abridged life tables, 2023</a> and the <a href="https://www.cdc.gov/nchs/products/databriefs/db521.htm">National Center for Health Statistics, 2023</a>. Since I have already lived this long, my own expectancy is somewhat longer than these figures suggest.</p></div>
+    <div class="span" data-span="life"><h2></h2><div class="days" aria-hidden="true"></div><p class="note">One dot is one year, one line is one decade.</p><p class="note">Life expectancy is my age plus the years still expected for men who have reached it, from the <a href="https://www.mhlw.go.jp/toukei/saikin/hw/life/life23/index.html">Ministry of Health, Labour and Welfare (厚生労働省) abridged life tables, 2023</a> and the <a href="https://www.cdc.gov/nchs/data/nvsr/nvsr74/nvsr74-06.pdf">National Center for Health Statistics, United States Life Tables, 2023</a>, read from their spreadsheets, <a href="https://www.mhlw.go.jp/toukei/saikin/hw/life/life23/xls/life23-12.xlsx">life23-12.xlsx</a> and <a href="https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Publications/NVSR/74-06/Table02.xlsx">Table02.xlsx</a>, which round less than the printed tables.</p></div>
   </div>
 </main>
 
@@ -78,10 +78,28 @@ title: 8-p.info
 <script>
  (function () {
      var BIRTHDAY = [1984, 11, 1];
+     // Life expectancy is age-specific: the older I get, the longer I am
+     // expected to live. Each byAge is the expected age at death from age 40
+     // onwards, one entry per year of age.
      // In the order their dots appear, youngest first.
+     var FROM_AGE = 40;
      var EXPECTANCY = [
-         { label: 'the U.S.', years: 75.8, mark: 'mark-us' },
-         { label: 'Japan', years: 81.1, mark: 'mark-jp' }
+         { label: 'the U.S.', mark: 'mark-us', byAge: [
+             78.6, 78.8, 78.9, 79.0, 79.1, 79.3, 79.4, 79.5, 79.7, 79.8,
+             80.0, 80.1, 80.3, 80.4, 80.6, 80.8, 81.0, 81.2, 81.4, 81.6,
+             81.9, 82.1, 82.4, 82.6, 82.9, 83.2, 83.5, 83.8, 84.1, 84.4,
+             84.7, 85.1, 85.4, 85.8, 86.1, 86.5, 86.9, 87.2, 87.7, 88.1,
+             88.5, 89.0, 89.5, 90.0, 90.5, 91.1, 91.6, 92.2, 92.8, 93.5,
+             94.1, 94.8, 95.5, 96.3, 97.0, 97.8, 98.6, 99.5, 100.3, 101.1,
+             102.0] },
+         { label: 'Japan', mark: 'mark-jp', byAge: [
+             82.1, 82.1, 82.1, 82.2, 82.2, 82.3, 82.3, 82.4, 82.5, 82.5,
+             82.6, 82.7, 82.8, 82.8, 83.0, 83.0, 83.2, 83.3, 83.4, 83.5,
+             83.7, 83.8, 84.0, 84.2, 84.3, 84.5, 84.7, 84.9, 85.2, 85.4,
+             85.7, 85.9, 86.2, 86.5, 86.8, 87.1, 87.5, 87.8, 88.2, 88.6,
+             89.0, 89.4, 89.8, 90.3, 90.8, 91.3, 91.8, 92.4, 93.0, 93.6,
+             94.2, 94.9, 95.6, 96.3, 97.0, 97.8, 98.5, 99.3, 100.1, 100.9,
+             101.7] }
      ];
 
      var birth = new Date(BIRTHDAY[0], BIRTHDAY[1] - 1, BIRTHDAY[2]);
@@ -99,6 +117,11 @@ title: 8-p.info
      }
      var next = new Date(birth.getFullYear() + age + 1, birth.getMonth(), birth.getDate());
      var exact = age + (now - last) / (next - last);
+
+     EXPECTANCY.forEach(function (e) {
+         var i = Math.min(Math.max(age - FROM_AGE, 0), e.byAge.length - 1);
+         e.years = e.byAge[i];
+     });
 
      function daysIn(y, m) {
          return new Date(y, m + 1, 0).getDate();
@@ -176,7 +199,7 @@ title: 8-p.info
          pct.textContent = Math.round((exact / e.years) * 100) + '%';
          life.appendChild(pct);
          life.appendChild(document.createTextNode(
-             (i === 0 ? ' of male life expectancy in ' : ' of ') + e.label +
+             (i === 0 ? ' of male life expectancy at my age in ' : ' of ') + e.label +
              ' (' + e.years + ')' + (i === 0 ? ', ' : '')));
      });
 
