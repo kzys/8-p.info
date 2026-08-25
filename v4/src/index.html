@@ -6,9 +6,9 @@ title: 8-p.info
   <p class="intro">Nowadays I mainly update <a href="https://explain.8-p.info/">explain.8-p.info</a>.</p>
 
   <div id="spans" hidden>
-    <div class="span" data-span="month"><h2></h2><span class="days" aria-hidden="true"></span><span class="note">One dot is one day, the week starting on Sunday.</span></div>
-    <div class="span" data-span="year"><h2></h2><span class="days" aria-hidden="true"></span><span class="note">One dot is one day, one line per month.</span></div>
-    <div class="span" data-span="life"><h2></h2><span class="days" aria-hidden="true"></span><span class="note">One dot is one year. Life expectancy is at birth for men (<a href="https://www.mhlw.go.jp/toukei/saikin/hw/life/life23/index.html">MHLW abridged life tables, 2023</a> and <a href="https://www.cdc.gov/nchs/products/databriefs/db521.htm">NCHS, 2023</a>). Since I have already lived this long, my own expectancy is somewhat longer than these figures suggest.</span></div>
+    <div class="span" data-span="month"><h2></h2><div class="days" aria-hidden="true"></div><p class="note">One dot is one day, one line is one week starting on Sunday.</p></div>
+    <div class="span" data-span="year"><h2></h2><div class="days" aria-hidden="true"></div><p class="note">One dot is one day, one line is one month.</p></div>
+    <div class="span" data-span="life"><h2></h2><div class="days" aria-hidden="true"></div><p class="note">One dot is one year, one line is one decade.</p><p class="note">Life expectancy is at birth for men, from the <a href="https://www.mhlw.go.jp/toukei/saikin/hw/life/life23/index.html">Ministry of Health, Labour and Welfare (厚生労働省) abridged life tables, 2023</a> and the <a href="https://www.cdc.gov/nchs/products/databriefs/db521.htm">National Center for Health Statistics, 2023</a>. Since I have already lived this long, my own expectancy is somewhat longer than these figures suggest.</p></div>
   </div>
 </main>
 
@@ -51,6 +51,7 @@ title: 8-p.info
      display: grid;
      gap: var(--gap);
      max-width: 30rem;
+     margin: 0.4rem 0;
  }
  #dots .span[data-span="year"] .days { grid-template-columns: repeat(31, 1fr); }
  #dots .span[data-span="month"] .days { grid-template-columns: repeat(7, var(--col)); }
@@ -66,7 +67,11 @@ title: 8-p.info
  #dots .dot.mark-us { background: #2e45b8; }
 
  #dots .note {
+     margin: 0;
      color: #666;
+ }
+ #dots .note + .note {
+     margin-top: 0.4rem;
  }
 </style>
 
