@@ -8,10 +8,17 @@ title: 8-p.info
   <div id="spans" hidden>
     <div class="span" data-span="month"><h2></h2><div class="days" aria-hidden="true"></div><p class="note">One dot is one day, one line is one week starting on Sunday.</p></div>
     <div class="span" data-span="year"><h2></h2><div class="days" aria-hidden="true"></div><p class="note">One dot is one day, one line is one month.</p></div>
-    <div class="span" data-span="life"><h2></h2><div class="days" aria-hidden="true"></div>
+    <div class="span" data-span="life">
+      <h2>This life,
+        <input id="age" type="number" min="0" max="100" step="0.1" inputmode="decimal" aria-label="Age in years">
+        years, <span class="pct mark-us"></span> of
+        <select id="gender" aria-label="Gender"><option value="male">male</option><option value="female">female</option></select>
+        life expectancy at that age in the U.S. (<span class="exp mark-us"></span>),
+        <span class="pct mark-jp"></span> of Japan (<span class="exp mark-jp"></span>)</h2>
+      <div class="days" aria-hidden="true"></div>
       <p class="note">One dot is one year, one line is one decade.</p>
-      <p class="note">Life expectancy is my age plus the years still expected for men who have reached it.</p>
-      <p class="note">For the U.S. that is Table 2 of <a href="https://www.cdc.gov/nchs/products/life_tables.htm">National Center for Health Statistics, United States Life Tables, 2023</a>. The numbers come from the less rounded <a href="https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Publications/NVSR/74-06/Table02.xlsx">spreadsheet</a> linked in the <a href="https://www.cdc.gov/nchs/data/nvsr/nvsr74/nvsr74-06.pdf">PDF</a>’s footnote.</p>
+      <p class="note">Life expectancy is that age plus the years still expected for <span class="cohort">men</span> who have reached it.</p>
+      <p class="note">For the U.S. that is Table <span class="us-table">2</span> of <a href="https://www.cdc.gov/nchs/products/life_tables.htm">National Center for Health Statistics, United States Life Tables, 2023</a>. The numbers come from the less rounded <a class="us-xlsx" href="https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Publications/NVSR/74-06/Table02.xlsx">spreadsheet</a> linked in the <a href="https://www.cdc.gov/nchs/data/nvsr/nvsr74/nvsr74-06.pdf">PDF</a>’s footnote.</p>
       <p class="note">For Japan it is the <a href="https://www.mhlw.go.jp/toukei/saikin/hw/life/life23/index.html">Ministry of Health, Labour and Welfare (厚生労働省) abridged life tables, 2023</a>, again from a <a href="https://www.mhlw.go.jp/toukei/saikin/hw/life/life23/xls/life23-12.xlsx">spreadsheet</a> there.</p>
     </div>
   </div>
@@ -49,8 +56,15 @@ title: 8-p.info
      line-height: 1.4;
  }
  /* Economist Design System: tokyo-45 for Japan, chicago-45 for the U.S. */
- #dots h2 .mark-jp { color: #c91d42; }
- #dots h2 .mark-us { color: #2e45b8; }
+ #dots h2 .pct.mark-jp { color: #c91d42; }
+ #dots h2 .pct.mark-us { color: #2e45b8; }
+ #dots h2 input,
+ #dots h2 select {
+     font: inherit;
+ }
+ #dots h2 input {
+     width: 4.5rem;
+ }
 
  #dots .days {
      display: grid;
@@ -83,29 +97,65 @@ title: 8-p.info
 <script>
  (function () {
      var BIRTHDAY = [1984, 11, 1];
-     // Life expectancy is age-specific: the older I get, the longer I am
-     // expected to live. Each byAge is the expected age at death from age 40
-     // onwards, one entry per year of age.
+     // Life expectancy is age-specific: the older you get, the longer you are
+     // expected to live. Each byAge is the expected age at death, one entry per
+     // year of age from 0 to 100.
      // In the order their dots appear, youngest first.
-     var FROM_AGE = 40;
      var EXPECTANCY = [
-         { label: 'the U.S.', mark: 'mark-us', byAge: [
-             78.6, 78.8, 78.9, 79.0, 79.1, 79.3, 79.4, 79.5, 79.7, 79.8,
-             80.0, 80.1, 80.3, 80.4, 80.6, 80.8, 81.0, 81.2, 81.4, 81.6,
-             81.9, 82.1, 82.4, 82.6, 82.9, 83.2, 83.5, 83.8, 84.1, 84.4,
-             84.7, 85.1, 85.4, 85.8, 86.1, 86.5, 86.9, 87.2, 87.7, 88.1,
-             88.5, 89.0, 89.5, 90.0, 90.5, 91.1, 91.6, 92.2, 92.8, 93.5,
-             94.1, 94.8, 95.5, 96.3, 97.0, 97.8, 98.6, 99.5, 100.3, 101.1,
-             102.0] },
-         { label: 'Japan', mark: 'mark-jp', byAge: [
-             82.1, 82.1, 82.1, 82.2, 82.2, 82.3, 82.3, 82.4, 82.5, 82.5,
-             82.6, 82.7, 82.8, 82.8, 83.0, 83.0, 83.2, 83.3, 83.4, 83.5,
-             83.7, 83.8, 84.0, 84.2, 84.3, 84.5, 84.7, 84.9, 85.2, 85.4,
-             85.7, 85.9, 86.2, 86.5, 86.8, 87.1, 87.5, 87.8, 88.2, 88.6,
-             89.0, 89.4, 89.8, 90.3, 90.8, 91.3, 91.8, 92.4, 93.0, 93.6,
-             94.2, 94.9, 95.6, 96.3, 97.0, 97.8, 98.5, 99.3, 100.1, 100.9,
-             101.7] }
+         { mark: 'mark-us', byAge: {
+             male: [
+                 75.8, 76.3, 76.3, 76.3, 76.4, 76.4, 76.4, 76.4, 76.4, 76.4,
+                 76.4, 76.4, 76.4, 76.4, 76.5, 76.5, 76.5, 76.6, 76.6, 76.7,
+                 76.7, 76.8, 76.9, 76.9, 77.0, 77.1, 77.2, 77.3, 77.4, 77.4,
+                 77.5, 77.6, 77.7, 77.9, 78.0, 78.1, 78.2, 78.3, 78.4, 78.5,
+                 78.6, 78.8, 78.9, 79.0, 79.1, 79.3, 79.4, 79.5, 79.7, 79.8,
+                 80.0, 80.1, 80.3, 80.4, 80.6, 80.8, 81.0, 81.2, 81.4, 81.6,
+                 81.9, 82.1, 82.4, 82.6, 82.9, 83.2, 83.5, 83.8, 84.1, 84.4,
+                 84.7, 85.1, 85.4, 85.8, 86.1, 86.5, 86.9, 87.3, 87.7, 88.1,
+                 88.5, 89.0, 89.5, 90.0, 90.5, 91.1, 91.6, 92.2, 92.8, 93.5,
+                 94.1, 94.8, 95.5, 96.3, 97.0, 97.8, 98.6, 99.5, 100.3, 101.1,
+                 102.0],
+             female: [
+                 81.1, 81.5, 81.5, 81.5, 81.6, 81.6, 81.6, 81.6, 81.6, 81.6,
+                 81.6, 81.6, 81.6, 81.6, 81.6, 81.7, 81.7, 81.7, 81.7, 81.7,
+                 81.8, 81.8, 81.8, 81.9, 81.9, 81.9, 82.0, 82.0, 82.0, 82.1,
+                 82.1, 82.2, 82.2, 82.3, 82.3, 82.4, 82.4, 82.5, 82.5, 82.6,
+                 82.7, 82.7, 82.8, 82.9, 83.0, 83.0, 83.1, 83.2, 83.3, 83.4,
+                 83.5, 83.6, 83.7, 83.8, 83.9, 84.0, 84.2, 84.3, 84.5, 84.6,
+                 84.8, 84.9, 85.1, 85.3, 85.5, 85.7, 85.9, 86.1, 86.4, 86.6,
+                 86.8, 87.1, 87.3, 87.6, 87.9, 88.2, 88.5, 88.8, 89.1, 89.5,
+                 89.9, 90.2, 90.7, 91.1, 91.6, 92.0, 92.5, 93.1, 93.6, 94.2,
+                 94.8, 95.5, 96.1, 96.8, 97.5, 98.3, 99.0, 99.8, 100.6, 101.4,
+                 102.3] } },
+         { mark: 'mark-jp', byAge: {
+             male: [
+                 81.1, 81.2, 81.3, 81.3, 81.3, 81.3, 81.3, 81.3, 81.3, 81.3,
+                 81.3, 81.3, 81.3, 81.3, 81.3, 81.4, 81.4, 81.4, 81.4, 81.4,
+                 81.5, 81.5, 81.5, 81.5, 81.6, 81.6, 81.6, 81.6, 81.7, 81.7,
+                 81.7, 81.8, 81.8, 81.8, 81.8, 81.9, 81.9, 81.9, 82.0, 82.0,
+                 82.1, 82.1, 82.1, 82.2, 82.2, 82.3, 82.3, 82.4, 82.5, 82.5,
+                 82.6, 82.7, 82.8, 82.8, 83.0, 83.0, 83.2, 83.3, 83.4, 83.5,
+                 83.7, 83.8, 84.0, 84.2, 84.3, 84.5, 84.7, 84.9, 85.2, 85.4,
+                 85.7, 85.9, 86.2, 86.5, 86.8, 87.1, 87.5, 87.8, 88.2, 88.6,
+                 89.0, 89.4, 89.8, 90.3, 90.8, 91.3, 91.8, 92.4, 93.0, 93.6,
+                 94.2, 94.9, 95.6, 96.3, 97.0, 97.8, 98.5, 99.3, 100.1, 100.9,
+                 101.7],
+             female: [
+                 87.1, 87.3, 87.3, 87.3, 87.3, 87.3, 87.3, 87.4, 87.4, 87.4,
+                 87.4, 87.4, 87.4, 87.4, 87.4, 87.4, 87.4, 87.4, 87.4, 87.5,
+                 87.5, 87.5, 87.5, 87.5, 87.5, 87.6, 87.6, 87.6, 87.6, 87.6,
+                 87.7, 87.7, 87.7, 87.7, 87.7, 87.7, 87.8, 87.8, 87.8, 87.8,
+                 87.8, 87.9, 87.9, 87.9, 88.0, 88.0, 88.0, 88.1, 88.1, 88.2,
+                 88.2, 88.3, 88.3, 88.4, 88.5, 88.5, 88.6, 88.7, 88.8, 88.8,
+                 88.9, 89.0, 89.1, 89.2, 89.3, 89.4, 89.5, 89.6, 89.7, 89.8,
+                 90.0, 90.1, 90.2, 90.4, 90.6, 90.7, 90.9, 91.1, 91.3, 91.6,
+                 91.8, 92.1, 92.3, 92.7, 93.0, 93.3, 93.7, 94.1, 94.6, 95.0,
+                 95.5, 96.1, 96.6, 97.2, 97.8, 98.5, 99.1, 99.8, 100.6, 101.3,
+                 102.1] } }
      ];
+     // The U.S. tables are one table, and one spreadsheet, per sex.
+     var US_TABLE = { male: '2', female: '3' };
+     var COHORT = { male: 'men', female: 'women' };
 
      var birth = new Date(BIRTHDAY[0], BIRTHDAY[1] - 1, BIRTHDAY[2]);
      var now = new Date();
@@ -114,19 +164,14 @@ title: 8-p.info
      var thisMonth = now.getMonth();
 
      // Whole years lived, then the leftover as a fraction of the current year.
-     var age = thisYear - birth.getFullYear();
-     var last = new Date(birth.getFullYear() + age, birth.getMonth(), birth.getDate());
+     var myAge = thisYear - birth.getFullYear();
+     var last = new Date(birth.getFullYear() + myAge, birth.getMonth(), birth.getDate());
      if (last > now) {
-         age -= 1;
-         last = new Date(birth.getFullYear() + age, birth.getMonth(), birth.getDate());
+         myAge -= 1;
+         last = new Date(birth.getFullYear() + myAge, birth.getMonth(), birth.getDate());
      }
-     var next = new Date(birth.getFullYear() + age + 1, birth.getMonth(), birth.getDate());
-     var exact = age + (now - last) / (next - last);
-
-     EXPECTANCY.forEach(function (e) {
-         var i = Math.min(Math.max(age - FROM_AGE, 0), e.byAge.length - 1);
-         e.years = e.byAge[i];
-     });
+     var next = new Date(birth.getFullYear() + myAge + 1, birth.getMonth(), birth.getDate());
+     var myExact = myAge + (now - last) / (next - last);
 
      function daysIn(y, m) {
          return new Date(y, m + 1, 0).getDate();
@@ -171,20 +216,52 @@ title: 8-p.info
          }
      }
 
-     // This life, a dot per year, one decade per line.
-     var lifeDays = partOf('life', '.days');
-     for (var year = 0; year < 100; year++) {
-         var names = ['dot'];
-         if (year <= age) {
-             names.push('past');
-         }
-         EXPECTANCY.forEach(function (e) {
-             if (year === Math.floor(e.years)) {
-                 names.push(e.mark);
-             }
+     var ageInput = document.getElementById('age');
+     var genderInput = document.getElementById('gender');
+     ageInput.value = myExact.toFixed(1);
+
+     function drawLife() {
+         var exact = Math.min(Math.max(parseFloat(ageInput.value) || 0, 0), 100);
+         // The tables have one entry per whole year of age.
+         var age = Math.floor(exact);
+         var gender = genderInput.value;
+         var years = EXPECTANCY.map(function (e) {
+             return e.byAge[gender][age];
          });
-         lifeDays.appendChild(dot(names, 'Age ' + year));
+
+         // This life, a dot per year, one decade per line.
+         var lifeDays = partOf('life', '.days');
+         lifeDays.textContent = '';
+         for (var year = 0; year < 100; year++) {
+             var names = ['dot'];
+             if (year <= age) {
+                 names.push('past');
+             }
+             EXPECTANCY.forEach(function (e, i) {
+                 if (year === Math.floor(years[i])) {
+                     names.push(e.mark);
+                 }
+             });
+             lifeDays.appendChild(dot(names, 'Age ' + year));
+         }
+
+         // The sentence itself is in the markup, since it holds the inputs.
+         EXPECTANCY.forEach(function (e, i) {
+             partOf('life', '.pct.' + e.mark).textContent =
+                 Math.round((exact / years[i]) * 100) + '%';
+             partOf('life', '.exp.' + e.mark).textContent = years[i].toFixed(1);
+         });
+
+         partOf('life', '.cohort').textContent = COHORT[gender];
+         partOf('life', '.us-table').textContent = US_TABLE[gender];
+         partOf('life', '.us-xlsx').href =
+             'https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Publications/NVSR/74-06/Table0' +
+             US_TABLE[gender] + '.xlsx';
      }
+
+     ageInput.addEventListener('input', drawLife);
+     genderInput.addEventListener('change', drawLife);
+     drawLife();
 
      var DAY = 24 * 60 * 60 * 1000;
      [['month', 'This month', new Date(thisYear, thisMonth, 1), new Date(thisYear, thisMonth + 1, 1)],
@@ -194,18 +271,6 @@ title: 8-p.info
          var day = Math.round((today - span[2]) / DAY) + 1;
          partOf(span[0], 'h2').textContent =
              span[1] + ', ' + Math.round((day / total) * 100) + '%, day ' + day + ' of ' + total;
-     });
-
-     var life = partOf('life', 'h2');
-     life.appendChild(document.createTextNode('This life, ' + exact.toFixed(1) + ' years, '));
-     EXPECTANCY.forEach(function (e, i) {
-         var pct = document.createElement('span');
-         pct.className = e.mark;
-         pct.textContent = Math.round((exact / e.years) * 100) + '%';
-         life.appendChild(pct);
-         life.appendChild(document.createTextNode(
-             (i === 0 ? ' of male life expectancy at my age in ' : ' of ') + e.label +
-             ' (' + e.years + ')' + (i === 0 ? ', ' : '')));
      });
 
      // Everything here is generated, so show it only once it is all there.
